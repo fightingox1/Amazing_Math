@@ -83,6 +83,8 @@ tr:nth-child(odd){background-color: #0f0f0f}
         <p id="targetnum">50 Targets</p>
         <input type="range" id="targetslider" min="1"></input>
     <p id="max_rects">Max Obstacles: 15</p>
+    <input type="range" id="speedslider" min="1" max="40" value="15"></input>
+    <p id="max_rects">Max Speed: 15</p>
     <input type="range" id="rectslider" min="1" max="40" value="15"></input>
     <p>Target Color</p>
     <input type="color" id="targetcolor" value="#0000FF" style="margin: 0;padding:0;border: none;"></input>
@@ -123,7 +125,7 @@ var cx = Math.random()*canvas.width;
 var cy = Math.random()*canvas.height;
 var vx = 0;var vy = 0;
 var moving=true;
-var speed=30;
+var speed=speedslider;
 var px;var py;
 var a_time = 0;var time = 0;
 var obstacles = [];
@@ -174,6 +176,12 @@ function game(){
             vy = Math.max(0.5,Math.random()*speed);
             if(Math.random()<0.5){vx=-vx}
             if(Math.random()>0.5){vy=-vy}
+            if(vx < speed){
+                vx=speed
+            }
+            if(vy < speed){
+                vy=speed
+            }
         }
         dists.push(dist(px,py,5,cx,cy,cr));
 
