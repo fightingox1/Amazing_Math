@@ -133,6 +133,7 @@ var times = [];var dists = [];var rects = [];
 var best=Infinity;
 ctx.strokeStyle = "grey";
 var game1;
+var changespeed = 5
 function game(){
 
     ctx.fillStyle = "rgb(0,0,0)";
@@ -172,8 +173,17 @@ function game(){
         cx = Math.random()*(xrange);
         cy = Math.random()*(yrange);
         if(moving){
-            vx = Math.random()*(speed-1+1)+1;
-            vy = Math.random()*(speed-1+1)+1;
+            vx = Math.random()*speed;
+            vy = Math.random()*speed;
+            if(vx>maxspeed){
+							vx=maxspeed
+            }
+            if(vy>maxspeed){
+            	vy=maxspeed
+            }
+            if(vx=vy){
+            vx = changespeed
+            }
 
             console.log(vx + " " + vy)
         }
@@ -287,3 +297,4 @@ document.addEventListener('click', function(e){clicking=true});
 </script>
 </body>
 </html>
+
