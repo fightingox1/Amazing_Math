@@ -84,8 +84,8 @@ tr:nth-child(odd){background-color: #0f0f0f}
         <input type="range" id="targetslider" min="1"></input>
     <p id="max_rects">Max Obstacles: 15</p>
     <input type="range" id="rectslider" min="1" max="40" value="15"></input>
-    <p id="max_speed">Max Speed: 15</p>
-    <input type="range" id="speedslider" min="1" max="40" value="15"></input>
+    <p id="max_speed">Max Speed: 30</p>
+    <input type="range" id="speedslider" min="1" max="40" value="30"></input>
     <p>Target Color</p>
     <input type="color" id="targetcolor" value="#0000FF" style="margin: 0;padding:0;border: none;"></input>
     </div>
@@ -117,7 +117,7 @@ canvas.height = window.innerHeight-10;
 const ctx=canvas.getContext("2d");
 const xrange = canvas.width;
 const yrange = canvas.height;
-var maxtargets=50;var maxrects=20;
+var maxtargets=50;var maxrects=20;var maxspeed=30
 var targetcolor;
 var clicking = false;
 var cr = 50;
