@@ -284,6 +284,8 @@ document.getElementById("targetslider").addEventListener('change', function(){
 });
 document.getElementById("rectslider").addEventListener('change', function(){
     document.getElementById("max_rects").textContent="Max Obstacles: "+document.getElementById("rectslider").value;
+});
+document.getElementById("speedslider").addEventListener('change', function(){
     document.getElementById("max_speed").textContent="Max Speed: "+document.getElementById("speedslider").value;
 });
 document.addEventListener('click', function(e){clicking=true});
