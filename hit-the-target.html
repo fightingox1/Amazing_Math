@@ -275,6 +275,7 @@ document.getElementById("play").addEventListener("click", function(){
     if(maxtargets==100){maxtargets=Infinity}
     document.getElementById("container").hidden=true;
     game1 = setInterval(game,20);
+    game()
 });
 document.addEventListener('mousemove', function(e){px=e.x;py=e.y});
 document.getElementById("targetslider").addEventListener('change', function(){
