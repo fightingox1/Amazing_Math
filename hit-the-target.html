@@ -172,17 +172,10 @@ function game(){
         cx = Math.random()*(xrange);
         cy = Math.random()*(yrange);
         if(moving){
-            vx = Math.max(0.5,Math.random()*speed);
-            vy = Math.max(0.5,Math.random()*speed);
-            if(Math.random()<0.5){vx=-vx}
-            if(Math.random()>0.5){vy=-vy}
+            vx = Math.random()*(speed-1+1)+1;
+            vy = Math.random()*(speed-1+1)+1;
+
             console.log(vx + " " + vy)
-            if(vx < speed){
-                vx=maxspeed
-            }
-            if(vy < speed){
-                vy=maxspeed
-            }
         }
         dists.push(dist(px,py,5,cx,cy,cr));
 
