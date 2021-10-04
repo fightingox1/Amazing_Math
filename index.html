@@ -91,7 +91,7 @@
   <p>This game is so amazing that I play it everyday.</p>
   
   <input type="button" value="Play Game" id="myButton" class="DescriptionButton">
-  <input type="button" value="Close" id="myButton" class="DescriptionButton">
+  <input type="button" value="Close" id="myButton" class="DescriptionButton" onclick="CloseTestGameDescription()">
 </div>
  
 <div class = button_div>
@@ -124,6 +124,10 @@
 <script>
     function ShowTestGameDescription() {
       document.getElementById('DiscriptionUIHidden').id = 'TestGameUI';
+    }
+                                                                   
+    function CloseTestGameDescription() {
+      document.getElementById('TestGameUI').id = DescriptionUIHidden;                                                              
     }
   </script>
 </body>
