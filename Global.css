@@ -1,4 +1,4 @@
-#myButton {
+/*#myButton {
   background-color: #808080;
   border: 3px solid #121212;
   color: black;
@@ -8,4 +8,8 @@
   display: inline-block;
   font-size: 15px;
   border-radius: 15px;
+}*/
+
+#myButton {
+  background-color: #808080; 
 }
