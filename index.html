@@ -83,7 +83,7 @@
 <center>
   
 <div class = button_div>
-<input type="button" value="Test Game" id="myButton" class="game_button" onclick="ShowTestGameDescription()">                                                                                                                                                                           
+<input type="button" value="Test Game Button" id="myButton" class="game_button" onclick="ShowTestGameDescription()">                                                                                                                                                                           
 </div>  
 
 <div id="DiscriptionUIHidden" class="TestGameDescription">
@@ -120,8 +120,7 @@
 <script>
     function ShowTestGameDescription() {
       alert('Clicked');
-      let element = document.getElementsByClass('TestGameDescription');
-      element[0].id = 'UITestDescription';
+      document.getElementById('DiscriptionUIHidden').id = 'TestGameUI';
     }
   </script>
 </body>
