@@ -86,7 +86,9 @@
 <input type="button" value="New UI Test" id="myButton" class="game_button" onclick="ShowTestGameDescription()">                                                                                                                                                                           
 </div>  
 
-<p id="DiscriptionUIHidden" class="TestGameDescription">Hello This is a little test of my new UI thing I hope you like it.</p>
+<div id="DiscriptionUIHidden" class="TestGameDescription">
+  <p>Hello This is a little test of my new UI thing I hope you like it.</p>
+</div>
  
 <div class = button_div>
 <a href = 'hit-the-target.html';" id="myButton" class="game_button">Hit the target</a>                                                                                                                                                                                 
@@ -119,7 +121,7 @@
     function ShowTestGameDescription() {
       alert('Clicked');
       let element = document.getElementsByClass('TestGameDescription');
-      element.id = 'UITestDescription';
+      element[0].id = 'UITestDescription';
     }
   </script>
 </body>
