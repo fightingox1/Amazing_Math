@@ -161,13 +161,13 @@
 </div>
 <script>
     function ShowHitTheTargetDescription() {
-      let hitTheTargetButton = document.getElementById('HitTheTarget');
+      let hitTheTargetButton = document.getElementsByClass('HitTheTarget')[0];
       hitTheTargetButton.id = 'DescriptionUIOn';
       hitTheTargetButton.classList.add('GameDescriptionUI');
     }
                                                                    
     function CloseHitTheTargetDescription() {
-      let hitTheTargetButton = document.getElementById('HitTheTarget');
+      let hitTheTargetButton = document.getElementsByClass('HitTheTarget')[0];
       hitTheTargetButton.id = 'DescriptionUIHidden';
       hitTheTargetButton.classList.remove('GameDescriptionUI');                                                          
     }
