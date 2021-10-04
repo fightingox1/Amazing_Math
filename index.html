@@ -13,6 +13,8 @@
       padding: 30px;
     }
     
+    /* Hidden Buttons */
+    
     #HitTheTargetHidden {
       display: none; 
     }
@@ -20,6 +22,12 @@
     #TwentyFourtyEightHidden {
       display: none; 
     }
+    
+    #ClumsyBirdHidden {
+      display: none; 
+    }
+    
+    /* Hidden Buttons */
     
     #GameDescription {
       background-color: rgba(0, 0, 0, 0.5); 
@@ -146,15 +154,28 @@
     <p>You Should Know what 2048 is otherwise you are dumb</p>
   </div>
   
-  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='2048/index.html'">
   <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('TwentyFourtyEightShown', 'TwentyFourtyEightHidden')">
 </div>                               
 
 <!--- Clumsy Bird Button Code ---!>
 
 <div class = button_div>
-<a href = 'clumsy-bird/index.html';" id="myButton" class="game_button">Clumsy bird (Flappy Bird)</a>
-</div>
+<input type="button" value="Clumsy Bird (Flappy Bird)" id="myButton" class="game_button" onclick="ChangeDescription('ClumsyBirdHidden', 'ClumsyBirdShown')">                                                                                                                                                                           
+</div>  
+
+<div id="ClumsyBirdHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>This is flappy bird. You know what flappy bird is.</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='clumsy-bird/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('ClumsyBirdShown', 'ClumsyBirdHidden')">
+</div>       
+
+<!--- Tetris Button Code ---!>
+
+
 <div class = button_div>
 <a href = 'canvas-tetris-master/canvas-tetris-master/index.html';" id="myButton" class="game_button">Bad Tetris Clone</a>
 </div>
