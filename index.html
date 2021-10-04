@@ -22,7 +22,10 @@
     }
     
     #GameDescription {
-     background-color: rgba(0, 0, 0, 0.5); 
+      background-color: rgba(0, 0, 0, 0.5); 
+      padding: 10px;
+      border: 3px solid #121212;
+      border-radius: 15px;
     }
     
     .GameDescriptionUI {
@@ -122,8 +125,11 @@
 </div>  
 
 <div id="DescriptionUIHidden HitTheTarget" class="GameDescriptionUI">
-  <p id="GameDescription">Welcome to Hit The Target. In Hit The Target You Test you reaction speed by hitting the moving target. If you hit the randomly generated blocks than it is game over</p>
-  <p>This Game Was Made: Walmart Harrison(Logan)</p>
+  <div id="GameDescription">
+    <p>Welcome to Hit The Target. In Hit The Target You Test you reaction speed by hitting the moving target. If you hit the randomly generated blocks than it is game over</p>
+    <p>Creator: Walmart Harrison(Logan)</p>
+    <p>Editor: Tyler</p>
+  </div>
   
   <input type="button" value="Play Game" id="myButton" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
   <input type="button" value="Close" id="myButton" class="DescriptionButton" onclick="CloseHitTheTargetDescription()">
