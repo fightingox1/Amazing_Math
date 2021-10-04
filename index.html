@@ -148,7 +148,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown')">                                                                                                                                                                           
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown')">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
@@ -190,9 +190,23 @@
 <div class = button_div>
 <a href = 'snake-game.html';" id="myButton" class="game_button">HTML Snake (Just in case google snake gets blocked)</a>
 </div>
+
+<!--- Cookie Clicker Button Code ---!>
+
 <div class = button_div>
-<a href = 'cookie-clicker.html';" id="myButton" class="game_button">Cookie Clicker</a>
-</div>
+<input type="button" value="Cookie Clicker" id="myButton" class="game_button" onclick="ChangeDescription('CookieClickerHidden', 'CookieClickerShown')">                                                                                                                                                                           
+</div>  
+
+<div id="CookieClickerHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>You click the cookie. And then you buy upgrades</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='cookie-clicker-master/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('CookieClickerShown', 'CookieClickerHidden')">
+</div>    
+
+
   <script>
     function ChangeDescription(CurrentID, NewID) {
       document.getElementById(CurrentID).id = NewID;
