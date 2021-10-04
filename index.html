@@ -13,12 +13,16 @@
       padding: 30px;
     }
     
-    #HitTheTargetHidden {
-      display: none;  
+    #HideClass {
+      display: none; 
     }
     
-    #DescriptionUIOn {
-      
+    #HitTheTargetHidden {
+      #HideClass;  
+    }
+    
+    #2048Hidden {
+      #HideClass;  
     }
     
     #GameDescription {
@@ -120,6 +124,8 @@
 </div>
 <center>
   
+<!--- Hit The Target Button Code ---!>  
+ 
 <div class = button_div>
 <input type="button" value="Hit The Target" id="myButton" class="game_button" onclick="ChangeDescription('HitTheTargetHidden', 'HitTheTargetShown')">                                                                                                                                                                           
 </div>  
@@ -132,13 +138,24 @@
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
   <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('HitTheTargetShown', 'HitTheTargetHidden')">
 </div>
-                                                                   
+  
+<!--- 2048 Button Code ---!>
+                           
 <div class = button_div>
-<a href = 'get-the-coin.html';" id="myButton" class="game_button">Collect The Coins (work in progress)</a>
-</div>
-<div class = button_div>
-<a href = '2048/2048-master/index.html';" id="myButton" class="game_button">2048</a>
-</div>
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('2048Hidden', '2048Shown')">                                                                                                                                                                           
+</div>  
+
+<div id="2048Hidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>You SHould Know what 2048 is otherwise you are dumb</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('2048Shown', '2048Hidden')">
+</div>                               
+
+<!--- Clumsy Bird Button Code ---!>
+
 <div class = button_div>
 <a href = 'clumsy-bird/index.html';" id="myButton" class="game_button">Clumsy bird (Flappy Bird)</a>
 </div>
