@@ -17,6 +17,10 @@
       display: none; 
     }
     
+    #TwentyFourtyEightHidden {
+      display: none; 
+    }
+    
     #GameDescription {
       background-color: rgba(0, 0, 0, 0.5); 
       padding: 10px;
@@ -134,16 +138,16 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('2048Hidden', '2048Shown')">                                                                                                                                                                           
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown')">                                                                                                                                                                           
 </div>  
 
-<div id="2048Hidden" class="GameDescriptionUI">
+<div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
   <div id="GameDescription">
     <p>You Should Know what 2048 is otherwise you are dumb</p>
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('2048Shown', '2048Hidden')">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('TwentyFourtyEightShown', 'TwentyFourtyEightHidden')">
 </div>                               
 
 <!--- Clumsy Bird Button Code ---!>
