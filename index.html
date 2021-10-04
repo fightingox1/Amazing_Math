@@ -83,10 +83,10 @@
 <center>
   
 <div class = button_div>
-<input type="button" value="New UI Test - A" id="myButton" class="game_button" onclick="msg(thing To message)">                                                                                                                                                                           
+<input type="button" value="New UI Test - A" id="myButton" class="game_button" onclick="ShowTestGameDescription()">                                                                                                                                                                           
 </div>  
 
-<p id = "UITestDescription">Hello This is a little test of my new UI thing</p>
+<p id="DiscriptionUIHidden" class="TestGameDescription">Hello This is a little test of my new UI thing</p>
  
 <div class = button_div>
 <a href = 'hit-the-target.html';" id="myButton" class="game_button">Hit the target</a>                                                                                                                                                                                 
@@ -116,8 +116,9 @@
 <a href = 'cookie-clicker.html';" id="myButton" class="game_button">Cookie Clicker</a>
 </div>
 <script>
-    function msg(WhatToMessage) {
-      alert(WhatToMessage);   
+    function ShowTestGameDescription() {
+      let element = document.getElementsByClass('TestGameDescription');
+      element.id = 'UITestDescription';
     }
   </script>
 </body>
