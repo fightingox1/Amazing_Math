@@ -66,7 +66,7 @@
   <link rel="stylesheet" href="Global.css">
 </head>
 <body>
-<button class="button-28" role="button">Home</button>
+<button class="button-28" role="button">Home Button</button>
 
 </body>
 
@@ -102,15 +102,9 @@ var apple = {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-
-  var lastUpdate = Date.now();
-var myInterval = setInterval(tick, 0);
   
 // game loop
 function loop() {
-  var now = Date.now();
-  var dt = now - lastUpdate;
-  lastUpdate = now;
   requestAnimationFrame(loop);
 
   // slow game loop to 15 fps instead of 60 (60/15 = 4)
@@ -122,8 +116,8 @@ function loop() {
   context.clearRect(0,0,canvas.width,canvas.height);
 
   // move snake by it's velocity
-  snake.x += snake.dx * dt;
-  snake.y += snake.dy * dt;
+  snake.x += snake.dx;
+  snake.y += snake.dy;
 
   // wrap snake position horizontally on edge of screen
   if (snake.x < 0) {
