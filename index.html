@@ -17,7 +17,15 @@
       display: none;  
     }
     
-    #HitTheTargetUI {
+    #DescriptionUIOn {
+      
+    }
+    
+    #GameDescription {
+     background-color: rgba(0, 0, 0, 0.5); 
+    }
+    
+    .GameDescriptionUI {
       background-color: #909090;
       width: 90%;
       border-radius: 15px;
@@ -113,8 +121,8 @@
 <input type="button" value="Hit The Target" id="myButton" class="game_button" onclick="ShowHitTheTargetDescription()">                                                                                                                                                                           
 </div>  
 
-<div id="DescriptionUIHidden">
-  <p>Welcome to Hit The Target. In Hit The Target You Test you reaction speed by hitting the moving target. If you hit the randomly generated blocks than it is game over</p>
+<div id="DescriptionUIHidden HitTheTarget" class="GameDescriptionUI">
+  <p id="GameDescription">Welcome to Hit The Target. In Hit The Target You Test you reaction speed by hitting the moving target. If you hit the randomly generated blocks than it is game over</p>
   <p>This Game Was Made: Walmart Harrison(Logan)</p>
   
   <input type="button" value="Play Game" id="myButton" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
@@ -147,11 +155,11 @@
 </div>
 <script>
     function ShowHitTheTargetDescription() {
-      document.getElementById('DescriptionUIHidden').id = 'HitTheTargetUI';
+      document.getElementById('HitTheTarget').id = 'DescriptionUIOn';
     }
                                                                    
     function CloseHitTheTargetDescription() {
-      document.getElementById('HitTheTargetUI').id = 'DescriptionUIHidden';                                                              
+      document.getElementById('HitTheTarget').id = 'DescriptionUIHidden';                                                              
     }
   </script>
 </body>
