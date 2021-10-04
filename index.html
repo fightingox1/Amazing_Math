@@ -13,22 +13,22 @@
       padding: 30px;
     }
     
-    #DiscriptionUIHidden {
+    #DescriptionUIHidden {
       display: none;  
     }
     
     #HitTheTargetUI {
-      background-color: #121212;
+      background-color: #909090;
       width: 90%;
       border-radius: 15px;
       font-size: 25px;
       text-decoration: none;
       float: center;
-      color: #606060;
+      color: #121212;
       padding: 15px;
     }
     
-    #DescriptionButton {
+    .DescriptionButton {
       background-color: #808080;
       border: none;
       color: white;
@@ -149,11 +149,11 @@
 </div>
 <script>
     function ShowHitTheTargetDescription() {
-      document.getElementById('DiscriptionUIHidden').id = 'HitTheTargetUI';
+      document.getElementById('DescriptionUIHidden').id = 'HitTheTargetUI';
     }
                                                                    
     function CloseHitTheTargetDescription() {
-      document.getElementById('HitTheTargetUI').id = 'DiscriptionUIHidden';                                                              
+      document.getElementById('HitTheTargetUI').id = 'DescriptionUIHidden';                                                              
     }
   </script>
 </body>
