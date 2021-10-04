@@ -124,11 +124,11 @@
 <input type="button" value="Hit The Target" id="myButton" class="game_button" onclick="ShowHitTheTargetDescription()">                                                                                                                                                                           
 </div>  
 
-<div id="DescriptionUIHidden HitTheTarget" class="GameDescriptionUI">
+<div id="DescriptionUIHidden HitTheTarget">
   <div id="GameDescription">
     <p>Welcome to Hit The Target. In Hit The Target You Test you reaction speed by hitting the moving target. If you hit the randomly generated blocks than it is game over</p>
-    <p>Creator: Walmart Harrison(Logan)</p>
-    <p>Editor: Tyler</p>
+    <p>Creator: Walmart Harrison (Logan)</p>
+    <p>Editor: Tyler Spruill</p>
   </div>
   
   <input type="button" value="Play Game" id="myButton" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
@@ -161,11 +161,15 @@
 </div>
 <script>
     function ShowHitTheTargetDescription() {
-      document.getElementById('HitTheTarget').id = 'DescriptionUIOn';
+      let hitTheTargetButton = document.getElementById('HitTheTarget');
+      hitTheTargetButton.id = 'DescriptionUIOn';
+      hitTheTargetButton.classList.add('GameDescriptionUI');
     }
                                                                    
     function CloseHitTheTargetDescription() {
-      document.getElementById('HitTheTarget').id = 'DescriptionUIHidden';                                                              
+      let hitTheTargetButton = document.getElementById('HitTheTarget');
+      hitTheTargetButton.id = 'DescriptionUIHidden';
+      hitTheTargetButton.classList.remove('GameDescriptionUI');                                                          
     }
   </script>
 </body>
