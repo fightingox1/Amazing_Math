@@ -161,11 +161,13 @@
 </div>
 <script>
     function ShowHitTheTargetDescription() {
+      alert('Hello World');
       var hitTheTargetButton = document.getElementsByClass('HitTheTarget');
+      alert(hitTheTargetButton.length);
+      
       var button = hitTheTargetButton[0];
       button.id = 'DescriptionUIOn';
       button.classList.add('GameDescriptionUI');
-      alert(hitTheTargetButton.length);
     }
                                                                    
     function CloseHitTheTargetDescription() {
