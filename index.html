@@ -121,7 +121,7 @@
 <center>
   
 <div class = button_div>
-<input type="button" value="Hit The Target - TylerIsGay" id="myButton" class="game_button" onclick="ShowHitTheTargetDescription()">                                                                                                                                                                           
+<input type="button" value="Hit The Target - TylerIsAVeryGayMan" id="myButton" class="game_button" onclick="ChangeDescription('HitTheTargetHidden', 'HitTheTargetShown')">                                                                                                                                                                           
 </div>  
 
 <div id="HitTheTargetHidden" class="GameDescriptionUI">
@@ -159,15 +159,9 @@
 <div class = button_div>
 <a href = 'cookie-clicker.html';" id="myButton" class="game_button">Cookie Clicker</a>
 </div>
-<script>
-    function ShowHitTheTargetDescription() {
-      document.getElementById('HitTheTargetHidden').id = 'HitTheTargetShown';
-    }
-                                                                   
-    function CloseHitTheTargetDescription() {
-      let hitTheTargetButton = document.getElementsByClass('HitTheTarget')[0];
-      hitTheTargetButton.id = 'DescriptionUIHidden';
-      hitTheTargetButton.classList.remove('GameDescriptionUI');                                                          
-    }
+  <script>
+    function ChangeDescription(CurrentID, NewID) {
+      document.getElementById(CurrentID).id = NewID;
+    }                                                           
   </script>
 </body>
