@@ -121,7 +121,7 @@
 <center>
   
 <div class = button_div>
-<input type="button" value="Hit The Target - D" id="myButton" class="game_button" onclick="ShowHitTheTargetDescription()">                                                                                                                                                                           
+<input type="button" value="Hit The Target - E" id="myButton" class="game_button" onclick="ShowHitTheTargetDescription()">                                                                                                                                                                           
 </div>  
 
 <div class="HitTheTarget" id="DescriptionUIHidden">
@@ -161,9 +161,11 @@
 </div>
 <script>
     function ShowHitTheTargetDescription() {
-      let hitTheTargetButton = document.getElementsByClass('HitTheTarget')[0];
-      hitTheTargetButton.id = 'DescriptionUIOn';
-      hitTheTargetButton.classList.add('GameDescriptionUI');
+      var hitTheTargetButton = document.getElementsByClass('HitTheTarget');
+      var button = hitTheTargetButton[0];
+      button.id = 'DescriptionUIOn';
+      button.classList.add('GameDescriptionUI');
+      alert("Added");
     }
                                                                    
     function CloseHitTheTargetDescription() {
