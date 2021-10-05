@@ -81,6 +81,7 @@
       float: center;
       color: #121212;
       padding: 15px;
+      height 250px;
       animation-name: animateOpenCrop;
       animation-duration: 2s; 
     }
@@ -89,7 +90,7 @@
       /*from {clip-path: inset(0 0 100% 0);}
       to {clip-path: inset(0 0 0% 0);}*/
       from { height: 0px; }
-      to { height: auto; }
+      to { height: 250px; }
     }
     
      @keyframes animateCloseCrop {
@@ -107,6 +108,9 @@
       display: inline-block;
       font-size: 20px;
       border-radius: 15px;
+      
+      position: absolute;
+      bottom: 0px;
     }
     
     .DescriptionButton:hover {
