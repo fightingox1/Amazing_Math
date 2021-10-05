@@ -70,8 +70,10 @@
     }
     
     @keyframes animateOpenCrop {
-      from {clip-path: inset(0 0 100% 0);}
-      to {clip-path: inset(0 0 0% 0);}
+      /*from {clip-path: inset(0 0 100% 0);}
+      to {clip-path: inset(0 0 0% 0);}*/
+      from { width: 0px; }
+      to {width: 100px; }
     }
     
      @keyframes animateCloseCrop {
@@ -179,7 +181,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
