@@ -17,34 +17,50 @@
     
     #HitTheTargetHidden {
       display: none; 
+            animation-name: animateOpenCrop;
+      animation-duration: 2s; 
     }
     
     #TwentyFourtyEightHidden {
       display: none; 
+            animation-name: animateCloseCrop;
+      animation-duration: 2s; 
     }
     
     #ClumsyBirdHidden {
       display: none; 
+            animation-name: animateCloseCrop;
+      animation-duration: 2s; 
     }
     
     #TetrisHidden {
       display: none; 
+            animation-name: animateCloseCrop;
+      animation-duration: 2s; 
     }
     
     #HextrisHidden {
       display: none; 
+            animation-name: animateCloseCrop;
+      animation-duration: 2s; 
     }
    
     #JavascriptRacerHidden {
       display: none; 
+            animation-name: animateCloseCrop;
+      animation-duration: 2s; 
     }
     
     #SnakeHidden {
-      display: none; 
+      display: none;
+            animation-name: animateCloseCrop;
+      animation-duration: 2s; 
     }
     
     #CookieClickerHidden {
       display: none; 
+      animation-name: animateCloseCrop;
+      animation-duration: 2s; 
     }
     
     /* Hidden Buttons */
@@ -65,6 +81,7 @@
       float: center;
       color: #121212;
       padding: 15px;
+      height: 250px;
       animation-name: animateOpenCrop;
       animation-duration: 2s; 
     }
@@ -73,12 +90,12 @@
       /*from {clip-path: inset(0 0 100% 0);}
       to {clip-path: inset(0 0 0% 0);}*/
       from { height: 0px; }
-      to { height: 100px; }
+      to { height: 250px; }
     }
     
      @keyframes animateCloseCrop {
-      from {clip-path: inset(0 0 0% 0);}
-      to {clip-path: inset(0 0 100% 0);}
+      from { height: 250px; }
+      to { height: 0px; }
     }
     
     .DescriptionButton {
@@ -181,7 +198,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
