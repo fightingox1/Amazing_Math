@@ -27,6 +27,22 @@
       display: none; 
     }
     
+    #TetrisHidden {
+      display: none; 
+    }
+    
+    #HextrisHidden {
+      display: none; 
+    }
+   
+    #JavascriptRacerHidden {
+      display: none; 
+    }
+    
+    #SnakeHidden {
+      display: none; 
+    }
+    
     #CookieClickerHidden {
       display: none; 
     }
@@ -181,18 +197,62 @@
 
 <!--- Tetris Button Code ---!>
 
+<div class = button_div>
+<input type="button" value="Tetris" id="myButton" class="game_button" onclick="ChangeDescription('TetrisHidden', 'TetrisShown')">                                                                                                                                                                           
+</div>  
+
+<div id="TetrisHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>Tetris is a classic. You know it</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='canvas-tetris-master/canvas-tetris-master/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('TetrisShown', 'TetrisHidden')">
+</div>
+
+<!--- Hextris Button Code ---!>
 
 <div class = button_div>
-<a href = 'canvas-tetris-master/canvas-tetris-master/index.html';" id="myButton" class="game_button">Bad Tetris Clone</a>
+<input type="button" value="Hextris" id="myButton" class="game_button" onclick="ChangeDescription('HextrisHidden', 'HextrisShown')">                                                                                                                                                                           
+</div>  
+
+<div id="HextrisHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>You rotate a hex to make pairs of three and then they go by by</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hextris-gh-pages/hextris-gh-pages/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('HextrisShown', 'HextrisHidden')">
 </div>
+
+<!--- Javascript Racer Button Code ---!>
+
 <div class = button_div>
-<a href = 'hextris-gh-pages/hextris-gh-pages/index.html';" id="myButton" class="game_button">Hextris (This is supprisingly fun)</a>
+<input type="button" value="Javascript Racer" id="myButton" class="game_button" onclick="ChangeDescription('JavascriptRacerHidden', 'JavascriptRacerShown')">                                                                                                                                                                           
+</div>  
+
+<div id="JavascriptRacerHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>Car go race and that is very fun that is why you play the game.</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='javascript-racer-master/javascript-racer-master/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('JavascriptRacerShown', 'JavascriptRacerHidden')">
 </div>
+
+<!--- Snake Button Code ---!>
+
 <div class = button_div>
-<a href = 'javascript-racer-master/javascript-racer-master/index.html';" id="myButton" class="game_button">Car Racing Game go brrrrrr</a>
-</div>
-<div class = button_div>
-<a href = 'snake-game.html';" id="myButton" class="game_button">HTML Snake (Just in case google snake gets blocked)</a>
+<input type="button" value="Snake" id="myButton" class="game_button" onclick="ChangeDescription('SnakeHidden', 'SnakeShown')">                                                                                                                                                                           
+</div>  
+
+<div id="SnakeHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>Look if the county finds a way to block google snake than this is here.</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='snake-game.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('SnakeShown', 'SnakeHidden')">
 </div>
 
 <!--- Cookie Clicker Button Code ---!>
