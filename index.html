@@ -65,13 +65,18 @@
       float: center;
       color: #121212;
       padding: 15px;
-      animation-name: animateCrop;
+      animation-name: animateOpenCrop;
       animation-duration: 2s; 
     }
     
-    @keyframes animateCrop {
+    @keyframes animateOpenCrop {
       from {clip-path: inset(0 0 100% 0);}
       to {clip-path: inset(0 0 0% 0);}
+    }
+    
+     @keyframes animateCloseCrop {
+      from {clip-path: inset(0 0 0% 0);}
+      to {clip-path: inset(0 0 100% 0);}
     }
     
     .DescriptionButton {
@@ -102,6 +107,7 @@
       font-size: 20px;
       width: 95%;
       border-radius: 15px;
+      position: relative;
     }
     
     .gameDescription {
@@ -173,7 +179,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown')">                                                                                                                                                                           
+<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown')">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
