@@ -341,7 +341,7 @@
     function ChangeDescription(CurrentID, NewID, Add) {      
       var element = document.getElementById(CurrentID);
       if (element == null) {
-        alert('Hello World');
+        ChangeDescription(NewID, CurrentID, false);
       } else {
         element.id = NewID;
       } 
