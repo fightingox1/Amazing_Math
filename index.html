@@ -164,7 +164,7 @@
 <!--- Hit The Target Button Code ---!>  
  
 <div class = button_div>
-<input type="button" value="Hit The Target" id="myButton" class="game_button" onclick="ChangeDescription('HitTheTargetHidden', 'HitTheTargetShown')">                                                                                                                                                                           
+<input type="button" value="Hit The Target" id="myButton" class="game_button" onclick="ChangeDescription('HitTheTargetHidden', 'HitTheTargetShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="HitTheTargetHidden" class="GameDescriptionUI">
@@ -173,13 +173,13 @@
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('HitTheTargetShown', 'HitTheTargetHidden')">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('HitTheTargetShown', 'HitTheTargetHidden', true)">
 </div>
   
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown')">                                                                                                                                                                           
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
@@ -188,13 +188,13 @@
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='2048/2048-master/index.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('TwentyFourtyEightShown', 'TwentyFourtyEightHidden')">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('TwentyFourtyEightShown', 'TwentyFourtyEightHidden', true)">
 </div>                               
 
 <!--- Clumsy Bird Button Code ---!>
 
 <div class = button_div>
-<input type="button" value="Clumsy Bird (Flappy Bird)" id="myButton" class="game_button" onclick="ChangeDescription('ClumsyBirdHidden', 'ClumsyBirdShown')">                                                                                                                                                                           
+<input type="button" value="Clumsy Bird (Flappy Bird)" id="myButton" class="game_button" onclick="ChangeDescription('ClumsyBirdHidden', 'ClumsyBirdShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="ClumsyBirdHidden" class="GameDescriptionUI">
@@ -203,13 +203,13 @@
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='clumsy-bird/index.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('ClumsyBirdShown', 'ClumsyBirdHidden')">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('ClumsyBirdShown', 'ClumsyBirdHidden', true)">
 </div>       
 
 <!--- Tetris Button Code ---!>
 
 <div class = button_div>
-<input type="button" value="Tetris" id="myButton" class="game_button" onclick="ChangeDescription('TetrisHidden', 'TetrisShown')">                                                                                                                                                                           
+<input type="button" value="Tetris" id="myButton" class="game_button" onclick="ChangeDescription('TetrisHidden', 'TetrisShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TetrisHidden" class="GameDescriptionUI">
@@ -218,13 +218,13 @@
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='canvas-tetris-master/canvas-tetris-master/index.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('TetrisShown', 'TetrisHidden')">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('TetrisShown', 'TetrisHidden', true)">
 </div>
 
 <!--- Hextris Button Code ---!>
 
 <div class = button_div>
-<input type="button" value="Hextris" id="myButton" class="game_button" onclick="ChangeDescription('HextrisHidden', 'HextrisShown')">                                                                                                                                                                           
+<input type="button" value="Hextris" id="myButton" class="game_button" onclick="ChangeDescription('HextrisHidden', 'HextrisShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="HextrisHidden" class="GameDescriptionUI">
@@ -233,13 +233,13 @@
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hextris-gh-pages/hextris-gh-pages/index.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('HextrisShown', 'HextrisHidden')">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('HextrisShown', 'HextrisHidden', true)">
 </div>
 
 <!--- Javascript Racer Button Code ---!>
 
 <div class = button_div>
-<input type="button" value="Javascript Racer" id="myButton" class="game_button" onclick="ChangeDescription('JavascriptRacerHidden', 'JavascriptRacerShown')">                                                                                                                                                                           
+<input type="button" value="Javascript Racer" id="myButton" class="game_button" onclick="ChangeDescription('JavascriptRacerHidden', 'JavascriptRacerShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="JavascriptRacerHidden" class="GameDescriptionUI">
@@ -248,13 +248,13 @@
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='javascript-racer-master/javascript-racer-master/index.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('JavascriptRacerShown', 'JavascriptRacerHidden')">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('JavascriptRacerShown', 'JavascriptRacerHidden', true)">
 </div>
 
 <!--- Snake Button Code ---!>
 
 <div class = button_div>
-<input type="button" value="Snake" id="myButton" class="game_button" onclick="ChangeDescription('SnakeHidden', 'SnakeShown')">                                                                                                                                                                           
+<input type="button" value="Snake" id="myButton" class="game_button" onclick="ChangeDescription('SnakeHidden', 'SnakeShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="SnakeHidden" class="GameDescriptionUI">
@@ -263,13 +263,13 @@
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='snake-game.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('SnakeShown', 'SnakeHidden')">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('SnakeShown', 'SnakeHidden', true)">
 </div>
 
 <!--- Cookie Clicker Button Code ---!>
 
 <div class = button_div>
-<input type="button" value="Cookie Clicker" id="myButton" class="game_button" onclick="ChangeDescription('CookieClickerHidden', 'CookieClickerShown')">                                                                                                                                                                           
+<input type="button" value="Cookie Clicker" id="myButton" class="game_button" onclick="ChangeDescription('CookieClickerHidden', 'CookieClickerShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="CookieClickerHidden" class="GameDescriptionUI">
@@ -278,7 +278,7 @@
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='cookie-clicker-master/index.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('CookieClickerShown', 'CookieClickerHidden')">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('CookieClickerShown', 'CookieClickerHidden', true)">
 </div>    
 
 
