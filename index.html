@@ -283,9 +283,10 @@
 
 
   <script>
-    var list = [];
+    var listOfObjects = [];
 
     function ChangeDescription(CurrentID, NewID) {
+      alert(listOfObjects.length);
       document.getElementById(CurrentID).id = NewID;
       var i = 0;
       var toAdd = true;
