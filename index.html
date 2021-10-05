@@ -12,6 +12,79 @@
       font-size: 30px;
       padding: 30px;
     }
+    
+    /* Hidden Buttons */
+    
+    #HitTheTargetHidden {
+      display: none; 
+    }
+    
+    #TwentyFourtyEightHidden {
+      display: none; 
+    }
+    
+    #ClumsyBirdHidden {
+      display: none; 
+    }
+    
+    #TetrisHidden {
+      display: none; 
+    }
+    
+    #HextrisHidden {
+      display: none; 
+    }
+   
+    #JavascriptRacerHidden {
+      display: none; 
+    }
+    
+    #SnakeHidden {
+      display: none; 
+    }
+    
+    #CookieClickerHidden {
+      display: none; 
+    }
+    
+    /* Hidden Buttons */
+    
+    #GameDescription {
+      background-color: rgba(0, 0, 0, 0.5); 
+      padding: 10px;
+      border: 3px solid #121212;
+      border-radius: 15px;
+    }
+    
+    .GameDescriptionUI {
+      background-color: #909090;
+      width: 90%;
+      border-radius: 15px;
+      font-size: 25px;
+      text-decoration: none;
+      float: center;
+      color: #121212;
+      padding: 15px;
+      
+      clip: rect(0px,60px,200px,0px);
+    }
+    
+    .DescriptionButton {
+      background-color: #808080;
+      border: none;
+      color: white;
+      text-align: center;
+      float: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 15px;
+    }
+    
+    .DescriptionButton:hover {
+      background: #757575;
+    }
+    
     .game_button{
       background-color: #808080;
       border: none;
@@ -56,6 +129,8 @@
       font-family: Arial, Helvetica, sans-serif;
       color: #808080;
   </style>
+  
+  
 </head>
 <body>
 
@@ -74,28 +149,131 @@
 </center>
 </div>
 <center>
+  
+<!--- Hit The Target Button Code ---!>  
+ 
 <div class = button_div>
-<a href = 'hit-the-target.html';" id="myButton" class="game_button">Hit the target</a>                                                                                                                                                                                 
+<input type="button" value="Hit The Target" id="myButton" class="game_button" onclick="ChangeDescription('HitTheTargetHidden', 'HitTheTargetShown')">                                                                                                                                                                           
+</div>  
+
+<div id="HitTheTargetHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>Welcome to Hit The Target. In Hit The Target You Test you reaction speed by hitting the moving target. If you hit the randomly generated blocks than it is game over</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('HitTheTargetShown', 'HitTheTargetHidden')">
 </div>
+  
+<!--- 2048 Button Code ---!>
+                           
 <div class = button_div>
-<a href = 'get-the-coin.html';" id="myButton" class="game_button">Collect The Coins (work in progress)</a>
-</div>
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown')">                                                                                                                                                                           
+</div>  
+
+<div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>You Should Know what 2048 is otherwise you are dumb</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='2048/2048-master/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('TwentyFourtyEightShown', 'TwentyFourtyEightHidden')">
+</div>                               
+
+<!--- Clumsy Bird Button Code ---!>
+
 <div class = button_div>
-<a href = '2048/2048-master/index.html';" id="myButton" class="game_button">2048</a>
-</div>
+<input type="button" value="Clumsy Bird (Flappy Bird)" id="myButton" class="game_button" onclick="ChangeDescription('ClumsyBirdHidden', 'ClumsyBirdShown')">                                                                                                                                                                           
+</div>  
+
+<div id="ClumsyBirdHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>This is flappy bird. You know what flappy bird is.</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='clumsy-bird/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('ClumsyBirdShown', 'ClumsyBirdHidden')">
+</div>       
+
+<!--- Tetris Button Code ---!>
+
 <div class = button_div>
-<a href = 'clumsy-bird/index.html';" id="myButton" class="game_button">Clumsy bird (Flappy Bird)</a>
+<input type="button" value="Tetris" id="myButton" class="game_button" onclick="ChangeDescription('TetrisHidden', 'TetrisShown')">                                                                                                                                                                           
+</div>  
+
+<div id="TetrisHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>Tetris is a classic. You know it</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='canvas-tetris-master/canvas-tetris-master/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('TetrisShown', 'TetrisHidden')">
 </div>
+
+<!--- Hextris Button Code ---!>
+
 <div class = button_div>
-<a href = 'canvas-tetris-master/canvas-tetris-master/index.html';" id="myButton" class="game_button">Bad Tetris Clone</a>
+<input type="button" value="Hextris" id="myButton" class="game_button" onclick="ChangeDescription('HextrisHidden', 'HextrisShown')">                                                                                                                                                                           
+</div>  
+
+<div id="HextrisHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>You rotate a hex to make pairs of three and then they go by by</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hextris-gh-pages/hextris-gh-pages/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('HextrisShown', 'HextrisHidden')">
 </div>
+
+<!--- Javascript Racer Button Code ---!>
+
 <div class = button_div>
-<a href = 'hextris-gh-pages/hextris-gh-pages/index.html';" id="myButton" class="game_button">Hextris (This is supprisingly fun)</a>
+<input type="button" value="Javascript Racer" id="myButton" class="game_button" onclick="ChangeDescription('JavascriptRacerHidden', 'JavascriptRacerShown')">                                                                                                                                                                           
+</div>  
+
+<div id="JavascriptRacerHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>Car go race and that is very fun that is why you play the game.</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='javascript-racer-master/javascript-racer-master/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('JavascriptRacerShown', 'JavascriptRacerHidden')">
 </div>
+
+<!--- Snake Button Code ---!>
+
 <div class = button_div>
-<a href = 'javascript-racer-master/javascript-racer-master/index.html';" id="myButton" class="game_button">Car Racing Game go brrrrrr</a>
+<input type="button" value="Snake" id="myButton" class="game_button" onclick="ChangeDescription('SnakeHidden', 'SnakeShown')">                                                                                                                                                                           
+</div>  
+
+<div id="SnakeHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>Look if the county finds a way to block google snake than this is here.</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='snake-game.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('SnakeShown', 'SnakeHidden')">
 </div>
+
+<!--- Cookie Clicker Button Code ---!>
+
 <div class = button_div>
-<a href = 'snake-game.html';" id="myButton" class="game_button">HTML Snake (Just in case google snake gets blocked)</a>
-</div>
+<input type="button" value="Cookie Clicker" id="myButton" class="game_button" onclick="ChangeDescription('CookieClickerHidden', 'CookieClickerShown')">                                                                                                                                                                           
+</div>  
+
+<div id="CookieClickerHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>You click the cookie. And then you buy upgrades</p>
+  </div>
+  
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='cookie-clicker-master/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('CookieClickerShown', 'CookieClickerHidden')">
+</div>    
+
+
+  <script>
+    function ChangeDescription(CurrentID, NewID) {
+      document.getElementById(CurrentID).id = NewID;
+    }                                                           
+  </script>
 </body>
