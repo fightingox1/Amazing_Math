@@ -338,8 +338,13 @@
   <script>
     var listOfObjects = [];
 
-    function ChangeDescription(CurrentID, NewID, Add) {
-      document.getElementById(CurrentID).id = NewID;
+    function ChangeDescription(CurrentID, NewID, Add) {      
+      var element = document.getElementById(CurrentID);
+      if (element == null) {
+        alert('Hello World');
+      } else {
+        element.id = NewID;
+      } 
     }                                                           
   </script>
 </body>
