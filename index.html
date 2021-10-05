@@ -179,7 +179,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown')">                                                                                                                                                                           
+<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown')">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
@@ -285,22 +285,25 @@
   <script>
     var listOfObjects = [];
 
-    function ChangeDescription(CurrentID, NewID) {
-      alert(listOfObjects.length);
-      document.getElementById(CurrentID).id = NewID;
-      var i = 0;
-      var toAdd = true;
-      for (i = 0; i < listOfObjects.length; i++) {
-        if (listOfObjects[i] == CurrentID) {
-          alert('It is there twice');
-          toAdd = false;
-          break;
+    function ChangeDescription(CurrentID, NewID, Add) {
+      if (Add) {
+        var i = 0;
+        var toAdd = true;
+        for (i = 0; i < listOfObjects.length; i++) {
+          if (listOfObjects[i] == CurrentID) {
+            toAdd = false;
+            break;
+          }
+        }
+        if (toAdd) {
+          listOfObjects.push(CurrentID);
+          listOfObjects.push(NewID);
         }
       }
-      if (toAdd) {
-        listOfObjects.push(CurrentID);
-        listOfObjects.push(NewID);
+      for (i = 0; i < listOfObjects.length / 2; i += 2) {
+        document.getElementById(listOfObjects[i]).id = listOfObjects[i + 1];    
       }
+      document.getElementById(CurrentID).id = NewID;
     }                                                           
   </script>
 </body>
