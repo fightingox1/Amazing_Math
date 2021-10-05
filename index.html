@@ -18,11 +18,11 @@
     @keyframes animateCloseCrop {
       from { 
         height: 250px; 
-        clip-path: inset(0 0 100% 0);
+        clip-path: inset(0 0 0 0);
       }
       to { 
         height: 0px; 
-        clip-path: inset(0 0 0% 0);
+        clip-path: inset(0 0 100% 0);
         display: none;
       }
     }
@@ -129,7 +129,6 @@
       background-color: #808080;
       border: none;
       color: white;
-      padding: 15px;
       text-align: center;
       float: center;
       text-decoration: none;
@@ -209,7 +208,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
