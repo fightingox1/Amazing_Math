@@ -340,6 +340,11 @@
 
     function ChangeDescription(CurrentID, NewID, Add) {      
       var element = document.getElementById(CurrentID);
+      if (Add) {
+        alert(CurrentID);
+        listOfObjects.push(CurrentID);
+      }
+
       if (element == null) {
         ChangeDescription(NewID, CurrentID, false);
       } else {
