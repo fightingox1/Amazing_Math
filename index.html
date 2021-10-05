@@ -65,8 +65,13 @@
       float: center;
       color: #121212;
       padding: 15px;
-      
-      clip-path: inset(0 0 57% 0);
+      animation-name: animateCrop;
+      animation-duration: 4s; 
+    }
+    
+    @keyframes animateCrop {
+      from {clip-path: inset(0 0 0 0);}
+      to {clip-path: inset(0 0 100% 0);}
     }
     
     .DescriptionButton {
@@ -144,7 +149,7 @@
 </div>
   
 <header>
-  <p class="Title">UNBLOCKED GAMES</p>
+  UNBLOCKED GAMES
 </header>
 </center>
 </div>
