@@ -341,20 +341,9 @@
 
     function ChangeDescription(CurrentID, NewID, Add) {      
       var element = document.getElementById(CurrentID);
-      if (Add) {
-        if (!listOfObjects.includes(CurrentID)) {
-          listOfObjects.push(CurrentID);
-          listOfNewID.push(NewID);
-        }
-      }
-
       if (element == null) {
         ChangeDescription(NewID, CurrentID, false);
       } else {
-        var i = 0;
-        for (i = 0; i < listOfObjects.length; i++) {
-          document.getElementById(listOfObjects[i]).id = listOfNewID[i];
-        }
         element.id = NewID;
       } 
     }                                                           
