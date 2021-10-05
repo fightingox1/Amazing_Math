@@ -286,7 +286,7 @@
     var listOfObjects = [];
 
     function ChangeDescription(CurrentID, NewID, Add) {
-      if (Add) {
+      /*if (Add) {
         var i = 0;
         var toAdd = true;
         for (i = 0; i < listOfObjects.length; i++) {
@@ -302,7 +302,7 @@
       }
       for (i = 0; i < listOfObjects.length / 2; i += 2) {
         document.getElementById(listOfObjects[i]).id = listOfObjects[i + 1];    
-      }
+      }*/
       document.getElementById(CurrentID).id = NewID;
     }                                                           
   </script>
