@@ -38,43 +38,59 @@
     }
     
     #TwentyFourtyEightHidden {
-      display: none; 
+            animation-name: animateCloseCrop;
+      animation-duration: 1s; 
+      padding: 0px;
+      height: 0px;
+      overflow: hidden;
     }
     
     #ClumsyBirdHidden {
-      display: none; 
             animation-name: animateCloseCrop;
-      animation-duration: 2s; 
+      animation-duration: 1s; 
+      padding: 0px;
+      height: 0px;
+      overflow: hidden;
     }
     
     #TetrisHidden {
-      display: none; 
-            animation-name: animateCloseCrop;
-      animation-duration: 2s; 
+      animation-name: animateCloseCrop;
+      animation-duration: 1s; 
+      padding: 0px;
+      height: 0px;
+      overflow: hidden;
     }
     
     #HextrisHidden {
-      display: none; 
-            animation-name: animateCloseCrop;
-      animation-duration: 2s; 
+      animation-name: animateCloseCrop;
+      animation-duration: 1s; 
+      padding: 0px;
+      height: 0px;
+      overflow: hidden;
     }
    
     #JavascriptRacerHidden {
-      display: none; 
-            animation-name: animateCloseCrop;
-      animation-duration: 2s; 
+      animation-name: animateCloseCrop;
+      animation-duration: 1s; 
+      padding: 0px;
+      height: 0px;
+      overflow: hidden;
     }
     
     #SnakeHidden {
-      display: none;
-            animation-name: animateCloseCrop;
-      animation-duration: 2s; 
+      animation-name: animateCloseCrop;
+      animation-duration: 1s; 
+      padding: 0px;
+      height: 0px;
+      overflow: hidden;
     }
     
     #CookieClickerHidden {
-      display: none; 
       animation-name: animateCloseCrop;
-      animation-duration: 2s; 
+      animation-duration: 1s; 
+      padding: 0px;
+      height: 0px;
+      overflow: hidden;
     }
     
     /* Hidden Buttons */
@@ -104,10 +120,12 @@
     
     @keyframes animateOpenCrop {
       from { 
+        padding: 0px;
         height: 0px; 
         clip-path: inset(0 0 100% 0);
       }
       to { 
+        padding: 15px;
         height: 250px; 
         clip-path: inset(0 0 0% 0);
         display: none;
