@@ -15,16 +15,18 @@
     
     /* Hidden Buttons */
     
-    #HitTheTargetHidden {
-      display: none; 
-            animation-name: animateOpenCrop;
+    .HiddenClass {
+      animation-name: animateCloseCrop;
       animation-duration: 2s; 
+      display: none; 
+    }
+    
+    #HitTheTargetHidden {
+      .HiddenClass
     }
     
     #TwentyFourtyEightHidden {
       display: none; 
-            animation-name: animateCloseCrop;
-      animation-duration: 2s; 
     }
     
     #ClumsyBirdHidden {
@@ -85,16 +87,16 @@
       height: 250px;
       
       animation-name: animateOpenCrop;
-      animation-duration: 2s; 
+      animation-duration: 1s; 
     }
     
     @keyframes animateOpenCrop {
       from { 
         height: 0px; 
-        clip-path: inset(0 0 0% 0%);
+        clip-path: inset(0 0 100% 0);
       }
       to { height: 250px; 
-        clip-path: inset(0 0 100% 0%);
+        clip-path: inset(0 0 0% 0);
       }
     }
     
@@ -203,7 +205,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
