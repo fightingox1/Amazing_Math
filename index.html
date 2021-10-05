@@ -338,11 +338,11 @@
   <script>
     var listOfObjects = [];
 
-    function ChangeDescription(CurrentID, NewID, Add) {      
+    function ChangeDescription(CurrentID, NewID, DoNotAdd) {      
       var element = document.getElementById(CurrentID);
-      if (Add) {
+      if (!DoNotAdd) {
         alert(CurrentID);
-        listOfObjects.push(CurrentID);
+        listOfObjects.push(NewID);
       }
 
       if (element == null) {
