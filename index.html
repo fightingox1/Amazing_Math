@@ -283,8 +283,23 @@
 
 
   <script>
+    var list = [];
+
     function ChangeDescription(CurrentID, NewID) {
       document.getElementById(CurrentID).id = NewID;
+      var i = 0;
+      var toAdd = true;
+      for (i = 0; i < listOfObjects.length; i++) {
+        if (listOfObjects[i] == CurrentID) {
+          alert('It is there twice');
+          toAdd = false;
+          break;
+        }
+      }
+      if (!toAdd) {
+        listOfObjects.push(CurrentID);
+        listOfObjects.push(NewID);
+      }
     }                                                           
   </script>
 </body>
