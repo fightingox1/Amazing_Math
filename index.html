@@ -16,17 +16,17 @@
     /* Hidden Buttons */
     
     @keyframes animateCloseCrop {
-      to { height: 250px; 
-        clip-path: inset(0 0 0% 0);
-      }
       from { 
         height: 0px; 
         clip-path: inset(0 0 100% 0);
       }
+      to { height: 250px; 
+        clip-path: inset(0 0 0% 0);
+      }
     }
     
     #HitTheTargetHidden {
-      animation-name: animateOpenCrop;
+      animation-name: animateCloseCrop;
       animation-duration: 1s; 
       height: 0px;
     }
@@ -206,7 +206,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
