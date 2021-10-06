@@ -26,8 +26,6 @@
     }
     
     #SettingsButton:hover {
-      width: 55px;
-      height: 55px;
       background-color: #262626;
     }
     
@@ -216,7 +214,7 @@
 
 <div class>
   
-<img src="Settings.png" id="SettingsButton">
+<img src="Settings.png" id="SettingsButton" onclick='DisplaySettings()'>
   
 <center>
   
@@ -353,13 +351,11 @@
 
 
   <script>
-    var listOfObjects = [];
+    function DisplaySettings() {
+      alert('Clicked Settings');
+    }
 
     function ChangeDescription(CurrentID, NewID, Add) {   
-      if (NewID.charAt(NewID.length - 1) == 'w') {
-        alert('It is shown');
-      }
-
       var element = document.getElementById(CurrentID);
       if (element == null) {
         ChangeDescription(NewID, CurrentID, false);
