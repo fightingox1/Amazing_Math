@@ -37,6 +37,10 @@
        left: 65px;
     }
     
+    #SettingsHidden {
+      display: none;  
+    }
+    
     #SettingsText {
       padding: 15px; 
     }
@@ -228,7 +232,7 @@
 
 <div class>
   
-  <div id="Settings">
+  <div id="SettingsHidden">
     <img src="Settings.png" id="SettingsButton" onclick='DisplaySettings()'>
     <div id="SettingsMenu">
       <div id="SettingsText">
@@ -373,7 +377,7 @@
 
   <script>
     function DisplaySettings() {
-      alert('Clicked Settings');
+      ChangeDescription('SettingsHidden', 'SettingsShown');
     }
 
     function ChangeDescription(CurrentID, NewID, Add) {   
