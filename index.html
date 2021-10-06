@@ -30,7 +30,7 @@
     
     #SettingsMenu {
        background-color: rgba(128, 128, 128, 1);
-       height: 210px;
+       height: 200px;
        width: 300px;
        position: absolute;
        border-radius: 15px;
@@ -445,7 +445,7 @@
     output.innerHTML = slider.value;
 
     slider.oninput = function() {
-      document.documentElement.style.setProperty('--animation-speed', this.value / 10);
+      document.documentElement.style.setProperty('--animation-speed', (this.value / 10).toString() + 's');
       output.innerHTML = this.value / 10;
     }   
 
