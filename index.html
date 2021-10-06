@@ -119,7 +119,7 @@
       height: 250px;
       
       animation-name: animateOpenCrop;
-      animation-duration: 1s; 
+      animation-duration: var(--animation-speed); 
     }
     
     @keyframes animateOpenCrop {
@@ -227,7 +227,6 @@
 <div id="HitTheTargetHidden" class="GameDescriptionUI">
   <div id="GameDescription">
     <p>You hit a target. Then you dont hit the boxes. Then you win.</p>
-    <p>"Its a peice of shit" - The Creator</p>
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
