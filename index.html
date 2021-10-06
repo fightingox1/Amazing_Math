@@ -294,9 +294,13 @@
     <div id="SettingsHidden">
       <div id="SettingsMenu">
         <div id="SettingsText">
-        <center>Animation Speed</center> 
-        <input type="range" min="0" max="100" value="50" class="slider" id="AnimationSpeed"> <br />
-        <center id="AnimationSpeedText"></center>
+          <center>Animation Speed</center> 
+          <input type="range" min="0" max="100" value="50" class="slider" id="AnimationSpeed"> <br />
+          <center id="AnimationSpeedText"></center>
+          <hr />
+          <center>Dark Mode</center> 
+          <input type="range" min="0" max="100" value="50" class="slider" id="AnimationSpeed"> <br />
+          <center id="DarkModeText"></center>
        </div>
       </div>
     </div>
@@ -441,7 +445,7 @@
     output.innerHTML = slider.value;
 
     slider.oninput = function() {
-      $(':root').css('--animation-speed', this.value / 10);
+      document.documentElement.style.setProperty('--animation-speed', this.value / 10);
       output.innerHTML = this.value / 10;
     }   
 
