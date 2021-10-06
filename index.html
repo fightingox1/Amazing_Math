@@ -236,7 +236,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
@@ -341,9 +341,12 @@
 
   <script>
     var listOfObjects = [];
-    var listOfNewID = [];
 
-    function ChangeDescription(CurrentID, NewID, Add) {      
+    function ChangeDescription(CurrentID, NewID, Add) {   
+      if (NewID.charAt(NewID.length - 1) == w) {
+        alert('It is shown');
+      }
+
       var element = document.getElementById(CurrentID);
       if (element == null) {
         ChangeDescription(NewID, CurrentID, false);
