@@ -6,6 +6,9 @@
     body {
       background-color: #121212;
     }
+    .p {
+      padding: 0px; 
+    }
     .b {
       background-color: #030303;
       color: white;
@@ -26,13 +29,16 @@
     }
     
     #SettingsMenu {
-       background-color: rgba(128, 128, 128, 0.5);
-       height: 400px;
+       background-color: rgba(128, 128, 128, 1);
+       height: 300px;
        width: 200px;
        position: absolute;
        border-radius: 15px;
        left: 65px;
-       z-index: 10;
+    }
+    
+    #SettingsText {
+      padding: 15px; 
     }
     
     @keyframes animateCloseCrop {
@@ -223,12 +229,14 @@
   <div id="Settings">
     <img src="Settings.png" id="SettingsButton" onclick='DisplaySettings()'>
     <div id="SettingsMenu">
+      <div id="SettingsText">
       <p>Animation Speed: </p>
       <p>Other Setting: </p>
       <p>Other Setting: </p>
       <p>Other Setting: </p>
       <p>Other Setting: </p>
-      <p>Dark Mode: </p>
+      Dark Mode:
+      </div>
     </div>
   </div>
 <center>
