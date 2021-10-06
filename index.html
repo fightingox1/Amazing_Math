@@ -13,6 +13,10 @@
       padding: 30px;
     }
     
+    :root {
+      --animation-speed: 0.5s; 
+    }
+    
     /* Hidden Buttons */
     
     @keyframes animateCloseCrop {
@@ -31,7 +35,7 @@
     
     #HitTheTargetHidden {
       animation-name: animateCloseCrop;
-      animation-duration: 1s; 
+      animation-duration: var(--animation-speed); 
       padding: 0px;
       height: 0px;
       overflow: hidden;
@@ -39,7 +43,7 @@
     
     #TwentyFourtyEightHidden {
             animation-name: animateCloseCrop;
-      animation-duration: 1s; 
+      animation-duration: var(--animation-speed); 
       padding: 0px;
       height: 0px;
       overflow: hidden;
@@ -47,7 +51,7 @@
     
     #ClumsyBirdHidden {
             animation-name: animateCloseCrop;
-      animation-duration: 1s; 
+      animation-duration: var(--animation-speed); 
       padding: 0px;
       height: 0px;
       overflow: hidden;
@@ -55,7 +59,7 @@
     
     #TetrisHidden {
       animation-name: animateCloseCrop;
-      animation-duration: 1s; 
+      animation-duration: var(--animation-speed); 
       padding: 0px;
       height: 0px;
       overflow: hidden;
@@ -63,7 +67,7 @@
     
     #HextrisHidden {
       animation-name: animateCloseCrop;
-      animation-duration: 1s; 
+      animation-duration: var(--animation-speed); 
       padding: 0px;
       height: 0px;
       overflow: hidden;
@@ -71,7 +75,7 @@
    
     #JavascriptRacerHidden {
       animation-name: animateCloseCrop;
-      animation-duration: 1s; 
+      animation-duration: var(--animation-speed); 
       padding: 0px;
       height: 0px;
       overflow: hidden;
@@ -79,7 +83,7 @@
     
     #SnakeHidden {
       animation-name: animateCloseCrop;
-      animation-duration: 1s; 
+      animation-duration: var(--animation-speed); 
       padding: 0px;
       height: 0px;
       overflow: hidden;
@@ -87,7 +91,7 @@
     
     #CookieClickerHidden {
       animation-name: animateCloseCrop;
-      animation-duration: 1s; 
+      animation-duration: var(--animation-speed); 
       padding: 0px;
       height: 0px;
       overflow: hidden;
@@ -223,6 +227,7 @@
 <div id="HitTheTargetHidden" class="GameDescriptionUI">
   <div id="GameDescription">
     <p>You hit a target. Then you dont hit the boxes. Then you win.</p>
+    <p>"Its a peice of shit" - The Creator</p>
   </div>
   
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='hit-the-target.html'">
