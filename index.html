@@ -41,6 +41,20 @@
       display: none;  
     }
     
+    @keyframes OpenSettingsMenu {
+       from { 
+        left: -100px;
+      }
+      to { 
+        left: 0px;
+      }
+    }
+    
+    #SettingsShown {
+      animation-name: OpenSettingsMenu;
+      animation-duration: var(--animation-speed); 
+    }
+    
     #SettingsText {
       padding: 15px; 
     }
