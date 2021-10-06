@@ -445,9 +445,12 @@
     output.innerHTML = slider.value;
 
     slider.oninput = function() {
-      document.documentElement.style.setProperty('--animation-speed', (this.value / 10).toString() + 's');
       output.innerHTML = this.value / 10;
     }   
+
+    document.getElementById("AnimationSpeed").addEventListener('change', function(){
+      document.documentElement.style.setProperty('--animation-speed', (this.value / 10).toString() + 's');
+    });
 
     function DisplaySettings() {
       ChangeDescription('SettingsHidden', 'SettingsShown');
