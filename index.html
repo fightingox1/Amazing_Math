@@ -38,6 +38,8 @@
     }
     
     #SettingsHidden {
+        animation-name: CloseSettingsMenu;
+        animation-duration: var(--animation-speed); 
        -webkit-transform: translateX(-100%);
     }
     
@@ -47,6 +49,15 @@
       }
       to { 
         -webkit-transform: translateX(0%);
+      }
+    }
+    
+    @keyframes CloseSettingsMenu {
+       from { 
+        -webkit-transform: translateX(0%);
+      }
+      to { 
+        -webkit-transform: translateX(-100%);
       }
     }
     
