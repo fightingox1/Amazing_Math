@@ -468,7 +468,7 @@
     }   
 
     function ChangeStyle() {
-      if (checkbox.checked) {
+      if (!checkbox.checked) {
         document.documentElement.style.setProperty('--background-color', darkBackground);
       } else {
         document.documentElement.style.setProperty('--background-color', lightBackgroud);
