@@ -30,7 +30,7 @@
     
     #SettingsMenu {
        background-color: rgba(128, 128, 128, 1);
-       height: 75px;
+       height: 125px;
        width: 300px;
        position: absolute;
        border-radius: 15px;
@@ -295,8 +295,8 @@
       <div id="SettingsMenu">
         <div id="SettingsText">
         <center>Animation Speed</center> 
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> <br />
-        <center>Dark Mode</center>
+        <input type="range" min="1" max="100" value="50" class="slider" id="AnimationSpeed"> <br />
+        <p id="AnimationSpeedText"></p>
        </div>
       </div>
     </div>
@@ -436,6 +436,14 @@
 
 
   <script>
+    var slider = document.getElementById("AnimationSpeed");
+    var output = document.getElementById("AnimationSpeedText");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }   
+
     function DisplaySettings() {
       ChangeDescription('SettingsHidden', 'SettingsShown');
     }
