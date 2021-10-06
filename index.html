@@ -295,11 +295,11 @@
       <div id="SettingsMenu">
         <div id="SettingsText">
           <center>Animation Speed</center> 
-          <input type="range" min="0" max="100" value="50" class="slider" id="AnimationSpeed"> <br />
+          <input type="range" min="0" max="100" value="0.5" class="slider" id="AnimationSpeed"> <br />
           <center id="AnimationSpeedText"></center>
           <hr />
           <center>Dark Mode</center> 
-          <input type="range" min="0" max="100" value="50" class="slider" id="AnimationSpeed"> <br />
+          <center>nput type="checkbox" class="slider" id="AnimationSpeed"></center> <br />
           <center id="DarkModeText"></center>
        </div>
       </div>
@@ -448,15 +448,13 @@
       output.innerHTML = this.value / 10;
     }   
 
-    document.getElementById("AnimationSpeed").addEventListener('change', function(){
-      document.documentElement.style.setProperty('--animation-speed', (this.value / 10).toString() + 's');
-    });
-
     function DisplaySettings() {
       ChangeDescription('SettingsHidden', 'SettingsShown');
     }
 
     function ChangeDescription(CurrentID, NewID, Add) {   
+      document.documentElement.style.setProperty('--animation-speed', (document.getElementById("AnimationSpeed").value / 10).toString() + 's');
+
       var element = document.getElementById(CurrentID);
       if (element == null) {
         ChangeDescription(NewID, CurrentID, false);
