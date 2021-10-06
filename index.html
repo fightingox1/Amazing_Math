@@ -30,7 +30,7 @@
     
     #SettingsMenu {
        background-color: rgba(128, 128, 128, 1);
-       height: 100px;
+       height: 210px;
        width: 300px;
        position: absolute;
        border-radius: 15px;
@@ -295,7 +295,7 @@
       <div id="SettingsMenu">
         <div id="SettingsText">
         <center>Animation Speed</center> 
-        <input type="range" min="1" max="100" value="50" class="slider" id="AnimationSpeed"> <br />
+        <input type="range" min="0" max="100" value="50" class="slider" id="AnimationSpeed"> <br />
         <center id="AnimationSpeedText"></center>
        </div>
       </div>
@@ -441,7 +441,8 @@
     output.innerHTML = slider.value;
 
     slider.oninput = function() {
-      output.innerHTML = this.value;
+      $(':root').css('--animation-speed', this.value / 10);
+      output.innerHTML = this.value / 10;
     }   
 
     function DisplaySettings() {
