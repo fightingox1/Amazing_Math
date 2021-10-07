@@ -20,6 +20,7 @@
       --animation-speed: 0.5s; 
       --background-color: #121212;
       --button-color: #808080;
+      --button-hover-color: #757575;
     }
     
     /* Dont Edit Setting Button {This is a note for me} */
@@ -205,7 +206,7 @@
     }
     
     .DescriptionButton:hover {
-      background: #757575;
+      background: var(--button-hover-color);
     }
     
     .game_button{
@@ -467,6 +468,9 @@
     var darkButton = '#808080';
     var lightButton = '#bababa';
 
+    var darkButtonHover = '#757575';
+    var lightButtonHover = '#a6a6a6';
+
     slider.oninput = function() {
       output.innerHTML = this.value / 10;
     }   
@@ -475,9 +479,11 @@
       if (!checkbox.checked) {
         document.documentElement.style.setProperty('--background-color', darkBackground);
         document.documentElement.style.setProperty('--button-color', darkButton);
+        document.documentElement.style.setProperty('--button-hover-color', darkButtonHover);
       } else {
         document.documentElement.style.setProperty('--background-color', lightBackgroud);
         document.documentElement.style.setProperty('--button-color', lightButton);
+        document.documentElement.style.setProperty('--button-hover-color', lightButtonHover);
       }
     }
 
