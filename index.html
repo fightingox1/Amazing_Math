@@ -486,6 +486,7 @@
     }   
 
     function ChangeStyle() {
+      SaveCookies();
       if (!checkbox.checked) {
         document.documentElement.style.setProperty('--background-color', darkBackground);
         document.documentElement.style.setProperty('--button-color', darkButton);
@@ -505,15 +506,24 @@
 
     function DisplaySettings() {
       ChangeDescription('SettingsHidden', 'SettingsShown');
+      SaveCookies();
+    }
+
+    function SaveCookies () {
       if (!checkbox.checked) {
         document.cookie = "darkMode";
       } else {
         document.cookie = "lightMode";
       }
+      ChangeStyle();
     }
 
     function LoadWebsite() {
-      alert(document.cookie);
+      if (document.cookie = "darkMode") {
+         checkbox.checked = false;
+      } else {
+         checkbox.checked = true;
+      }
     } 
   
     function ChangeDescription(CurrentID, NewID, Add) {   
