@@ -19,6 +19,7 @@
     :root {
       --animation-speed: 0.5s; 
       --background-color: #121212;
+      --button-color: #808080;
     }
     
     /* Dont Edit Setting Button {This is a note for me} */
@@ -208,7 +209,7 @@
     }
     
     .game_button{
-      background-color: #808080;
+      background-color: var(--button-color);
       border: none;
       color: white;
       padding: 15px;
@@ -351,7 +352,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048 Games" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
@@ -463,6 +464,9 @@
     var darkBackground = '#121212';
     var lightBackgroud = 'e6e6e6';
 
+    var darkButton = '#808080';
+    var lightButton = '#bababa';
+
     slider.oninput = function() {
       output.innerHTML = this.value / 10;
     }   
@@ -470,8 +474,10 @@
     function ChangeStyle() {
       if (!checkbox.checked) {
         document.documentElement.style.setProperty('--background-color', darkBackground);
+        document.documentElement.style.setProperty('--button-color', darkButton);
       } else {
         document.documentElement.style.setProperty('--background-color', lightBackgroud);
+        document.documentElement.style.setProperty('--button-color', lightButton);
       }
     }
 
