@@ -22,6 +22,8 @@
       --button-color: #808080;
       --button-hover-color: #757575;
       --opacity: 0.5;
+      --description-button-color: #757575;
+      --description-button-hover-color: #696969;
     }
     
     /* Dont Edit Setting Button {This is a note for me} */
@@ -195,7 +197,7 @@
     }
     
     .DescriptionButton {
-      background-color: var(--button-color);;
+      background-color: var(--description-button-color);
       border: none;
       color: white;
       height 15px;
@@ -207,7 +209,7 @@
     }
     
     .DescriptionButton:hover {
-      background: var(--button-hover-color);
+      background: var(--description-button-hover-color);
     }
     
     .game_button{
@@ -354,7 +356,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
@@ -475,6 +477,12 @@
     var darkOpacity = '0.5';
     var lightOpacity = '0.1';
 
+    var darkDescriptionButtonColor = '#757575';
+    var lightDescriptionButtonColor = '#a6a6a6';
+
+    var darkDescriptionButtonHoverColor = '#696969';
+    var lightDescriptionButtonHoverColor = '#a1a1a1';
+
     slider.oninput = function() {
       output.innerHTML = this.value / 10;
     }   
@@ -485,11 +493,15 @@
         document.documentElement.style.setProperty('--button-color', darkButton);
         document.documentElement.style.setProperty('--button-hover-color', darkButtonHover);
         document.documentElement.style.setProperty('--opacity', darkOpacity);
+        document.documentElement.style.setProperty('--description-button-color', darkDescriptionButtonColor);
+        document.documentElement.style.setProperty('--description-button-hover-color', darkDescriptionButtonHoverColor);
       } else {
         document.documentElement.style.setProperty('--background-color', lightBackgroud);
         document.documentElement.style.setProperty('--button-color', lightButton);
         document.documentElement.style.setProperty('--button-hover-color', lightButtonHover);
         document.documentElement.style.setProperty('--opacity', lightOpacity);
+        document.documentElement.style.setProperty('--description-button-color', lightDescriptionButtonColor);
+        document.documentElement.style.setProperty('--description-button-hover-color', lightDescriptionButtonHoverColor);
       }
     }
 
