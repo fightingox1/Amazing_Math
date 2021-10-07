@@ -303,7 +303,7 @@
   
   
 </head>
-<body>
+<body onload="LoadWebsite()">
 
 <div class>
   
@@ -354,7 +354,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
@@ -505,8 +505,17 @@
 
     function DisplaySettings() {
       ChangeDescription('SettingsHidden', 'SettingsShown');
+      if (!checkbox.checked) {
+        document.cookie = "darkMode";
+      } else {
+        document.cookie = "lightMode";
+      }
     }
 
+    function LoadWebsite() {
+      alert(document.cookie);
+    } 
+  
     function ChangeDescription(CurrentID, NewID, Add) {   
       document.documentElement.style.setProperty('--animation-speed', (slider.value / 10).toString() + 's');
       output.innerHTML = slider.value / 10;       
