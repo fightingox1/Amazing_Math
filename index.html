@@ -510,12 +510,14 @@
     }
 
     function SaveCookies() {
+      var cookie_value;
       if (!checkbox.checked) {
-        document.cookie = "darkMode";
+        cookie_value = "darkMode";
       } else {
-        document.cookie = "lightMode";
+        cookie_value = "lightMode";
       }
-      document.cookie = (slider.value / 10).tostring();
+      cookie_value += (slider.value / 10).tostring();
+      document.cookie = cookie_value;
     }
 
     function LoadWebsite() {
