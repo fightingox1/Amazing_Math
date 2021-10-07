@@ -354,7 +354,7 @@
 <!--- 2048 Button Code ---!>
                            
 <div class = button_div>
-<input type="button" value="2048 Game" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
+<input type="button" value="2048" id="myButton" class="game_button" onclick="ChangeDescription('TwentyFourtyEightHidden', 'TwentyFourtyEightShown', false)">                                                                                                                                                                           
 </div>  
 
 <div id="TwentyFourtyEightHidden" class="GameDescriptionUI">
@@ -509,13 +509,12 @@
       SaveCookies();
     }
 
-    function SaveCookies () {
+    function SaveCookies() {
       if (!checkbox.checked) {
         document.cookie = "darkMode";
       } else {
         document.cookie = "lightMode";
       }
-      ChangeStyle();
     }
 
     function LoadWebsite() {
