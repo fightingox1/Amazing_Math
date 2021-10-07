@@ -510,18 +510,18 @@
     }
 
     function SaveCookies() {
-      document.cookie2 = (slider.value / 10).tostring();
       if (!checkbox.checked) {
         document.cookie = "darkMode";
       } else {
         document.cookie = "lightMode";
       }
+      document.cookie = (slider.value / 10).tostring();
     }
 
     function LoadWebsite() {
       var value = GetCookieValue(document.cookie);
-      var value2 = GetCookieValue(document.cookie2);
-      alert(document.cookie2);
+      //var value2 = GetCookieValue(document.cookie2);
+      alert(document.cookie);
       if (value == "darkMode") {
          checkbox.checked = false;
       } else {
