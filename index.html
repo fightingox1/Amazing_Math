@@ -510,6 +510,7 @@
     }
 
     function SaveCookies() {
+      document.cookie2 = (slider.value / 10).tostring();
       if (!checkbox.checked) {
         document.cookie = "darkMode";
       } else {
@@ -519,11 +520,17 @@
 
     function LoadWebsite() {
       var value = GetCookieValue(document.cookie);
+      var value2 = GetCookieValue(document.cookie2);
+      alert(value2);
       if (value == "darkMode") {
          checkbox.checked = false;
       } else {
          checkbox.checked = true;
       }
+      
+      document.documentElement.style.setProperty('--animation-speed', value2 + 's');
+      slider.value = value2;
+      output.innerHTML = value2;
       ChangeStyle();
     } 
   
