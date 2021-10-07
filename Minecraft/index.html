@@ -21,8 +21,6 @@
 	</head>
 	
 	<body oncontextmenu="return false">
-		<button onclick="location.href = '../index.html';" id="myButton" class="float-left submit-button" style="left:0; right:100; position:absolute;">Home</button>
-		<button onclick="location.href = 'multiplayer.html.html';" id="myButton" class="float-left submit-button" style="left:100; right:0; position:absolute;">Multiplayer</button>
 		<!-- Render surface -->
 		<canvas id="renderSurface"></canvas>
 		
@@ -73,5 +71,7 @@
 				while ( new Date().getTime() / 1000 - time < 0.016 );
 			}, 1 );
 		</script>
+		<button onclick="location.href = '../index.html';" id="myButton" class="float-left submit-button" style="left:0; right:100; position:absolute;">Home</button>
+		<button onclick="location.href = 'multiplayer.html.html';" id="myButton" class="float-left submit-button" style="left:100; right:0; position:absolute;">Multiplayer</button>
 	</body>
 </html>
