@@ -518,12 +518,12 @@
     }
 
     function LoadWebsite() {
+      alert(document.cookie);
       if (document.cookie == "darkMode") {
          checkbox.checked = false;
       } else {
          checkbox.checked = true;
       }
-      alert(checkbox.checked);
       ChangeStyle();
     } 
   
