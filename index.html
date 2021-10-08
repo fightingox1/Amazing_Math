@@ -154,6 +154,14 @@
       height: 0px;
       overflow: hidden;
     }
+   
+     #greg_stupidHidden {
+      animation-name: animateCloseCrop;
+      animation-duration: var(--animation-speed); 
+      padding: 0px;
+      height: 0px;
+      overflow: hidden;
+    }
     
     /* Hidden Buttons */
     
@@ -452,10 +460,17 @@
     <p>You click the cookie. And then you buy upgrades</p>
   </div>
   
-  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='cookie-clicker-master/index.html'">
-  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('CookieClickerShown', 'CookieClickerHidden', true)">
+  <input type="button" value="no game to play L ratio bozo" class="DescriptionButton" onclick="window.location.href='#'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('greg_stupidShown', 'greg_stupidHidden', true)">
 </div>    
 
+<div id="greg_stupidHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>greg thinks i dont know how to use his shitty ui.</p>
+  </div>
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='snake-game.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('SnakeShown', 'SnakeHidden', true)">
+</div>
 
   <script>
     var slider = document.getElementById("AnimationSpeed");
