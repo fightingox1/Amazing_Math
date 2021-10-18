@@ -155,7 +155,7 @@
       overflow: hidden;
     }
    
-     #greg_stupidHidden {
+     #RickRollHidden {
       animation-name: animateCloseCrop;
       animation-duration: var(--animation-speed); 
       padding: 0px;
@@ -462,6 +462,22 @@
 
   <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='cookie-clicker-master/index.html'">
   <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('CookieClickerShown', 'CookieClickerHidden', true)">
+</div>
+
+<!--- Rick Roll Button Code --!>
+
+
+<div class = button_div>
+<input type="button" value="Mario (Currently Links to Cookie Clicker need to find html)" id="myButton" class="game_button" onclick="ChangeDescription('RickRollHidden', 'RickRollShown', false)">                                                                                                                                                                           
+</div>  
+
+<div id="RickRollHidden" class="GameDescriptionUI">
+  <div id="GameDescription">
+    <p>Its a me a mario. (you know what i am or else i killl you)</p>
+  </div>
+
+  <input type="button" value="Play Game" class="DescriptionButton" onclick="window.location.href='cookie-clicker-master/index.html'">
+  <input type="button" value="Close" class="DescriptionButton" onclick="ChangeDescription('RickRollShown', 'RickRollHidden', true)">
 </div>
 
   <script>
