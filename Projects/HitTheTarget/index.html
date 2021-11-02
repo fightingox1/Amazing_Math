@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bored</title>
+    <style>
+body{
+    background:black;
+    margin:0;
+    padding: 0;
+}
+p{
+    color:white;
+    user-select: none;
+    font-size: 30px;
+}
+
+td, th {
+  border: 1px solid #303030;
+  font-size: 30px;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #303030}
+tr:nth-child(odd){background-color: #0f0f0f}
+
+#container{
+    position: absolute;
+    user-select: none;
+    left:45%;
+    top:30%;
+}
+#play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chartreuse;
+    font-size: 60px;
+    color: white;
+    width: 20px;
+    height: 150px;
+    border-radius: 80px;
+}
+#HomeButton {
+    position: absolute;
+}
+#endscreen{
+    position: absolute;
+    text-align: center;
+    left:45%;
+    top:5%;
+}
+#gameover{
+    user-select: none;
+    text-align: center;
+    position: absolute;
+    right: 40%;
+    top: 25%;
+    background-color:rgba(100,100,100,60%);
+    width: 200px;height: 200px;
+    border-radius: 9999px;
+    padding: 50px;
+}
+
+.MakePosAbs {
+  position: absolute;
+}
+
+    </style>
+    <link rel="stylesheet" href="../../Global.css">
+</head>
+<body>
+<button onclick="location.href = '../../index.html';" id="myButton" class="float-left submit-button MakePosAbs" >Home</button>
+<div id="gameover"hidden="true">
+    <b style="color: red;font-size: 60px;">Game Over</b>
+    <p style="color: white;font-size: 40px;">(you suck)</p>
+    <button onClick="window.location.reload();">Respawn</button>
+</div>
+<div id="hud" style="position:absolute;left:10%;top:10%;">
+    <p id="average"></p>
+    <p id="hits"></p>
+    <p id="last"></p>
+    <p id="best"></p>
+</div>
+
+<div id="container">
+    <div id="play">Play</div>
+    <div style="text-align: center; color: white;background-color: darkgrey;border-radius: 99999px;width: 400px;transform: translateX(-100px);">
+        <p id="targetnum">50 Targets</p>
+        <input type="range" id="targetslider" min="1"></input>
+    <p id="max_rects">Max Obstacles: 15</p>
+    <input type="range" id="rectslider" min="1" max="40" value="15"></input>
+    <p id="max_speed">Max Speed: 30</p>
+    <input type="range" id="speedslider" min="1" max="40" value="30"></input>
+    <p>Target Color</p>
+    <input type="color" id="targetcolor" value="#0000FF" style="margin: 0;padding:0;border: none;"></input>
+    </div>
+</div>
+<div id="useless" hidden="true">
+    <div id="endscreen">
+        <b style="color: white;font-size: 50px;">Finished</b>
+        <p>(reload to play again)</p>
+        <div>
+            <p>Stats: </p>
+            <table style="color: white;" id="table">
+                <tr>
+                    <th>Target</th>
+                    <th>Time (MS)</th>
+                    <th>Distance</th>
+                    <th>Obstacles</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<canvas width="500" height="500" id="canvas"></canvas>
+<script>
+function dist(x1,y1,r1,x2,y2,r2){return Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2));}
+document.getElementById("play").style.width=200 +"px";
+const canvas=document.getElementById("canvas");
+canvas.width = window.innerWidth-10;
+canvas.height = window.innerHeight-10;
+const ctx=canvas.getContext("2d");
+const xrange = canvas.width;
+const yrange = canvas.height;
+var maxtargets=50;var maxrects=20;var maxspeed=30
+var targetcolor;
+var clicking = false;
+var cr = 50;
+var cx = Math.random()*canvas.width;
+var cy = Math.random()*canvas.height;
+var vx = 0;var vy = 0;
+var moving=true;
+var speed=maxspeed;
+var px;var py;
+var a_time = 0;var time = 0;
+var obstacles = [];
+var times = [];var dists = [];var rects = [];
+var best=Infinity;
+ctx.strokeStyle = "grey";
+var game1;
+var changespeed = 5
+function game(){
+
+    ctx.fillStyle = "rgb(0,0,0)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.lineWidth = 5;
+    cx+=vx;cy+=vy;
+    if(cx<10 || cx>xrange-10){vx=-vx}
+    if(cy<10 || cy>yrange-10){vy=-vy}
+    for(let i=0;i<rects.length;i++){
+        ctx.fillStyle = "white";
+        let r = rects[i];
+
+        if(moving){
+           if(cx>r[0]-cr && cx<r[0]+r[2]+cr && cy<r[1]+r[3]+cr && cy>r[1]-cr){
+               if(cx<r[0] || cx>r[0]+r[2]){vx=-vx}
+               if(cy<r[1] || cy>r[1]+r[3]){vy=-vy}
+               ctx.fillStyle="blue";
+            }
+        }
+        if(px>r[0]-5 && px<r[0]+r[2] && py<r[1]+r[3] && py>r[1]-5){
+            document.getElementById("hud").hidden=true;
+            document.getElementById("gameover").hidden=false;
+            ctx.fillStyle="red";
+            clearInterval(game1);
+        }
+        ctx.fillRect(r[0],r[1],r[2],r[3]);
+        ctx.strokeRect(r[0]+ctx.lineWidth/2,r[1]+ctx.lineWidth/2,r[2]-ctx.lineWidth,r[3]-ctx.lineWidth);
+    }
+    ctx.fillStyle = targetcolor;
+    if(dist(px,py,5,cx,cy,cr) < cr+5){ctx.fillStyle = "green"}
+    if(dist(px,py,5,cx,cy,cr) < cr+5 && clicking){
+        times.push(time);
+        best=Math.min(best,time);
+        time=0;a_time=0;
+        for(let i=0;i<times.length;i++){a_time+=times[i]}
+        a_time=a_time/times.length;
+        cx = Math.random()*(xrange);
+        cy = Math.random()*(yrange);
+        if(moving){
+            vx = Math.random()*speed;
+            vy = Math.random()*speed;
+            if(vx>maxspeed){
+							vx=maxspeed
+            }
+            if(vy>maxspeed){
+            	vy=maxspeed
+            }
+            if(vx=vy){
+            vx = changespeed
+            }
+
+            console.log(vx + " " + vy)
+        }
+        dists.push(dist(px,py,5,cx,cy,cr));
+
+        if(a_time<650){document.getElementById("average").style.color = "green"}
+        else if(a_time<1250){document.getElementById("average").style.color = "yellow"}
+        else{document.getElementById("average").style.color = "red"}
+
+        if(times[times.length-1]<450){document.getElementById("last").style.color = "green"}
+        else if(times[times.length-1]<700){document.getElementById("last").style.color = "yellow"}
+        else if(time[times.length-1]<1000){document.getElementById("last").style.color = "orange"}
+        else{document.getElementById("last").style.color = "red"}
+
+        if(best<400){document.getElementById("best").style.color = "green"}
+        else if(best<600){document.getElementById("best").style.color = "yellow"}
+        else if(best<700){document.getElementById("best").style.color = "orange"}
+        else{document.getElementById("best").style.color = "red"}
+
+        document.getElementById("average").textContent = "average: "+Math.round(a_time)+" MS";
+        document.getElementById("hits").textContent = "targets hit: "+times.length;
+        document.getElementById("last").textContent = "last time: "+times[times.length-1];
+        document.getElementById("best").textContent = "best: "+best;
+
+        rects = [];
+        var rect;
+        for(let i=0;i<Math.max(1,Math.round(Math.random()*maxrects));i++){
+            let itt=0;
+            let isColliding=false;
+            while(true){
+                isColliding=false;
+                itt++;
+                /*avoid crashes in case of REALLY shitty RNG values*/
+                if(itt>1000){console.log("max itterations reached");break}
+                rect = [Math.random()*xrange,Math.random()*yrange,Math.random()*500,Math.random()*500];
+                rect[2] = Math.max(rect[2],50);
+                rect[3] = Math.max(rect[3],50);
+                if(px<rect[0]-5 || px>rect[0]+rect[2] && py>rect[1]+rect[3] || py<rect[1]-5){
+                    if(cx+cr<rect[0]-5 || cx-cr>rect[0]+rect[2] && cy-cr>rect[1]+rect[3] || cy+cr<rect[1]-5){
+                        for(let j=0;j<rects.length;j++){
+                            let r = rects[j];
+                            if(rect[0]<r[0]+r[2] && rect[0]+rect[2]>r[0] && rect[1]<r[1]+r[3] && rect[1]+rect[3]>r[1]){
+                                isColliding=true;
+                                break;
+                            }
+                        }
+                        if(!isColliding){break}
+                    }
+                }
+            }
+            rects.push(rect);
+        }
+        clicking=false;
+        obstacles.push(rects.length);
+    }
+
+    ctx.lineWidth=2;
+    ctx.beginPath();
+    ctx.arc(cx,cy,cr,0,2*Math.PI);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(cx,cy,cr/1,0,2*Math.PI);
+    ctx.arc(cx,cy,cr/1.75,0,2*Math.PI);
+    ctx.arc(cx,cy,cr/3,0,2*Math.PI);
+    ctx.moveTo(cx+cr,cy);ctx.lineTo(cx-cr,cy);
+    ctx.moveTo(cx,cy-cr);ctx.lineTo(cx,cy+cr);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fillRect(px-2,py-2,5,5);
+    time+=20;
+    clicking=false;
+    if(times.length==maxtargets){
+        for(let i=0;i<times.length;i++){
+            let row = document.getElementById("table").insertRow(i+1);
+            row.insertCell(0).textContent=i+1;
+            row.insertCell(1).textContent=times[i];
+            row.insertCell(2).textContent=Math.round(dists[i]);
+            row.insertCell(3).textContent=obstacles[i];
+        }
+        document.getElementById("useless").hidden=false;
+        console.log("Game Finished");
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        clearInterval(game1);
+    }
+}
+document.getElementById("play").addEventListener("click", function(){
+    maxtargets = document.getElementById("targetslider").value;
+    targetcolor = document.getElementById("targetcolor").value;
+    maxrects = document.getElementById("rectslider").value;
+    maxspeed = document.getElementById("speedslider").value;
+    if(maxtargets==100){maxtargets=Infinity}
+    document.getElementById("container").hidden=true;
+    game1 = setInterval(game,20);
+    game()
+});
+document.addEventListener('mousemove', function(e){px=e.x;py=e.y});
+document.getElementById("targetslider").addEventListener('change', function(){
+    let val = document.getElementById("targetslider").value;
+    if(val==100){document.getElementById("targetnum").textContent = "∞ Targets"}
+    else{document.getElementById("targetnum").textContent = val + " Targets"}
+});
+document.getElementById("rectslider").addEventListener('change', function(){
+    document.getElementById("max_rects").textContent="Max Obstacles: "+document.getElementById("rectslider").value;
+});
+document.getElementById("speedslider").addEventListener('change', function(){
+    document.getElementById("max_speed").textContent="Max Speed: "+document.getElementById("speedslider").value;
+});
+document.addEventListener('click', function(e){clicking=true});
+</script>
+</body>
+</html>
