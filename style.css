@@ -1,0 +1,146 @@
+body {
+  background-color: #121212;
+}
+
+#hidden {
+  display: none;
+}
+
+.header {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+
+  padding: 15px;
+}
+
+.Game {
+   position: relative;
+   border-style: solid;
+   border-color: #353535;
+   box-shadow: 3px 3px 8px #888888;
+   height: 30rem;
+   background-color: #575757;
+   transition: border-color 0.5s, box-shadow 0.5s,
+     margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
+   display: table-cell;
+}
+
+.Game:hover {
+   border-color: #fff;
+   margin-left: -4px;
+   margin-right: 4px;
+   margin-top: -4px;
+   margin-bottom: 4px;
+   box-shadow: 8px 8px 8px #888888;
+   transition: border-color 0.5s, box-shadow 0.5s,
+     margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
+}
+
+.Games {
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  display: grid;
+  grid-gap: 25px 50px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#version {
+  border-style: solid;
+  border-color: #353535;
+
+  margin-bottom: 10px;
+
+  padding: 5px;
+
+  font-size: 25px;
+  position: fixed;
+  bottom: 0;
+}
+
+.GameName {
+  font-size: 25px;
+  color: #909090;
+  text-align: center;
+}
+
+.GameImg {
+  right: 5%;
+  width: 90%;
+  border-style: solid;
+  border-color: #353535;
+
+  position: absolute;
+
+  vertical-align: center;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+.GameButton {
+  position: absolute;
+  bottom: 1%;
+
+  right: 5%;
+
+  border-style: solid;
+
+  width: 90%;
+  height: 5rem;
+  background-color: #252525;
+  border-radius: 1rem;
+  border-color: #353535;
+  color: #fff;
+  font-size: 2rem;
+
+  transition: border-color 0.5s;
+}
+
+.GameButton:hover {
+  background-color: #202020;
+  border-color: #fff;
+}
+
+#Announcment {
+  top: 0;
+  width: 100%;
+  margin: auto;
+  align: center;
+  position: fixed;
+  background: none;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+
+#AnnouncmentBackground {
+  pointer-events: all;
+  width: 40%;
+  height: 20%;
+  position: relative;
+  vertical-align: center;
+  top: 0;
+  background: rgba(128, 128, 128, 0.5);
+  border-radius: 1rem;
+  margin: auto;
+  top: 10%;
+
+  border-style: solid;
+  border-radius: 1rem;
+  border-color: black;
+}
+
+#AnnouncmentClose {
+  margin: 5px;
+  position: fixed;
+  width: 2%;
+  aspect-ratio: 1;
+  background-color: rgba(204, 76, 51, 1);
+  border-radius: 1rem;
+}
+
+#AnnouncmentClose:hover {
+  background-color: rgba(229, 51, 25, 1)
+}

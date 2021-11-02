@@ -1,0 +1,48 @@
+#myButton {
+  background-color: #909090;
+
+  margin: 5px;
+
+  border-style: solid;
+  border-color: #353535;
+  border-width: 2px;
+
+  color: white;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 16px;
+
+  transition: background-color 0.5s, border-color 0.5s;
+}
+
+#abPos {
+  /* position: absolute; */
+}
+
+#myButton:hover {
+  border-color: #fff;
+  background-color: #707070;
+}
+
+.GameText {
+  font-size: 50px;
+  text-decoration: none;
+  color: white;
+  background: #212121;
+
+  border-style: solid;
+  border-color: #353535;
+  border-width: 2px;
+
+  transition: color 0.5s;
+  padding: 10px;
+}
+
+.Game-Version {
+  margin: 25px;
+  text-align: center;
+}
+
+.GameText:hover {
+  color: #787878;
+}
