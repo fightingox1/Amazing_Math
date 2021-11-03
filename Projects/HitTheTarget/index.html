@@ -45,7 +45,7 @@ tr:nth-child(odd){background-color: #0f0f0f}
     border-radius: 80px;
 }
 #HomeButton {
-    position: absolute;	
+    position: absolute;
 }
 #endscreen{
     position: absolute;
@@ -64,11 +64,16 @@ tr:nth-child(odd){background-color: #0f0f0f}
     border-radius: 9999px;
     padding: 50px;
 }
+
+.MakePosAbs {
+  position: absolute;
+}
+
     </style>
-    <link rel="stylesheet" href="Global.css">
+    <link rel="stylesheet" href="../../Global.css">
 </head>
 <body>
-<button onclick="location.href = 'index.html';" id="myButton" class="float-left submit-button" >Home</button>
+<button onclick="location.href = '../../index.html';" id="myButton" class="float-left submit-button MakePosAbs" >Home</button>
 <div id="gameover"hidden="true">
     <b style="color: red;font-size: 60px;">Game Over</b>
     <p style="color: white;font-size: 40px;">(you suck)</p>
@@ -211,7 +216,7 @@ function game(){
         document.getElementById("hits").textContent = "targets hit: "+times.length;
         document.getElementById("last").textContent = "last time: "+times[times.length-1];
         document.getElementById("best").textContent = "best: "+best;
-        
+
         rects = [];
         var rect;
         for(let i=0;i<Math.max(1,Math.round(Math.random()*maxrects));i++){
@@ -301,4 +306,3 @@ document.addEventListener('click', function(e){clicking=true});
 </script>
 </body>
 </html>
-
