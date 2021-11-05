@@ -14,7 +14,6 @@ function SetUpGames() {
 var PathToLoad;
 
 function LoadAnnouncment(Name, Value) {
-  alert("Loaded Announcment");
   document.getElementById("AnnouncmentNameText").innerHTML = Name;
   document.getElementById("AnnouncmentText").innerHTML = Value;
 }
