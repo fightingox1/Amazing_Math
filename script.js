@@ -2,7 +2,7 @@ function SetUpGames() {
   AddProject("Hextris",          "img/Hextris.png",            "Projects/Hextris/index.html");
   AddProject("2048",             "img/2048.png",               "Projects/2048/index.html");
   AddProject("Tetris",           "img/Tetris.jpg",             "Projects/Tetris/index.html");
-  AddProject("Cookie Clicker",   "img/CookeClickTins.jpg", "Projects/Cookie Clicker/index.html");
+  AddProject("Cookie Clicker",   "img/CookeClickTins.jpg",     "Projects/Cookie Clicker/index.html");
   AddProject("Flappy Bird",      "img/FlappyBird.jpeg",        "Projects/FlappyBird/index.html");
   AddProject("Javascript Racer", "img/JsRacer.png",            "Projects/JsRacer/index.html");
   AddProject("Hit The Target",   "img/HitTheTarget.png",       "Projects/HitTheTarget/index.html");
@@ -33,19 +33,12 @@ function getCookie(name) {
 }
 
 function LoadAnnouncment(Name, Value) {
-  alert("load");
   var cookeVal = getCookie(Name);
-  if (cookeVal != null) {
-    alert("does exsist");
+  
+  if (cookeVal == null) {
     document.getElementById("AnnouncmentNameText").innerHTML = Name;
     document.getElementById("AnnouncmentText").innerHTML = Value;
     document.cookie = Name + "=true";
-  } else {
-    if (!Request.Cookies[Name]["true"]) {
-      alert("no opened");
-    } else {
-      alert("opened");
-    }
   }
 }
 
