@@ -33,6 +33,7 @@ function getCookie(name) {
 }
 
 function LoadAnnouncment(Name, Value) {
+  alert("load");
   alert(getCookie(Name));
   if (getCookie(Name) != null) {
     alert("does exsist");
