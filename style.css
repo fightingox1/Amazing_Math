@@ -132,6 +132,22 @@ hr.solid {
   border-color: black;
 }
 
+#AnnouncmentText {
+  padding: 5px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#AnnouncmentNameText {
+  position: relative;
+  left: 10%;
+}
+
+#AnnouncmentName {
+  background: rgba(0.5, 0.5, 0.5, 0.5);
+  border-radius: 12.5px 12.5px 0px 0px;
+}
+
 #AnnouncmentClose {
   margin: 5px;
   position: fixed;
@@ -142,5 +158,5 @@ hr.solid {
 }
 
 #AnnouncmentClose:hover {
-  background-color: rgba(229, 51, 25, 1)
+  background-color: rgba(229, 51, 25, 1);
 }
