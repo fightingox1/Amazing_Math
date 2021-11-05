@@ -141,7 +141,7 @@ hr.solid {
 #AnnouncmentNameText {
   position: relative;
   left: 10%;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #AnnouncmentName {
@@ -157,6 +157,11 @@ hr.solid {
   aspect-ratio: 1;
   background-color: rgba(204, 76, 51, 1);
   border-radius: 1rem;
+}
+
+#AnnouncmentData {
+  width: 100%;
+  height: 100%;
 }
 
 #AnnouncmentClose:hover {
