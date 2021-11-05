@@ -34,8 +34,8 @@ function getCookie(name) {
 
 function LoadAnnouncment(Name, Value) {
   alert("load");
-  alert(getCookie(Name));
-  if (getCookie(Name) != null) {
+  var cookeVal = getCookie(Name);
+  if (cookeVal != null) {
     alert("does exsist");
     document.getElementById("AnnouncmentNameText").innerHTML = Name;
     document.getElementById("AnnouncmentText").innerHTML = Value;
