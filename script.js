@@ -14,8 +14,12 @@ function SetUpGames() {
 var PathToLoad;
 
 function LoadAnnouncment(Name, Value) {
-  document.getElementById("AnnouncmentNameText").innerHTML = Name;
-  document.getElementById("AnnouncmentText").innerHTML = Value;
+  if (Request.Cookies[Name]["true"]) {
+    alert("opened");
+    document.getElementById("AnnouncmentNameText").innerHTML = Name;
+    document.getElementById("AnnouncmentText").innerHTML = Value;
+    doument.cookie = Name + "=true";
+  }
 }
 
 function CloseAnnouncment() {
