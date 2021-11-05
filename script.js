@@ -13,14 +13,37 @@ function SetUpGames() {
 
 var PathToLoad;
 
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+        end = dc.length;
+        }
+    }
+    return decodeURI(dc.substring(begin + prefix.length, end));
+}
+
 function LoadAnnouncment(Name, Value) {
-  if (!Request.Cookies[Name]["true"]) {
-    alert("no opened");
+  if (getCookie(Name) != null) {
+    alert("does exsist");
     document.getElementById("AnnouncmentNameText").innerHTML = Name;
     document.getElementById("AnnouncmentText").innerHTML = Value;
-    doument.cookie = Name + "=true";
+    document.cookie = Name + "=true";
   } else {
-    alert("opened");
+    if (!Request.Cookies[Name]["true"]) {
+      alert("no opened");
+    } else {
+      alert("opened");
+    }
   }
 }
 
