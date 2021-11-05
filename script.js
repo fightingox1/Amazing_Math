@@ -8,13 +8,15 @@ function SetUpGames() {
   AddProject("Hit The Target",   "img/HitTheTarget.png",       "Projects/HitTheTarget/index.html");
   AddProject("Snake",            "img/Snake.png",              "Projects/Snake/index.html");
 
-  LoadAnnouncment("Test", "Hello I was a bit bored on tuesday and decided to create this announcment system. I dont know if il use this a lot but it is here. When you close this it should be gone forever. If you get the same announcment twice than I need to know because it means that my system is not working");
+  LoadAnnouncment("Test", " Hello, This is a test annoncment. I have no use for this system, I just added it. Plese ignore this and close. If it pops back up please noify me and I will fix.");
 }
 
 var PathToLoad;
 
 function LoadAnnouncment(Name, Value) {
-
+  alert("Loaded Announcment");
+  document.getElementById("AnnouncmentNameText").innerHTML = Name;
+  document.getElementById("AnnouncmentText").innerHTML = Value;
 }
 
 function CloseAnnouncment() {
