@@ -154,12 +154,11 @@ hr.solid {
   text-align: center;
   vertical-align: center;
   margin: 5px;
-  position: relative;
+  position: fixed;
   width: 2%;
-  right: 95%;
   aspect-ratio: 1;
   background-color: rgba(204, 76, 51, 1);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 #AnnouncmentData {
