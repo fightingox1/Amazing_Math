@@ -135,17 +135,17 @@ hr.solid {
 #AnnouncmentText {
   padding: 5px;
   text-align: center;
-  font-size: 15px;
+  font-size: 30px;
 }
 
 #AnnouncmentNameText {
   position: relative;
-  left: 10%;
-  font-size: 25px;
+  left: 5%;
+  font-size: 50px;
 }
 
 #AnnouncmentName {
-  height: 10%;
+  height: 20%;
   background: rgba(0.5, 0.5, 0.5, 0.5);
   border-radius: 12.5px 12.5px 0px 0px;
 }
