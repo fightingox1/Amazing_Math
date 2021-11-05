@@ -8,7 +8,7 @@ function SetUpGames() {
   AddProject("Hit The Target",   "img/HitTheTarget.png",       "Projects/HitTheTarget/index.html");
   AddProject("Snake",            "img/Snake.png",              "Projects/Snake/index.html");
 
-  LoadAnnouncment("HelloAnnouncment", " Hello, This is a test annoncment. I have no use for this system, I just added it. Plese ignore this and close. If it pops back up please noify me and I will fix.");
+  LoadAnnouncment("BobsYourUncle", " Hello, This is a test annoncment. I have no use for this system, I just added it. Plese ignore this and close. If it pops back up please noify me and I will fix.");
 }
 
 var PathToLoad;
@@ -33,6 +33,7 @@ function getCookie(name) {
 }
 
 function LoadAnnouncment(Name, Value) {
+  alert(getCookie(Name));
   if (getCookie(Name) != null) {
     alert("does exsist");
     document.getElementById("AnnouncmentNameText").innerHTML = Name;
