@@ -141,9 +141,11 @@ hr.solid {
 #AnnouncmentNameText {
   position: relative;
   left: 10%;
+  font-size: 20px;
 }
 
 #AnnouncmentName {
+  height: 10%;
   background: rgba(0.5, 0.5, 0.5, 0.5);
   border-radius: 12.5px 12.5px 0px 0px;
 }
