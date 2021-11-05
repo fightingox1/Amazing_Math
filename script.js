@@ -8,17 +8,19 @@ function SetUpGames() {
   AddProject("Hit The Target",   "img/HitTheTarget.png",       "Projects/HitTheTarget/index.html");
   AddProject("Snake",            "img/Snake.png",              "Projects/Snake/index.html");
 
-  LoadAnnouncment("Test", " Hello, This is a test annoncment. I have no use for this system, I just added it. Plese ignore this and close. If it pops back up please noify me and I will fix.");
+  LoadAnnouncment("HelloAnnouncment", " Hello, This is a test annoncment. I have no use for this system, I just added it. Plese ignore this and close. If it pops back up please noify me and I will fix.");
 }
 
 var PathToLoad;
 
 function LoadAnnouncment(Name, Value) {
-  if (Request.Cookies[Name]["true"]) {
-    alert("opened");
+  if (!Request.Cookies[Name]["true"]) {
+    alert("no opened");
     document.getElementById("AnnouncmentNameText").innerHTML = Name;
     document.getElementById("AnnouncmentText").innerHTML = Value;
     doument.cookie = Name + "=true";
+  } else {
+    alert("opened");
   }
 }
 
