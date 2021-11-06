@@ -8,7 +8,7 @@ function SetUpGames() {
   AddProject("Hit The Target",   "img/HitTheTarget.png",       "Projects/HitTheTarget/index.html");
   AddProject("Snake",            "img/Snake.png",              "Projects/Snake/index.html");
 
-  LoadAnnouncment("ChangeLog1", "Change Log 0.4", " - New UI\n - Announcment System\n - Javascript Racer UI Update");
+  LoadAnnouncment("ChangeLog1", "Change Log 0.4", "New UI, Announcment System, Javascript Racer UI Update, Home Button Rework");
 }
 
 var PathToLoad;
@@ -33,12 +33,14 @@ function getCookie(name) {
 }
 
 function LoadAnnouncment(Name, Title, Value) {
-  var cookeVal = getCookie(Name);
+  var cookieVal = getCookie(Name);
+  alert(cookieVal);
+  alert(document.cookie);
   
-  if (cookeVal == null) {
+  if (cookieVal == null) {
     document.getElementById("AnnouncmentNameText").innerHTML = Title;
     document.getElementById("AnnouncmentText").innerHTML = Value;
-    document.cookie = Name + "=true";
+    document.cookie = Name + "=loaded;";
   } else {
     document.getElementById("Announcment").id = "hidden"; 
   }
