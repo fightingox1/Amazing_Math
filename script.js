@@ -34,8 +34,6 @@ function getCookie(name) {
 
 function LoadAnnouncment(Name, Title, Value) {
   var cookieVal = getCookie(Name);
-  alert(cookieVal);
-  alert(document.cookie);
   
   if (cookieVal == null) {
     document.getElementById("AnnouncmentNameText").innerHTML = Title;
