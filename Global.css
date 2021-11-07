@@ -4,7 +4,7 @@
   margin: 5px;
 
   border-style: solid;
-  border-color: #353535;
+  border-color: white;
   border-width: 2px;
 
   color: white;
@@ -13,7 +13,8 @@
   font-size: 16px;
 
   height: fit-content;
-  box-shadow: 0px 2px 5px #454545;
+  box-shadow: 2px 2px 5px #454545;
+  box-shadow: -2px -2px 5px #454545;
   
   transition: background-color 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
@@ -21,8 +22,9 @@
 #myButton:hover {
   background-color: #707070;
   
-  border-color: #fff;
-  box-shadow: 2px 4px 5px #545454;
+  border-color: black;
+  box-shadow: 4px 4px 5px #545454;
+  box-shadow: -4px -4px 5px #454545;
 }
 
 .GameText {
