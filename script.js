@@ -38,19 +38,23 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
+var currentAnnouncment = "";
+
 function LoadAnnouncment(Name, Title, Value) {
+  currentAnnouncment = Name;
   var cookieVal = getCookie(Name);
   
   if (cookieVal == null) {
     document.getElementById("AnnouncmentNameText").innerHTML = Title;
     document.getElementById("AnnouncmentText").innerHTML = Value;
-    document.cookie = Name + "=loaded;";
   } else {
     document.getElementById("Announcment").id = "hidden"; 
   }
 }
 
 function CloseAnnouncment() {
+  alert(currentAnnouncment);
+  document.cookie = currentAnnouncment + "=loaded;";
   document.getElementById("Announcment").id = "hidden";
 }
 
