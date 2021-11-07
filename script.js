@@ -3,11 +3,14 @@ function SetUpGames() {
   AddProject("2048",             "img/2048.png",               "Projects/2048/index.html");
   AddProject("Tetris",           "img/Tetris.jpg",             "Projects/Tetris/index.html");
   AddProject("Cookie Clicker",   "img/CookeClickTins.jpg",     "Projects/Cookie Clicker/index.html");
+  
   AddProject("Flappy Bird",      "img/FlappyBird.jpeg",        "Projects/FlappyBird/index.html");
   AddProject("Javascript Racer", "img/JsRacer.png",            "Projects/JsRacer/index.html");
   AddProject("Hit The Target",   "img/HitTheTarget.png",       "Projects/HitTheTarget/index.html");
   AddProject("Doge The Lava",    "img/DogeLava.png",           "Projects/DogeLava/index.html");
+  
   AddProject("Snake",            "img/Snake.png",              "Projects/Snake/index.html");
+  AddProject("Space Company",    "img/SpaceCompany.png",       "Projects/SpaceCompany/index.html");
 
   LoadAnnouncment("ChangeLog1", "Change Log 0.4", "New UI, Announcment System, Javascript Racer UI Update, Home Button Rework");
 }
