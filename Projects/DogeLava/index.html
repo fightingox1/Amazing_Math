@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{color: white;}
+body{margin: 0;padding: 0;overflow: hidden}
+b{color: red;font-size: 60px}
+p{font-size: 30px}
+button{
+    border-radius: 80px;
+    border: darkgreen 5px solid;
+    background-color: lawngreen;
+    font-size: 60px;
+    width: 200px;height: 150px;
+}
+#endscreen{
+    position: absolute;
+    left: 45%;top: 35%;
+    text-align: center;
+    border-radius: 80px;
+    background-color: rgba(30,30,30,75%);
+    padding: 30px;
+    line-height: 15px;
+}
+#startscreen{
+    position: absolute;
+    left: 20%;top: 10%;
+    text-align: center;
+}
+#controls{
+    border-radius: 80px;
+    background-color: rgba(30,30,30,75%);
+    padding: 30px;
+}
+
+.MakePosAbs {
+  position: absolute;
+}
+
+    </style>
+    <link rel="stylesheet" href="../../Global.css">
+</head>
+<body>
+    <button onclick="location.href = '../../index.html';" id="myButton" class="float-left submit-button MakePosAbs" >Home</button>
+    <canvas width="500" height="500"></canvas>
+    <div id="endscreen" hidden>
+        <b>You Died</b>
+        <p id="score">Score: NULL</p>
+        <button style="font-size: 30px;width: 300px;height: 150px;" id="play_again">Play Again</button>
+    </div>
+    <div id="startscreen">
+        <div id="controls">
+            <h1>How To Play</h1>
+            <p>
+                Run from the rising lava. The higher up you go the better your score is.
+                <br>As you climb difficulty will increase and you will get larger
+            </p>
+            <div style="line-height: 15px;">
+                <h1>Controls:</h1>
+                <p>W:jump</p>
+                <p>ASD:move</p>
+                <p>SPACE:dash</p>
+            </div>
+        </div>
+        <button id="play">Play</button>
+    </div>
+    <script>
+const canvas = document.getElementsByTagName("canvas")[0];
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const xrange = canvas.width*(5/6);
+const yrange = canvas.height*(5/6);
+const ctx = canvas.getContext("2d");
+const f = 0.09;
+const maxSpeed=6;
+const speedCap = 20;
+let dashtimeout = 0, dashcount = 0, dashSpeed = maxSpeed+1;
+let jumptimeout = 0;
+let px = 250,py = 250;
+let pw = 10,ph = 10;
+let vx = 0,vy = 0;
+let jv = 7;
+let tol = 69;
+const g=0.2;
+let rects = [];
+let keyW, keyA, keyS, keyD;
+let pGrounded = false;
+let lavaHeight = 0, lavaRate = 0.5;
+let submitted = false;
+let difficulty = 0; let score = 0;
+let gameloop;
+function dist(x1,y1,x2,y2){
+    return Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2))
+}
+/* collision function (no velocity)
+function isColliding2(x1,y1,w1,h1,x2,y2,w2,h2){
+    if(x1<x2+w2 && x2<x1+w1 && y1<y2+h2 &&  y2<y1+h1){return true}return false
+}*/
+function isColliding(x1,y1,w1,h1,x2,y2,w2,h2){
+    if(x1<x2+w2+vx/2 && x2<x1+w1-vx/2 && y1<y2+h2+vy/2 && y2<y1+h1-vy/2){return true}
+    return false
+}
+function genRects(rectnum,maxsize,minsize){
+    let rects = [
+        [0,0,10,canvas.height],
+        [canvas.width-10,0,10,canvas.height],
+        [250,250+ph,pw*2,ph*2]
+    ];
+    /*rejection sampling because its fast and easy to implement*/
+    for(let i=0;i<rectnum;i++){
+        let itt=0;
+        let isColliding=false;
+        while(true){
+            isColliding=false;
+            itt++;
+            /*avoid crashes in case of shitty RNG values*/
+            if(itt>1000){rect=[-10,-10,1,1];break}
+            rect = [Math.random()*xrange,Math.random()*yrange,Math.random()*maxsize,Math.random()*maxsize];
+            rect[2] = Math.max(rect[2],minsize);
+            rect[3] = Math.max(rect[3],minsize);
+            if(px<rect[0]-tol || px>rect[0]+rect[2]+tol || py>rect[1]+rect[3]+tol || py<rect[1]-tol){
+                for(let j=0;j<rects.length;j++){
+                    let r = rects[j];
+                    if(rect[0]<r[0]+r[2]+tol && rect[0]+rect[2]+tol>r[0] && rect[1]<r[1]+r[3]+tol && rect[1]+rect[3]+tol>r[1]){
+                        isColliding=true;
+                        break;
+                    }
+                }
+                if(!isColliding){break}
+            }
+        }
+        rects.push(rect);
+    }
+    return rects;
+}
+
+rects = genRects(20,250,50);
+function game(){
+    ctx.fillStyle = "rgba(0,0,0,25%)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    pGrounded=false;
+    ctx.fillStyle = "green";
+    if(rects.length>0){
+        for(let i=0;i<rects.length;i++){
+            ctx.fillStyle = "green";
+            let r = rects[i];
+            if(isColliding(r[0],r[1],r[2],r[3],px,py,pw,ph) && py<r[1]-ph/2){
+                pGrounded=true;
+                vy+=1;
+                if(dashtimeout==0){dashcount=1}
+            }
+            if(isColliding(r[0],r[1],r[2],r[3],px,py,pw,ph)){
+            ctx.fillStyle = "red";
+            if(py<r[1]){
+              py-=vy;
+              if(vy>=(maxSpeed-1)){vy=-vy*0.6;dashcount=1}
+              else{vy=0}
+            }
+            if(px<r[0]){px-=vx;vx=0}
+            if(py>r[1]+r[3]+vy){py-=vy;vy=1}
+            if(px>r[0]+r[2]+vx){px-=vx;vx=0}
+        }
+        ctx.fillRect(r[0],r[1],r[2],r[3]);
+      }
+    }
+
+    ctx.fillStyle = "blue";
+    if(dashcount>0){ctx.fillStyle="purple"}
+    ctx.fillRect(px,py,pw,ph);
+
+    vy = Math.min(speedCap,vy);
+    vy = Math.max(-speedCap,vy);
+    vx = Math.min(speedCap,vx);
+    vx = Math.max(-speedCap,vx);
+
+    if(vx<0){vx+=f}
+    else if(vx>0){vx-=f}
+    if(vy<0){vy+=f}
+    else if(vy>0){vy-=f}
+
+    if(Math.abs(vy)<f){vy=0}
+    if(Math.abs(vx)<f){vx=0}
+    if(keyW  && pGrounded && jumptimeout==0){vy=-jv;jumptimeout=5}
+    if(keyA && vx>-maxSpeed){vx-=1}
+    if(keyS && vy<maxSpeed){vy+=1}
+    if(keyD && vx<maxSpeed){vx+=1}
+    px+=vx;py+=vy;
+    if(!pGrounded){vy+=g}
+
+    if(!pGrounded){dashtimeout=0}
+    if(dashtimeout>0){dashtimeout--}
+    if(jumptimeout>0){jumptimeout--}
+
+    if(py<=0){
+        pw+=5;
+        ph+=5;
+        lavaHeight=Math.min(Math.max((lavaHeight-canvas.height/2),-200),-50*difficulty*2);
+        if(lavaHeight<0){lavaRate*=2}
+        py=canvas.height-20-ph;
+
+        rects = genRects(35-difficulty,100-difficulty*2,50-difficulty*2);
+        rects.push(
+            [0,canvas.height-10,canvas.width,10],
+            [0,0,10,canvas.height],
+            [canvas.width-10,0,10,canvas.height]
+        );
+        if(difficulty<15){difficulty++}
+    }
+    score = difficulty*1000 + Math.round(canvas.height-py);
+    if(canvas.height-(py+ph/2)<lavaHeight){
+        document.getElementById("endscreen").hidden = false;
+        document.getElementById("score").textContent = "Score: "+score;
+        clearInterval(gameloop)
+    }
+    if(lavaHeight>-100){lavaRate=Math.max(0.5,Math.min(difficulty*0.6,3))}
+    ctx.fillStyle = "orange";
+    ctx.fillRect(0,canvas.height,canvas.width,-lavaHeight);
+    lavaHeight+=lavaRate;
+}
+for(let i=0;i<60;i++){game()}
+
+document.getElementById("play").addEventListener("click", function(){
+    gameloop=setInterval(game,20);
+    document.getElementById("startscreen").hidden = true;
+});
+document.getElementById("play_again").addEventListener("click", function(){
+    document.getElementById("endscreen").hidden = true;
+    ph=10;pw=10;
+    px=250;py=250;
+    lavaHeight = 50; lavaRate = 0.5;
+    difficulty = 0; score = 0;
+    rects = genRects(20,250,50);
+    gameloop = setInterval(game,20);
+});
+document.addEventListener("keydown", function(e){
+    if(e.key == " " && dashcount>0){
+        if(keyW){vy=-(dashSpeed-Math.min(0,Math.max(-4,vy)))}
+        if(keyA){vx-=dashSpeed}
+        if(keyS){vy+=dashSpeed}
+        if(keyD){vx+=dashSpeed+Math.max(0,vy)}
+        dashtimeout = 25;
+        dashcount--;
+    }
+    if(e.key == 'w' || e.key == 'ArrowUp'){keyW=true}
+    if(e.key == 'a' || e.key == 'ArrowLeft'){keyA=true}
+    if(e.key == 's' || e.key == 'ArrowDown'){keyS=true}
+    if(e.key == 'd' || e.key == 'ArrowRight'){keyD=true}
+});
+
+document.addEventListener("keyup", function(e){
+    if(e.key == 'w' || e.key == 'ArrowUp'){keyW=false}
+    if(e.key == 'a' || e.key == 'ArrowLeft'){keyA=false}
+    if(e.key == 's' || e.key == 'ArrowDown'){keyS=false}
+    if(e.key == 'd' || e.key == 'ArrowRight'){keyD=false}
+});
+
+    </script>
+</body>
+</html>
