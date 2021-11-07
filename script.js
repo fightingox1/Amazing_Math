@@ -6,6 +6,7 @@ function SetUpGames() {
   AddProject("Flappy Bird",      "img/FlappyBird.jpeg",        "Projects/FlappyBird/index.html");
   AddProject("Javascript Racer", "img/JsRacer.png",            "Projects/JsRacer/index.html");
   AddProject("Hit The Target",   "img/HitTheTarget.png",       "Projects/HitTheTarget/index.html");
+  AddProject("Doge The Lava",    "img/DogeLava.png",           "Projects/DogeLava/index.html");
   AddProject("Snake",            "img/Snake.png",              "Projects/Snake/index.html");
 
   LoadAnnouncment("ChangeLog1", "Change Log 0.4", "New UI, Announcment System, Javascript Racer UI Update, Home Button Rework");
