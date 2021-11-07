@@ -2,11 +2,11 @@ function SetUpGames() {
   AddProject("Hextris",          "img/Hextris.png",       "Projects/Hextris/index.html");
   AddProject("2048",             "img/2048.png",          "Projects/2048/index.html");
   AddProject("Tetris",           "img/Tetris.jpg",        "Projects/Tetris/index.html");
-  AddProject("Chrome Dino Game", "img/DinoGame",          "Projects/DinoGame/index.html");
+  AddProject("Chrome Dino Game", "img/DinoGame.pmg",          "Projects/DinoGame/index.html");
   
   AddProject("Flappy Bird",      "img/FlappyBird.jpeg",   "Projects/FlappyBird/index.html");
   AddProject("Snake",            "img/Snake.png",         "Projects/Snake/index.html");
-  AddProject("Pac Man",          "img/PacMan.png",        "Projects/PacMan/index.html");
+  AddProject("Pac Man",          "img/PacGame.jpg",        "Projects/PacMan/index.html");
   AddProject("Javascript Racer", "img/JsRacer.png",       "Projects/JsRacer/index.html");
   
   AddProject("Space Company",    "img/SpaceCompany.png",  "Projects/SpaceCompany/index.html");
