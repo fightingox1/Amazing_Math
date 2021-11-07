@@ -12,6 +12,8 @@
   display: inline-block;
   font-size: 16px;
 
+  height: fit-content;
+  
   transition: background-color 0.5s, border-color 0.5s;
 }
 
@@ -45,4 +47,8 @@
 
 .GameText:hover {
   color: #787878;
+}
+
+.MakePosAbs {
+  position: absolute;
 }
