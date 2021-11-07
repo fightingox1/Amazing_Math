@@ -53,7 +53,6 @@ function LoadAnnouncment(Name, Title, Value) {
 }
 
 function CloseAnnouncment() {
-  alert("Hello World");
   document.cookie = currentAnnouncment + "=loaded;";
   document.getElementById("Announcment").id = "hidden";
 }
