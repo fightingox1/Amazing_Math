@@ -118,8 +118,8 @@ hr.solid {
 
 #AnnouncmentBackground {
   pointer-events: all;
-  width: 40%;
-  height: fit-content;
+  width: 35%;
+  height: 70%;
   position: relative;
   vertical-align: center;
   top: 0;
