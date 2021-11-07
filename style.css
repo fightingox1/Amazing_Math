@@ -118,7 +118,7 @@ hr.solid {
 #AnnouncmentBackground {
   pointer-events: all;
   width: 40%;
-  height: 20%;
+  height: fit-content;
   position: relative;
   vertical-align: center;
   top: 0;
@@ -145,7 +145,7 @@ hr.solid {
 }
 
 #AnnouncmentName {
-  height: 25%;
+  height: fit-content;
   background: rgba(0.5, 0.5, 0.5, 0.5);
   border-radius: 12.5px 12.5px 0px 0px;
 }
@@ -154,7 +154,8 @@ hr.solid {
   text-align: center;
   margin: 5px;
   position: fixed;
-  width: 2%;
+  width: fit-content;
+  padding: 5px;
   aspect-ratio: 1;
   background-color: rgba(204, 76, 51, 1);
   border-radius: 0.5rem;
