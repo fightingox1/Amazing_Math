@@ -1,29 +1,22 @@
-#myButton {
-  background-color: #909090;
-
-  margin: 5px;
-
+#HomeButton {
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  color: white;
+  background: #565656;
   border-style: solid;
   border-color: #353535;
-  border-width: 2px;
-
-  color: white;
-  padding: 15px 32px;
-  display: inline-block;
-  font-size: 16px;
-
-  height: fit-content;
   
-  transition: background-color 0.5s, border-color 0.5s;
+  position: absolute;
+  
+  transition: box-shadow 0.25s, margin-top 0.25s;
+  
+  box-shadow: 0px 2px 5px #454545;
 }
 
-#abPos {
-  /* position: absolute; */
-}
-
-#myButton:hover {
-  border-color: #fff;
-  background-color: #707070;
+#HomeButton:hover {
+  margin-top: -0.5%;
+  box-shadow: 0px 5px 6px #454545;
 }
 
 .GameText {
@@ -47,8 +40,4 @@
 
 .GameText:hover {
   color: #787878;
-}
-
-.MakePosAbs {
-  position: absolute;
 }
