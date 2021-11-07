@@ -2,7 +2,7 @@ function SetUpGames() {
   AddProject("Hextris",          "img/Hextris.png",       "Projects/Hextris/index.html");
   AddProject("2048",             "img/2048.png",          "Projects/2048/index.html");
   AddProject("Tetris",           "img/Tetris.jpg",        "Projects/Tetris/index.html");
-  AddProject("Chrome Dino Game", "img/DinoGame.pmg",          "Projects/DinoGame/index.html");
+  AddProject("Chrome Dino Game", "img/DinoGame.png",          "Projects/DinoGame/index.html");
   
   AddProject("Flappy Bird",      "img/FlappyBird.jpeg",   "Projects/FlappyBird/index.html");
   AddProject("Snake",            "img/Snake.png",         "Projects/Snake/index.html");
