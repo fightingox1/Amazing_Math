@@ -143,6 +143,7 @@ hr.solid {
   position: relative;
   text-align: center;
   font-size: 55px;
+  pointer-events: none;
 }
 
 #AnnouncmentName {
