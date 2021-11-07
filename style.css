@@ -14,12 +14,13 @@ body {
   padding: 15px;
 }
 
+
 .Game {
    position: relative;
    border-style: solid;
    border-color: #353535;
    box-shadow: 3px 3px 8px #888888;
-   height: 70%;
+   aspect-ratio: 1 / 2;
    background-color: #575757;
    transition: border-color 0.5s, box-shadow 0.5s,
      margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
