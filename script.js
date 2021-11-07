@@ -14,7 +14,7 @@ function SetUpGames() {
   AddProject("Hit The Target",   "img/HitTheTarget.png",  "Projects/HitTheTarget/index.html");
   AddProject("Doge The Lava",    "img/DogeLava.png",      "Projects/DogeLava/index.html");
   
-  LoadAnnouncment("ChangeLog2", "Change Log 0.5", "Bonjour, new games have been added to the website including a new clicker game called Space Company. It has some very simple UI but overall I have found it to be a fun game and it kept my attention for more than 20 mins. Also it works offline. Other than space company I added in Pac-Man, The Dino Game, and Doge the Lava");
+  LoadAnnouncment("ChangeLog2", "Change Log 0.5", "Bonjour, new games have been added to the website including a new clicker game called Space Company. It has some very simple UI but overall I have found it to be a fun game and it kept my attention for more than 20 mins. Other than Space Company I added in Pac-Man, The Dino Game, and Doge the Lava");
 }
 
 var PathToLoad;
