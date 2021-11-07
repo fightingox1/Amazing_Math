@@ -46,3 +46,7 @@
 .GameText:hover {
   color: #787878;
 }
+
+.MakePosAbs {
+  position: absolute;
+}
