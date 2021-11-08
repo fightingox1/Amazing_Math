@@ -24,6 +24,7 @@ body {
    transition: border-color 0.5s, box-shadow 0.5s,
      margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
    display: table-cell;
+   height: auto;
 }
 
 .Game:hover {
@@ -55,7 +56,7 @@ body {
 
   padding: 5px;
 
-  color: white;
+  color: #898989;
   font-size: 25px;
   position: fixed;
   bottom: 0;
