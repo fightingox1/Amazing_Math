@@ -16,26 +16,14 @@ body {
 
 
 .Game {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #575757;
-    font-size: 3rem;
-    color: #fff;
-    box-shadow: 3px 3px 8px #888888;
-    height: 100%;
-    width: 100%;
-    border-radius: 4px;
-    transition: all 500ms;
-    overflow: hidden;
-
-    transition: border-color 0.5s, box-shadow 0.5s,
+   position: relative;
+   border-style: solid;
+   border-color: #353535;
+   box-shadow: 3px 3px 8px #888888;
+   background-color: #575757;
+   transition: border-color 0.5s, box-shadow 0.5s,
      margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
-  
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+   display: table-cell;
 }
 
 .Game:hover {
@@ -49,10 +37,13 @@ body {
      margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
 }
 
-.Games {
+.Games {  
   display: grid;
-  gap: 1rem;
-
+  gap: 25px 50px;
+  margin: auto;
+  height: 100%;
+  width: 80%;
+  
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-auto-rows: 240px;
 }
