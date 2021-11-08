@@ -24,6 +24,7 @@ body {
    transition: border-color 0.5s, box-shadow 0.5s,
      margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
    display: flex;
+  height: 20rem;
 }
 
 .Game:hover {
@@ -45,7 +46,6 @@ body {
   width: 80%;
   
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-auto-rows: fit-content(1em);
 }
 
 #version {
