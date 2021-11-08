@@ -21,6 +21,7 @@ body {
    border-color: #353535;
    box-shadow: 3px 3px 8px #888888;
    background-color: #575757;
+   height: fit-content;
    transition: border-color 0.5s, box-shadow 0.5s,
      margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
    display: table-cell;
