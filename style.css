@@ -50,13 +50,14 @@ body {
 
 #version {
   border-style: solid;
-  border-color: #353535;
+  border-color: black;
 
   margin-bottom: 10px;
 
   padding: 5px;
 
-  color: #898989;
+  color: #fff;
+  
   font-size: 25px;
   position: fixed;
   bottom: 0;
