@@ -13,8 +13,8 @@ function SetUpGames() {
   AddProject("Cookie Clicker",   "img/CookeClickTins.jpg", "Projects/Cookie Clicker/index.html");
   AddProject("Hit The Target",   "img/HitTheTarget.png",   "Projects/HitTheTarget/index.html");
   AddProject("Doge The Lava",    "img/DogeLava.png",       "Projects/DogeLava/index.html");
-  
-  LoadAnnouncment("ChangeLog5", "Change Log 0.5", "Bonjour, new games have been added to the website including a new clicker game called Space Company. It has some very simple UI but overall I have found it to be a fun game and it kept my attention for more than 20 mins. Other than Space Company I added in Pac-Man, The Dino Game, and Doge the Lava");
+  var muted = true
+  LoadAnnouncment("ChangeLog5", "Change Log 0.52", "The website has recently been updated to the Christmas theme! With christmas theme there are a couple of new things, a countdown to christmas at the top of the page, and a mute/umute button that plays christmas music! We also added some snowflakes falling, and we plan on adding a string of christmas lights at the top of the page. Merry Christmas!");
 }
 
 var PathToLoad;
@@ -67,6 +67,21 @@ function AddProject(PrjName, ImgSrc, Game) {
         "<button class='GameButton' onclick='Load(" + '"' + Game + '"' + ")'>Play Game</button>"
       +
     "</div></div>"
+}
+
+function mute_muted() {
+  var audio = document.getElementById('christmas_music');
+  var audio_icon = document.getElementById('audio_icon');
+  if(muted == true) {
+    audio.muted = false;
+    audio_icon.src="unmute.png";
+    muted = false;
+  }
+  if(muted == false) {
+    audio.muted = true;
+    audio_icon.src="mute.png";
+    muted = true;
+  }
 }
 
 function Load(Input) {
