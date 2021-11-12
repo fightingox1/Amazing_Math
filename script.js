@@ -14,7 +14,7 @@ function SetUpGames() {
   AddProject("Hit The Target",   "img/HitTheTarget.png",   "Projects/HitTheTarget/index.html");
   AddProject("Doge The Lava",    "img/DogeLava.png",       "Projects/DogeLava/index.html");
   
-  LoadAnnouncment("ChangeLog53", "Change Log 0.52", "The website has recently been updated to the Christmas theme! With christmas theme there are a couple of new things, a countdown to christmas at the top of the page. Merry Christmas!");
+  LoadAnnouncment("ChangeLog52", "Change Log 0.52", "The website has recently been updated to the Christmas theme! With christmas theme there are a couple of new things, a countdown to christmas at the top of the page. Merry Christmas!");
 }
 
 var PathToLoad;
