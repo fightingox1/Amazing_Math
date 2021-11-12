@@ -36,6 +36,10 @@ body {
   padding: 15px;
 }
 
+.audio_button_div {
+  position: absolute;
+  left: 35px;
+  top: 20px;
 
 .Game {
    position: relative;
