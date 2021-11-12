@@ -120,9 +120,9 @@ hr.solid {
 .GameButton::before {
 	content: '';
 	display: block;
+	bottom: 1%;
+	right: 5%;
 	position: absolute;
-	top: -7px;
-	left: -3px;
 	bottom:1%;
 	right: 0;
 	height: 23px;
