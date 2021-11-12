@@ -63,7 +63,7 @@ function AddProject(PrjName, ImgSrc, Game) {
         PrjName +
         "<hr class='solid'>" +
         "<img src='" + ImgSrc + "' class='GameImg'>" +
-        "<div style='bottom:1%; height:15%;'><button class='GameButton' onclick='Load(" + '"' + Game + '"' + ")'>Play Game</button></div>"
+        "<button class='GameButton' onclick='Load(" + '"' + Game + '"' + ")'>Play Game</button>"
       +
     "</div></div>"
 }
