@@ -1,7 +1,6 @@
 body {
   background-color: #121212;
 }
-
 <style>
 /* customizable snowflake styling */
 .snowflake {
@@ -10,10 +9,8 @@ body {
   font-family: Arial, sans-serif;
   text-shadow: 0 0 5px #000;
 }
-
 @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
 </style>
-
     christmas_countdown {
       display: block;
       margin: 0 auto;
@@ -23,7 +20,6 @@ body {
       left:50%;
       transform:translateX(-50%);
     }
-
 #hidden {
   display: none;
 }
@@ -32,16 +28,8 @@ body {
   font-size: 50px;
   color: white;
   text-align: center;
-
   padding: 15px;
 }
-
-.audio_button_div {
-  position: absolute;
-  left: 35px;
-  top: 20px;
-}
-
 .Game {
    position: relative;
    border-style: solid;
@@ -53,7 +41,6 @@ body {
      margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
    display: table-cell;
 }
-
 .Game:hover {
    border-color: #fff;
    margin-left: -4px;
@@ -64,7 +51,6 @@ body {
    transition: border-color 0.5s, box-shadow 0.5s,
      margin-left 0.5s, margin-right 0.5s, margin-top 0.5s, margin-bottom 0.5s;
 }
-
 .Games {  
   display: grid;
   gap: 25px 50px;
@@ -74,51 +60,38 @@ body {
   
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
-
 #version {
   border-style: solid;
   border-color: #353535;
-
   margin-bottom: 10px;
-
   padding: 5px;
-
   color: #fff;
   
   font-size: 25px;
   position: fixed;
   bottom: 0;
 }
-
 .GameName {
   font-size: 25px;
   color: #909090;
   text-align: center;
 }
-
 .GameImg {
   right: 5%;
   width: 90%;
   border-style: solid;
   border-color: #353535;
-
   position: absolute;
-
   vertical-align: center;
 }
-
 hr.solid {
   border-top: 3px solid #bbb;
 }
-
 .GameButton {
   position: absolute;
   bottom: 1%;
-
   right: 5%;
-
   border-style: solid;
-
   width: 90%;
   height: 5rem;
   background-color: #252525;
@@ -126,15 +99,12 @@ hr.solid {
   border-color: #353535;
   color: #fff;
   font-size: 2rem;
-
   transition: border-color 0.5s;
 }
-
 .GameButton:hover {
   background-color: #202020;
   border-color: #fff;
 }
-
 #Announcment {
   top: 0;
   width: 100%;
@@ -145,7 +115,6 @@ hr.solid {
   aspect-ratio: 1;
   pointer-events: none;
 }
-
 #AnnouncmentBackground {
   pointer-events: all;
   width: 40%;
@@ -157,31 +126,26 @@ hr.solid {
   border-radius: 1rem;
   margin: auto;
   top: 10%;
-
   border-style: solid;
   border-radius: 1rem;
   border-color: black;
 }
-
 #AnnouncmentText {
   padding: 5px;
   text-align: center;
   font-size: 35px;
 }
-
 #AnnouncmentNameText {
   position: relative;
   text-align: center;
   font-size: 55px;
   pointer-events: none;
 }
-
 #AnnouncmentName {
   height: fit-content;
   background: rgba(0.5, 0.5, 0.5, 0.5);
   border-radius: 12.5px 12.5px 0px 0px;
 }
-
 #AnnouncmentClose {
   text-align: center;
   margin: 5px;
@@ -192,12 +156,10 @@ hr.solid {
   background-color: rgba(204, 76, 51, 1);
   border-radius: 0.5rem;
 }
-
 #AnnouncmentData {
   width: 100%;
   height: 100%;
 }
-
 #AnnouncmentClose:hover {
   background-color: rgba(229, 51, 25, 1);
 }
