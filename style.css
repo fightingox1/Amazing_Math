@@ -84,6 +84,8 @@ body {
 }
 hr.solid {
   border-top: 3px solid #bbb;
+}
+
 .GameButton {
 	display: inline-block;
 	-webkit-box-sizing:border-box;
