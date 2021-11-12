@@ -15,6 +15,7 @@ function SetUpGames() {
   AddProject("Doge The Lava",    "img/DogeLava.png",       "Projects/DogeLava/index.html");
   
   LoadAnnouncment("ChangeLog52", "Change Log 0.52", "The website has recently been updated to the Christmas theme! With christmas theme there are a couple of new things, a countdown to christmas at the top of the page. Merry Christmas!");
+  lightup_tree()
 }
 
 var PathToLoad;
@@ -36,6 +37,11 @@ function getCookie(name) {
         }
     }
     return decodeURI(dc.substring(begin + prefix.length, end));
+}
+
+function lightup_tree(){
+  $('.bauble').addClass('light');
+  $('.star').addClass('star-light');
 }
 
 var currentAnnouncment = "";
