@@ -1,5 +1,11 @@
 body {
   background-color: #121212;
+  padding: 0;
+  margin: 0;
+}
+html {
+  padding: 0;
+  margin: 0;
 }
 /* customizable snowflake styling */
 .snowflake {
@@ -26,6 +32,7 @@ body {
   overflow: hidden;
   background-color: #C93030;
   position: fixed;
+  margin:0;
   top: 0;
   width: 100%;
   color:white;
