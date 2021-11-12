@@ -42,7 +42,7 @@ var currentAnnouncment = "";
 function LoadAnnouncment(Name, Title, Value) {
   currentAnnouncment = Name;
   var cookieVal = getCookie(Name);
-  
+  cookieVal = null
   if (cookieVal == null) {
     document.getElementById("AnnouncmentNameText").innerHTML = Title;
     document.getElementById("AnnouncmentText").innerHTML = Value;
