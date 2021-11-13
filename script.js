@@ -68,6 +68,18 @@ function AddProject(PrjName, ImgSrc, Game) {
     "</div></div>"
 }
 
+var IsMuted = false;
+
+function MuteUnmute() {
+  var muteButton = document.getElementById("MuteButton");
+  if (IsMuted) {
+    muteButton.src = "unmute.png";
+  } else {
+    muteButton.src = "mute.png"; 
+  }
+  IsMuted = !IsMuted;
+}
+
 function Load(Input) {
   //alert(Input);
   window.location.href = Input;
