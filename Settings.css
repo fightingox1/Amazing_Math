@@ -5,6 +5,14 @@
   z-index: 10;
 }
 
+@keyframes OpenCloseSettings {
+  from {
+    transform: translateY(-120%);
+  } to {
+    transform: translateY(0%);
+  }
+}
+
 .SettingsIco {
   width: 5%;
   aspect-ratio: 1 / 1;
@@ -14,17 +22,40 @@
   height: fit-content;
   width: fit-content;
   background-color: rgb(128, 128, 128);
+  border-style: solid;
+  border-bottom-style: none;
+  border-radius: 5px;
 }
 
 .SettingsHeader {
-  font-size: 20px;
+  font-size: 50px;
   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .Setting {
-
+  border-bottom-style: solid;
+  border-radius: inherit;
+    padding-left: 5px;
+  padding-right: 5px;
 }
 
 .SettingName {
-  font-size: 15px; 
+  font-size: 25px; 
+}
+
+.SettingsOpen {
+  animation-name: OpenCloseSettings;
+  animation-duration: 1s;
+  
+  transform: translateY(0%);
+}
+
+.SettingsClose {
+  animation-name: OpenCloseSettings;
+  animation-direction: reverse;
+  animation-duration: 1s;
+  
+  transform: translateY(-120%);
 }
