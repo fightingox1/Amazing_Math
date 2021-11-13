@@ -1,0 +1,30 @@
+.Settings {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+
+.SettingsIco {
+  width: 5%;
+  aspect-ratio: 1 / 1;
+}
+
+.SettingsWindow {
+  height: fit-content;
+  width: fit-content;
+}
+
+.SettingsHeader {
+  font-size: 20px;
+  text-align: center;
+}
+
+.Setting {
+  border-style: solid;
+  border-top: 5px;
+  border-color: rgb(175, 87, 93);
+}
+
+.SettingName {
+  font-size: 15px; 
+}
