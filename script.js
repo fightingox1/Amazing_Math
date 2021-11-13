@@ -86,7 +86,7 @@ function Load(Input) {
   window.location.href = Input;
 }
 
-function SettingsOpened = false;
+var SettingsOpened = false;
 
 function OpenCloseSettings() {
   alert(SettingsOpened);
