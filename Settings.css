@@ -7,7 +7,7 @@
 
 @keyframes OpenCloseSettings {
   from {
-    transform: translateY(-150%);
+    transform: translateY(-200%);
   } to {
     transform: translateY(0%);
   }
@@ -58,5 +58,5 @@
   animation-direction: reverse;
   animation-duration: 1s;
   
-  transform: translateY(-150%);
+  transform: translateY(-200%);
 }
