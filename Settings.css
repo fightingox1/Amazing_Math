@@ -2,6 +2,7 @@
   position: fixed;
   top: 5px;
   left: 5px;
+  z-index: 10;
 }
 
 .SettingsIco {
@@ -12,6 +13,7 @@
 .SettingsWindow {
   height: fit-content;
   width: fit-content;
+  background-color: rgb(128, 128, 128);
 }
 
 .SettingsHeader {
@@ -20,9 +22,7 @@
 }
 
 .Setting {
-  border-style: solid;
-  border-top: 5px;
-  border-color: rgb(175, 87, 93);
+
 }
 
 .SettingName {
