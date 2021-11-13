@@ -15,6 +15,7 @@ function SetUpGames() {
   AddProject("Doge The Lava",    "img/DogeLava.png",       "Projects/DogeLava/index.html");
   
   LoadAnnouncment("ChangeLog52", "Change Log 0.52", "The website has recently been updated to the Christmas theme! With christmas theme there are a couple of new things, a countdown to christmas at the top of the page. Merry Christmas!");
+  LoadAnnouncment("URLChange", "Amazing Math URL change", "Inorder to improve the experience of our users we have made the desicion to switch over to the domain amazing-math.net. This change should be active in the next 72 to 96 hours as of Satruday, November 13th.");
 }
 
 var PathToLoad;
@@ -87,7 +88,7 @@ function Load(Input) {
 
 function SettingsOpened = false;
 
-function OpenCloseSettings()() {
+function OpenCloseSettings() {
   alert(SettingsOpened);
   var settingsButton = document.getElementById("SettingsWindow");
   if (SettingsOpened) {
