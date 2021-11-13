@@ -68,11 +68,11 @@ function AddProject(PrjName, ImgSrc, Game) {
     "</div></div>"
 }
 
-var IsMuted = false;
+var IsMuted = true;
 
 function MuteUnmute() {
   var muteButton = document.getElementById("MuteButton");
-  if (IsMuted) {
+  if (!IsMuted) {
     muteButton.src = "unmute.png";
   } else {
     muteButton.src = "mute.png"; 
@@ -83,4 +83,19 @@ function MuteUnmute() {
 function Load(Input) {
   //alert(Input);
   window.location.href = Input;
+}
+
+function SettingsOpened = false;
+
+function OpenSettings() {
+  alert(SettingsOpened);
+  var settingsButton = document.getElementById("SettingsWindow");
+  if (SettingsOpened) {
+    settingsButton.classList.remove("SettingsClosed");
+    settingsButton.classList.add("SettingsOpened");
+  } else {
+    settingsButton.classList.add("SettingsClosed");
+    settingsButton.classList.remove("SettingsOpened");
+  }
+  SettingsOpened = !SettingsOpened;
 }
