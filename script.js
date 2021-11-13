@@ -87,7 +87,7 @@ function Load(Input) {
 
 function SettingsOpened = false;
 
-function OpenSettings() {
+function OpenCloseSettings()() {
   alert(SettingsOpened);
   var settingsButton = document.getElementById("SettingsWindow");
   if (SettingsOpened) {
