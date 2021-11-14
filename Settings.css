@@ -62,3 +62,7 @@
   
   transform: translateY(-200%);
 }
+
+.SettingButton_Img { 
+  width: 25%;
+}
