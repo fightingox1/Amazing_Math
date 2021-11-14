@@ -69,7 +69,7 @@ function AddProject(PrjName, ImgSrc, Game) {
     "</div></div>"
 }
 
-var IsMuted = true;
+var IsMuted = false;
 
 function MuteUnmute() {
   var muteButton = document.getElementById("MuteButton");
@@ -86,7 +86,7 @@ function Load(Input) {
   window.location.href = Input;
 }
 
-var SettingsOpened = false;
+var SettingsOpened = true;
 
 function OpenCloseSettings() {
   var settingsButton = document.getElementById("SettingsWindow");
