@@ -91,11 +91,11 @@ var SettingsOpened = false;
 function OpenCloseSettings() {
   var settingsButton = document.getElementById("SettingsWindow");
   if (SettingsOpened) {
-    settingsButton.classList.remove("SettingsClosed");
-    settingsButton.classList.add("SettingsOpened");
+    settingsButton.classList.remove("SettingsClose");
+    settingsButton.classList.add("SettingsOpen");
   } else {
-    settingsButton.classList.add("SettingsClosed");
-    settingsButton.classList.remove("SettingsOpened");
+    settingsButton.classList.add("SettingsClose");
+    settingsButton.classList.remove("SettingsOpen");
   }
   SettingsOpened = !SettingsOpened;
 }
