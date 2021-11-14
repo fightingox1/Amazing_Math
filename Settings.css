@@ -18,6 +18,16 @@
   width: 5%;
   aspect-ratio: 1 / 1;
   pointer-events: all;
+  border-radius: 5px;
+  
+  border-width: 0px;
+  
+  transition: border-width 0.5s;
+}
+
+.SettingsIco:hover {
+  border-style: solid;
+  border-width: 1px;
 }
 
 .SettingsWindow {
@@ -65,4 +75,5 @@
 
 .SettingButton_Img { 
   width: 25%;
+  pointer-events: all;
 }
