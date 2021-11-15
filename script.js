@@ -99,3 +99,14 @@ function OpenCloseSettings() {
   }
   SettingsOpened = !SettingsOpened;
 }
+
+var shownId = "Showflakes_Shown";
+var hiddenId = "Showflakes_Hidden";
+
+function DisableSnowflakes() {
+  document.getElementById(shownId).id = hiddenId;
+}
+
+function EnableSnowflakes() {
+  document.getElementById(hiddenId).id = shownId;
+}
