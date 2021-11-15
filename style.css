@@ -27,11 +27,11 @@ html {
     }
 
 #Showflakes_Shown {
-  opacity: 1;	
+  background-color: red;
 }
 
 #Showflakes_Hidden {
-  opacity: 0;
+  display: none;
 }
 
 #hidden {
