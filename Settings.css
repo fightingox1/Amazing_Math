@@ -74,4 +74,7 @@
   pointer-events: all;
   margin: auto;
   float: center;
+  
+  background-color: #121212;
+  height: 1rem;
 }
