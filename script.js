@@ -91,17 +91,17 @@ function set_audio(startup){
  if(startup){
    muted = true;
    startup = false;
-   alert("starting");
+   console.log("starting");
  }
  else{
   if(muted){
-    alert("unmuting");
-    audio.muted = false;
+    console.log("unmuting");
+    audio.play()
     muted = false;
   }
   else{
-    alert("muting");
-    audio.muted = true;
+    console.log("muting");
+    audio.pause()
     muted = true;
   
   }}}
