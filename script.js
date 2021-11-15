@@ -124,8 +124,8 @@ function OpenCloseSettings() {
   SettingsOpened = !SettingsOpened;
 }
 
-var shownId = "Showflakes_Shown";
-var hiddenId = "Showflakes_Hidden";
+var shownId = "Snowflakes_Shown";
+var hiddenId = "Snowflakes_Hidden";
 
 function DisableSnowflakes() {
   alert("Disablaling Snowflakes");
