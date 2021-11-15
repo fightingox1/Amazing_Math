@@ -104,6 +104,7 @@ var shownId = "Showflakes_Shown";
 var hiddenId = "Showflakes_Hidden";
 
 function DisableSnowflakes() {
+  alert("Hello WOrld");
   document.getElementById(shownId).id = hiddenId;
   document.getElementById("HideSnowflakes").innerHTML = "Show Snowflakes";
   //document.getElementById("HideSnowflakes").onclick = "EnableSnowflakes()";
