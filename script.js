@@ -19,8 +19,8 @@ function SetUpGames() {
   set_audio(true)
 }
 
+var audio=new Audio("https://fightingox1.github.io/Amazing-Math/Wham!%20-%20Last%20Christmas%20(Instrumental)-Instrumentals.mp3");
 var muted;
-var audio = document.getElementById("christmas_music");
 var PathToLoad;
 
 function getCookie(name) {
@@ -91,17 +91,14 @@ function set_audio(startup){
  if(startup){
    muted = true;
    startup = false;
-   console.log("starting");
  }
  else{
   if(muted){
-    console.log("unmuting");
-    audio.play()
+    audio.play();
     muted = false;
   }
   else{
-    console.log("muting");
-    audio.pause()
+    audio.pause();
     muted = true;
   
   }}}
