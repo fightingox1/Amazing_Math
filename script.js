@@ -20,6 +20,7 @@ function SetUpGames() {
 }
 
 var muted;
+var audio = document.getElementById("christmas_music");
 var PathToLoad;
 
 function getCookie(name) {
@@ -54,25 +55,6 @@ function LoadAnnouncment(Name, Title, Value) {
   }
 }
 
-function set_audio(startup){
- var audio = document.getElementById("christmas_music");
- if(startup){
-   muted = true;
-   startup = false;
-   alert("starting");
- }
- else{
-  if(muted){
-    alert("unmuting");
-    audio.muted = false;
-    muted = false;
-  }
-  else{
-    alert("muting");
-    audio.muted = true;
-    muted = true;
-  
-  }}}
 
 function CloseAnnouncment() {
   document.cookie = currentAnnouncment + "=loaded;";
@@ -104,6 +86,25 @@ function MuteUnmute() {
   IsMuted = !IsMuted;
   
 }
+
+function set_audio(startup){
+ if(startup){
+   muted = true;
+   startup = false;
+   alert("starting");
+ }
+ else{
+  if(muted){
+    alert("unmuting");
+    audio.muted = false;
+    muted = false;
+  }
+  else{
+    alert("muting");
+    audio.muted = true;
+    muted = true;
+  
+  }}}
 
 function Load(Input) {
   //alert(Input);
