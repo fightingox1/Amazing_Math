@@ -16,8 +16,10 @@ function SetUpGames() {
   
   LoadAnnouncment("ChangeLog52", "Change Log 0.52", "The website has recently been updated to the Christmas theme! With christmas theme there are a couple of new things, a countdown to christmas at the top of the page. Merry Christmas!");
   LoadAnnouncment("URLChange", "Amazing Math URL change", "Inorder to improve the experience of our users we have made the decision to switch over to the domain amazing-math.net. This change should be active in the next 72 to 96 hours as of Satruday, November 13th.");
+  set_audio(true)
 }
 
+var muted;
 var PathToLoad;
 
 function getCookie(name) {
@@ -52,6 +54,23 @@ function LoadAnnouncment(Name, Title, Value) {
   }
 }
 
+function set_audio(startup){
+ var audio = document.getElementById("christmas_music").id
+ if(startup){
+   muted = true;
+   startup = false;
+ }
+ else{
+  if(muted){
+    audio.muted = false;
+    muted = false
+  }
+  else{
+    audio.muted = true
+    muted = true
+  
+  }}}
+
 function CloseAnnouncment() {
   document.cookie = currentAnnouncment + "=loaded;";
   document.getElementById("Announcment").id = "hidden";
@@ -73,12 +92,14 @@ var IsMuted = false;
 
 function MuteUnmute() {
   var muteButton = document.getElementById("MuteButton");
+  set_audio(false)
   if (!IsMuted) {
     muteButton.src = "unmute.png";
   } else {
     muteButton.src = "mute.png"; 
   }
   IsMuted = !IsMuted;
+  
 }
 
 function Load(Input) {
@@ -104,7 +125,6 @@ var shownId = "Showflakes_Shown";
 var hiddenId = "Showflakes_Hidden";
 
 function DisableSnowflakes() {
-  alert("Hello WOrld");
   document.getElementById(shownId).id = hiddenId;
   document.getElementById("HideSnowflakes").innerHTML = "Show Snowflakes";
   //document.getElementById("HideSnowflakes").onclick = "EnableSnowflakes()";
