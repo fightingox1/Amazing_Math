@@ -68,7 +68,7 @@
   pointer-events: all;
 }
 
-SettingButton_Button {
+.SettingButton_Button {
   width: fit-content;
   position: relative;
   pointer-events: all;
