@@ -105,8 +105,12 @@ var hiddenId = "Showflakes_Hidden";
 
 function DisableSnowflakes() {
   document.getElementById(shownId).id = hiddenId;
+  document.getElementById("HideSnowflakes").innerHTML = "Show Snowflakes";
+  //document.getElementById("HideSnowflakes").onclick = "EnableSnowflakes()";
 }
 
 function EnableSnowflakes() {
   document.getElementById(hiddenId).id = shownId;
+  document.getElementById("HideSnowflakes").innerHTML = "Hide Snowflakes";
+  //document.getElementById("HideSnowflakes").onclick = "DisableSnowflakes()";
 }
