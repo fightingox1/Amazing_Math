@@ -55,19 +55,22 @@ function LoadAnnouncment(Name, Title, Value) {
 }
 
 function set_audio(startup){
- var audio = document.getElementById("christmas_music").id
+ var audio = document.getElementById("christmas_music");
  if(startup){
    muted = true;
    startup = false;
+   alert("starting");
  }
  else{
   if(muted){
+    alert("unmuting");
     audio.muted = false;
-    muted = false
+    muted = false;
   }
   else{
-    audio.muted = true
-    muted = true
+    alert("muting");
+    audio.muted = true;
+    muted = true;
   
   }}}
 
@@ -92,7 +95,7 @@ var IsMuted = false;
 
 function MuteUnmute() {
   var muteButton = document.getElementById("MuteButton");
-  set_audio(false)
+  set_audio(false);
   if (!IsMuted) {
     muteButton.src = "unmute.png";
   } else {
