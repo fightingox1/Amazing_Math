@@ -67,3 +67,11 @@
   width: 25%;
   pointer-events: all;
 }
+
+SettingButton_Button {
+  width: fit-content;
+  position: relative;
+  pointer-events: all;
+  margin: auto;
+  float: center;
+}
