@@ -28,12 +28,10 @@ html {
 
 #Showflakes_Shown {
   opacity: 1;	
-  transition: opacity 0.5s;
 }
 
 #Showflakes_Hidden {
   opacity: 0;
-  transition: opacity 0.5s;
 }
 
 #hidden {
