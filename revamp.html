@@ -1,0 +1,376 @@
+   <!DOCTYPE html>
+   <html>
+
+     <head>
+       <title>Dashboard</title>
+        <link rel="icon" type="image/x-icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico">
+        <link rel="stylesheet" href="revamp_style.css">
+     </head>
+
+     <body>
+       <div id="sidebar" class="sidebar">
+         <a href="#" class="profile_pic_a" id="profile_pic_a">
+           <img class="profile_pic_img" id="profile_pic_img" src="https://i.pinimg.com/originals/47/5a/86/475a86177aeedacf8dc7f5e2b4eff61f.png">
+         </a>
+        <img src="https://static.thenounproject.com/png/446003-200.png" id="users_select" class="page_select">
+        <div class="selected_bar" id="users_bar"></div>
+        <img src="https://www.freeiconspng.com/uploads/controller-game-icon-10.png" id="games_select" class="page_select">
+        <div class="selected_bar_games" id="games_bar"></div>
+        <img src="https://static.thenounproject.com/png/2206184-200.png" id="chat_select" class="page_select">
+        <div class="selected_bar" id="chat_bar"></div>
+       </div>
+       <div class="main_game_page_body" id="main_game_page">
+         <div id="name_welcome" class="name_welcome">
+           <h1>Hello, John Doe</h1>
+           <p>Welcome to amazing math</p>
+         </div>
+         <div id="hextris" class="game_holder">
+           <img src="https://ik.imagekit.io/sjyfpsp1n/portal/html5games/images/tmp/HextrisTeaser.jpg">
+           <p>
+             Hextris
+           </p>
+         </div>
+         <div id="2048" class="game_holder">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png">
+           <p>
+             2048
+           </p>
+         </div>
+         <div id="tetris" class="game_holder">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRliuFWtcFORR3zvf8YD_eGyYLA-7MY1fA3o5BbCECu1wbtCWj4v7MDzZpuH9_R4gWPmWQ&usqp=CAU">
+           <p>
+             Tetris
+           </p>
+         </div>
+         <div id="dino" class="game_holder">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Trex_pixel.png">
+           <p>
+             Dino game
+           </p>
+         </div>
+         <div id="flappy" class="game_holder">
+           <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png">
+           <p>
+             Flappy bird
+           </p>
+         </div>
+         <div id="snake" class="game_holder">
+           <img src="https://logodix.com/logo/833674.png">
+           <p>
+             Snake
+           </p>
+         </div>
+         <div id="pacman" class="game_holder">
+           <img src="https://freepngimg.com/thumb/ghost/80736-world-pacman-square-area-png-image-high-quality.png">
+           <p>
+             Pacman
+           </p>
+         </div>
+         <div id="racer" class="game_holder">
+           <img src="https://cdn.freebiesupply.com/logos/large/2x/js-racing-logo-svg-vector.svg">
+           <p>
+             JS racer
+           </p>
+         </div>
+         <div id="clicker" class="game_holder">
+           <img src="https://cdn-icons-png.flaticon.com/512/164/164659.png">
+           <p>
+             Cookie Clicker
+           </p>
+         </div>
+         <div id="hit_target" class="game_holder">
+           <img src="https://i.pinimg.com/originals/c1/81/61/c18161d71ed03dd1cad94ce48d36d453.png">
+           <p>
+             Hit the target
+           </p>
+         </div>
+         <div id="space_company" class="game_holder">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkfGNho7QKQ_9Iv-6T3nu10b-k9NlJk0apJg&usqp=CAU">
+           <p>
+             Space company
+           </p>
+         </div>
+         <div id="minecraft" class="game_holder">
+           <img src="https://glcometstale.com/wp-content/uploads/2019/09/Untitled-1.jpg">
+           <p>
+             Minecraft
+           </p>
+         </div>
+         <div id="lava" class="game_holder">
+           <img src="https://fightingox1.github.io/image_library/Screenshot%202021-12-06%203.04.50%20PM.png">
+           <p>
+             Dodge the lava
+           </p>
+         </div>
+       </div>
+       <div class="play_game_page_body" style="display:none;" id="play_game_page">
+         <div class="banner_div" id="banner_div">
+           <img src="https://fightingox1.github.io/image_library/banner.png" id="banner_img" class="banner_img">
+         </div>
+         <div id="back_arrow" class="back_arrow">
+           <a href="#">
+             <img src="https://cdn.iconscout.com/icon/free/png-256/back-arrow-1767515-1502579.png" id="back_arrow_img" class="back_arrow_img">
+             
+           </a>
+         </div>
+         <div id="branding" class="branding">
+           <h1>Amazing Math</h1>
+           <h2>By something studios</h2>
+         </div>
+         <div class="bottom_div" id="bottom_div">
+           <img src="https://fightingox1.github.io/image_library/cover.jpg" id="game_cover" class="game_cover">
+           <div class="game_play_div" id="game_play_div">
+             <div style="padding-bottom: 15%;">
+               <b id="game_name">[GAME NAME]</b>
+             </div>
+             <div id="play_button" style="position: relative;">
+                 <img src="https://fightingox1.github.io/image_library/imageedit_15_6161789067.png">
+             </div>
+           </div>
+           <div class="description_div" id="description_div">
+             <b>Description</b>
+             <div class="description_div_text_back" id="description_div_text">
+               <div class="description_div_text">
+                 <p id="description">
+                   #description
+                 </p>
+               </div>
+             </div>
+           </div>
+           <div class="credits" id="credits">
+             <p>Something Studios</p>
+           </div>
+         </div>
+       </div>
+       <div class="coming_soon_body" id="coming_soon_page" style="display:none">
+       <div class="text_area">
+       <h1>
+       Coming soon!
+       </h1>
+       <h3>
+       This page has yet to be completed, rest assured that our developers are hard at work to release it as soon as possible. Please check back at a later date.
+       </h3>
+       </div>
+       </div>
+       <script>
+         var banner
+         var cover
+         var description
+         var name
+         var game_url
+         var hextris = document.getElementById('hextris');
+         var game_2048 = document.getElementById('2048');
+         var tetris = document.getElementById('tetris');
+         var dino = document.getElementById('dino');
+         var flappy = document.getElementById('flappy');
+         var snake = document.getElementById('snake');
+         var pacman = document.getElementById('pacman');
+         var racer = document.getElementById('racer');
+         var clicker = document.getElementById('clicker');
+         var hit_target = document.getElementById('hit_target');
+         var space_company = document.getElementById('space_company');
+         var minecraft = document.getElementById('minecraft');
+         var lava = document.getElementById('lava');
+         var play = document.getElementById('play_game_page')
+         var main = document.getElementById('main_game_page')
+         var coming_soon = document.getElementById('coming_soon_page')
+         var back_arrow = document.getElementById('back_arrow')
+         var play_game = document.getElementById('play_button');
+         var game_bar = document.getElementById('games_bar');
+         var users_bar = document.getElementById('users_bar');
+         var chat_bar = document.getElementById('chat_bar');
+         var game_select = document.getElementById('games_select');
+         var users_select = document.getElementById('users_select');
+         var chat_select = document.getElementById('chat_select');
+
+         hextris.style.cursor = 'pointer';
+         hextris.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://fightingox1.github.io/image_library/hextris%20banner.png"
+           cover = "https://ik.imagekit.io/sjyfpsp1n/portal/html5games/images/tmp/HextrisTeaser.jpg"
+           description = "It's like tetris but weirder and more fun!"
+           name = "Hextris!"
+           game_url = "Projects/Hextris/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         game_2048.style.cursor = 'pointer';
+         game_2048.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRpwC5i5fkvayXiEvJsXpOJmJWjvtE02s7Ag&usqp=CAU"
+           cover = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png"
+           description = "You have to combine the blocks till you get to 2048 or run out of space!"
+           name = "2048!"
+           game_url = "Projects/2048/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         tetris.style.cursor = 'pointer';
+         tetris.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxk6ChNB9L6hUm_17lKtcSEoWtXgeT0HMV_G3yJzs5N38zQnqrDE5mGPNUzYeI6d-3W-U&usqp=CAU"
+           cover = "https://upload.wikimedia.org/wikipedia/en/4/4a/Tetris_Boxshot.jpg"
+           description = "its tetris what the fuck do you want from me"
+           name = "Tetris!"
+           game_url = "Projects/Tetris/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         dino.style.cursor = 'pointer';
+         dino.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://bloggingrevolution.com/wp-content/uploads/2021/05/Dinosaur-Game-5.png"
+           cover = "https://upload.wikimedia.org/wikipedia/commons/d/d3/Trex_pixel.png"
+           description = "It's the chrome dino game, you have to jump and avoid cacti"
+           name = "Dino Game!"
+           game_url = "Projects/DinoGame/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         flappy.style.cursor = 'pointer';
+         flappy.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "http://oyster.ignimgs.com/wordpress/stg.ign.com/2014/02/FlappyBirdReview_020614_1600.jpg"
+           cover = "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png"
+           description = "Your a bird and you have to go in between two poles so that you don't hit them!"
+           name = "Flappy Bird!"
+           game_url = "Projects/FlappyBird/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         snake.style.cursor = 'pointer';
+         snake.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://fightingox1.github.io/image_library/snake%20game.jpeg"
+           cover = "https://logodix.com/logo/833674.png"
+           description = "The game popularized by Nokia you have to go around and eat/collect apples which makes your snake longer but you have to be carefull to not hit your tail"
+           name = "Snake"
+           game_url = "Projects/Snake/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         pacman.style.cursor = 'pointer';
+         pacman.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfBsD2mKruEi2842YfcGnnvA1lvdNBrXkFh02wC86Y1gkEg19UCJrLCHRCk42Wa8feUZA&usqp=CAU"
+           cover = "https://freepngimg.com/thumb/ghost/80736-world-pacman-square-area-png-image-high-quality.png"
+           description = "Pretty sure everyone knows what pacman is"
+           name = "Pacman!"
+           game_url = "Projects/PacMan/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         racer.style.cursor = 'pointer';
+         racer.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://cdn.shopify.com/s/files/1/0406/3753/0271/products/J_SRACINGJ_SRACINGWindShieldBanner_800x.jpg?v=1613108009"
+           cover = "https://cdn.freebiesupply.com/logos/large/2x/js-racing-logo-svg-vector.svg"
+           description = "A simple fun racing game made in javascript"
+           name = "Javascript Racer!"
+           game_url = "Projects/JsRacer/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         clicker.style.cursor = 'pointer';
+         clicker.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSUTnVkJMMCH1_NYNNeI7QI5_T1Z5eLKI3NaoV7AMex-yETSbcvGribcFnKjUr_GyKOHY&usqp=CAU"
+           cover = "https://cdn-icons-png.flaticon.com/512/164/164659.png"
+           description = "You click the cookie to get more money, with more money you can buy autoclickers and other upgrades to get you cookies automatically without the need to click and you keep going!"
+           name = "Cookie Clicker!"
+           game_url = "Projects/Cookie Clicker/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         hit_target.style.cursor = 'pointer';
+         hit_target.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://media.istockphoto.com/photos/archery-banner-conquering-adversity-picture-id158196537?k=20&m=158196537&s=170667a&w=0&h=LUITxHBIqAFkD0i21KX5VW1yp9wCs3IXhCQz_gsEs_c="
+           cover = "https://i.pinimg.com/originals/c1/81/61/c18161d71ed03dd1cad94ce48d36d453.png"
+           description = "You have to move your mouse to hit the target but as soon as your mouse goes over a block you die"
+           name = "Hit the target"
+           game_url = "Projects/HitTheTarget/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         lava.style.cursor = 'pointer';
+         lava.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://fightingox1.github.io/image_library/Screenshot%202021-12-07%209.34.38%20AM.png"
+           cover = "https://fightingox1.github.io/image_library/Screenshot%202021-12-06%203.04.50%20PM.png"
+           description = "Jump to go up and avoid hitting the rising lava!"
+           name = "Dodge the lava!"
+           game_url = "Projects/DogeLava/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         space_company.style.cursor = 'pointer';
+         space_company.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://fightingox1.github.io/image_library/space_company_banner.jpeg"
+           cover = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkfGNho7QKQ_9Iv-6T3nu10b-k9NlJk0apJg&usqp=CAU"
+           description = "Idk I've never played this game"
+           name = "Space Company!"
+           game_url = "Projects/SpaceCompany/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         minecraft.style.cursor = 'pointer';
+         minecraft.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://unwinnable.com/wp-content/uploads/2011/08/minecraft1.png"
+           cover = "https://glcometstale.com/wp-content/uploads/2019/09/Untitled-1.jpg"
+           description = "It's like a shittier version of minecraft in the browser... and well do I really need to describe minecraft to you?"
+           name = "Minecraft!"
+           game_url = "Minecraft/index.html"
+           set_properties(banner, cover, description, name)
+         };
+         back_arrow.style.cursor = 'pointer';
+         back_arrow.onclick = function() {
+           play.style.display = 'none';
+           main.style.display = 'inline';
+         };
+         play_game.style.cursor = 'pointer';
+         play_game.onclick = function() {
+           window.location.replace(game_url)
+         };
+         users_select.style.cursor = 'pointer';
+         users_select.onclick = function() {
+           users_bar.style.display = 'inline-block'
+           chat_bar.style.display = 'none';
+           game_bar.style.display = 'none';
+           coming_soon.style.display = 'inline';
+           play.style.display = 'none';
+           main.style.display = 'none';
+         };
+         chat_select.style.cursor = 'pointer';
+         chat_select.onclick = function() {
+           users_bar.style.display = 'none'
+           chat_bar.style.display = 'inline-block';
+           game_bar.style.display = 'none';
+           coming_soon.style.display = 'inline';
+           play.style.display = 'none';
+           main.style.display = 'none';
+         };
+         game_select.style.cursor = 'pointer';
+         game_select.onclick = function() {
+           users_bar.style.display = 'none'
+           chat_bar.style.display = 'none';
+           game_bar.style.display = 'inline-block';
+           coming_soon.style.display = 'none';
+           play.style.display = 'none';
+           main.style.display = 'inline';
+         };
+
+         function set_properties(header_img, game_logo, description, game_name) {
+           document.getElementById("banner_img").src = header_img;
+           document.getElementById("game_cover").src = game_logo;
+           document.getElementById("description").innerHTML = description
+           document.getElementById("game_name").innerHTML = game_name
+         }
+
+       </script>
+     </body>
+
+   </html>
