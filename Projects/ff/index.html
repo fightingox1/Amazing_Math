@@ -1,1 +1,245 @@
-asdf
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fighter Fun!</title>
+<style>
+#canvas_main, #canvas_enemy {
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	position: absolute;
+}
+
+#canvas_div {
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	background-color: gray;
+	position: absolute;
+}
+
+.button {
+	cursor: pointer;
+	border-radius: 15px;
+  background-color: #326da8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+	margin-top: 3.5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#dead {
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	background-color: #3d3d3d;
+	font-family: Sans-serif;
+	width: 25%;
+	height: 30%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	display: inline;
+	visibility: hidden;
+}
+</style>
+</head>
+<body>
+<img src="https://fightingox1.github.io/image_library/Untitled%20drawing%20(6).png" id="player_sprite_s" style="display:none;">
+
+<img src="https://fightingox1.github.io/image_library/fighter%20right.png" id="player_sprite_r" style="display:none;">
+
+<img src="https://fightingox1.github.io/image_library/fighter%20left.png" id="player_sprite_l" style="display:none;">
+
+<div id="canvas_div">
+<canvas id="canvas_enemy"></canvas>
+<canvas id="canvas_main"></canvas>
+</div>
+
+<div id="dead" style="dead">
+	<h3 id = "dead_head">You Died</h3>
+	<p id="score">Your score:</p>
+	<button class="button" id="play_again">Play Again</button>
+</div>
+<script>
+const canvas = document.getElementById("canvas_main");
+const ctx = canvas.getContext("2d");
+const canvas_enemy = document.getElementById("canvas_enemy");
+const dead_h = document.getElementById("dead_head")
+const play_again = document.getElementById("play_again");
+const score_txt = document.getElementById("score");
+const dead_div = document.getElementById("dead");
+const ctx_e = canvas_enemy.getContext("2d");
+var px_color
+const player_sprite_s = document.getElementById("player_sprite_s");
+const player_sprite_r = document.getElementById("player_sprite_r");
+const player_sprite_l = document.getElementById("player_sprite_l");
+var player_sprite = player_sprite_s;
+var player_x = (canvas.width / 2) - (25 / 2)
+var player_y = (canvas.height / 2) - (20 / 2)
+var enemy_x = 0
+var enemy_y = 0
+var keyW, keyS;
+var cx, cy
+var rotation = 0;
+var obstacle_array = [[0,0,50,50]]
+var velocity_x = 0, velocity_y = 0;
+var speed = -2.5;
+var player_score = 0
+var rad,vel_x,vel_y,sprite_x,sprite_y, sprite_gen_colide,p,x;
+var subtracter = 0;
+ctx_e.fillStyle = "#0a0000";
+
+function random_place(current_x){
+var x,y,height,width
+x = current_x
+y = Math.floor(Math.random() * 100);
+width = 60
+height = Math.floor(Math.random() * (85 - 40 + 1) + 40);
+return([x,y,width,height])
+}
+
+function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+      x: evt.clientX - rect.left,
+      y: evt.clientY - rect.top
+    };
+}
+
+function generate_obstacles(obstacles_count){
+var x,y,height,width
+var counter = 0
+var placement
+var placement_colide = false;
+var current_x = 0
+while(counter < obstacles_count){
+placement_colide = false;
+placement = random_place(current_x);
+for(let i=0; i<obstacle_array.length; i++){
+
+if(obstacle_array[i][1]+35 > placement[1]+(placement[3]/2)+35 || obstacle_array[i][1]+(obstacle_array[i][3]/2)+35 < placement[1]){placement_colide = true; break}
+
+placement_colide = true; break
+}
+obstacle_array.push(placement);
+counter++;
+i = obstacle_array.length
+
+current_x = current_x + 15
+}
+}
+
+generate_obstacles(10000);
+game_loop_func();
+function game_loop_func(){
+var game_loop = setInterval(function(){
+
+ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+ctx_e.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+rad = 0.0174533*rotation;
+vel_x = Math.cos(rad)*speed;
+vel_y = Math.sin(rad)*speed;
+
+player_sprite = player_sprite_s
+
+if(keyW){player_sprite = player_sprite_l}
+if(keyS){player_sprite = player_sprite_r}
+
+cx = player_x + 0.5 * 25
+cy = player_y + 0.5 * 20
+
+ctx.save();
+
+if(player_sprite == player_sprite_r && player_y < canvas.height-25){
+ctx.translate(cx,cy);
+ctx.rotate(3.5*Math.PI/180);
+rotation = rotation + 3.5;
+ctx.translate(-cx,-cy);
+}
+else if(player_sprite == player_sprite_l){
+ctx.translate(cx,cy);
+ctx.rotate(-3.5*Math.PI/180);
+rotation = rotation - 3.5;
+ctx.translate(-cx,-cy);
+}
+
+ctx.drawImage(player_sprite, player_x, player_y, 25, 20);
+for(let i=0; i<obstacle_array.length; i++){
+sprite_x = obstacle_array[i][0] + vel_x
+sprite_y = obstacle_array[i][1] + vel_y
+
+obstacle_array[i][0] = sprite_x
+obstacle_array[i][1] = sprite_y
+
+ctx_e.fillRect(sprite_x, sprite_y, obstacle_array[i][2],obstacle_array[i][3]);
+}
+
+
+
+if(coliders() == "dead" && player_score > 5){
+clearInterval(game_loop);
+score_txt.innerHTML = "Your Score: " + Math.trunc(player_score)
+dead_div.style.visibility = "visible";
+}
+player_score += 0.1
+speed -= 0.0005
+}, 20);
+}
+
+play_again.onclick = function(){
+
+ctx.translate(cx,cy);
+ctx.rotate(-rotation*Math.PI/180);
+ctx.translate(-cx,-cy);
+
+dead_div.style.visibility = "hidden";
+obstacle_array = [[0,0,50,50]];
+player_score = 0;
+rotation = 0;
+sprite_x = 0;
+sprite_y = 0;
+enemy_x = 0;
+enemy_y = 0;
+velocity_y = 0;
+velocity_x = 0;
+speed = -2.5;
+generate_obstacles(10000);
+game_loop_func();
+};
+
+function coliders(){
+p = ctx_e.getImageData(137, 66, 24, 19).data;
+for(let i = 0; i < p.length; i += 4){
+if(p[i+1],p[i+2],p[i+3] == (0,0,0)){
+return("dead");
+}
+}
+return("alive");
+}
+
+document.addEventListener("keydown", function(e){
+    if(e.key == 'w' || e.key == 'ArrowUp'){keyW=true}
+    if(e.key == 's' || e.key == 'ArrowDown'){keyS=true}
+});
+
+document.addEventListener("keyup", function(e){
+    if(e.key == 'w' || e.key == 'ArrowUp'){keyW=false}
+    if(e.key == 's' || e.key == 'ArrowDown'){keyS=false}
+});
+</script>
+</body>
+</html>
