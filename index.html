@@ -24,6 +24,11 @@
            <h1>Hello, John Doe</h1>
            <p>Welcome to amazing math</p>
          </div>
+           <div id="FF" class="game_holder">
+           <img src="https://fightingox1.github.io/image_library/Fighter%20Fun.png">
+           <p>
+              <a style="color: #d6f527;">New: </a>Fighter Fun
+           </p>
          <div id="hextris" class="game_holder">
            <img src="https://ik.imagekit.io/sjyfpsp1n/portal/html5games/images/tmp/HextrisTeaser.jpg">
            <p>
@@ -158,6 +163,7 @@
          var description
          var name
          var game_url
+         var ff = document.getElementById('FF');
          var hextris = document.getElementById('hextris');
          var game_2048 = document.getElementById('2048');
          var tetris = document.getElementById('tetris');
@@ -183,6 +189,18 @@
          var users_select = document.getElementById('users_select');
          var chat_select = document.getElementById('chat_select');
 
+         ff.style.cursor = 'pointer';
+         ff.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://fightingox1.github.io/image_library/Screenshot%202022-02-02%2011.52.33%20AM.png"
+           cover = "https://fightingox1.github.io/image_library/Fighter%20Fun.png"
+           description = "Amazing Math's new exclusive flappy-bird style game!"
+           name = "Fighter Fun"
+           game_url = "Projects/FF/index.html"
+           set_properties(banner, cover, description, name)
+         };
+          
          hextris.style.cursor = 'pointer';
          hextris.onclick = function() {
            play.style.display = 'inline';
