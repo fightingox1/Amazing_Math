@@ -54,6 +54,14 @@
 	display: inline;
 	visibility: hidden;
 }
+	
+#above-game {
+  left: 50%;
+  top: 2.5%;
+  -webkit-transform: translate(-50%, -50%);
+  text-align: center;
+  position: absolute;
+}
 </style>
 </head>
 <body>
@@ -68,6 +76,12 @@
 <canvas id="canvas_main"></canvas>
 </div>
 
+    <div class="above-game" id="above-game">
+	<center><button onclick="location.href = '../../index.html';" id="myButton" class="float-left submit-button" >Home</button></center>
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button">New Game</a>
+    </div>
+	
 <div id="dead" style="dead">
 	<h3 id = "dead_head">You Died</h3>
 	<p id="score">Your score:</p>
