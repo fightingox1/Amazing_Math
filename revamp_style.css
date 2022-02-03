@@ -16,15 +16,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: #d6dee1;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
@@ -60,7 +51,12 @@ body {
   bottom: 0;
   right: 0;
   position: absolute;
-  overflow:scroll
+  overflow:scroll;
+  overflow-x: hidden;
+}
+
+.game_icons {
+  display: grid;
 }
 
 .play_game_page_body {
