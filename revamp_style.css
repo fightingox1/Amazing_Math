@@ -77,11 +77,13 @@ body {
   background-color: #434343;
 }
 
-.name_welcome {
-    top: 4%;
-    left: 3.5%;
-    position: absolute;
-    line-height: 8px;
+.name_welcome p {
+  font-size: 2vw;
+  position: absolute;
+  top: calc(5px + 4vw);
+  padding: 0;
+  margin: 0;
+  left: 1%;
 }
 
 .branding {
@@ -93,18 +95,22 @@ body {
 
 .name_welcome h1 {
     color: #FFFFAD;
-    font-size: 55px;
+    font-size: 4vw;
+    position: absolute;
+    top: 5px;
+    padding: 0;
+    margin: 0;
+    left: 1%;
 }
 
 .game_icons {
   display: grid;
   grid-gap: 1% 1%;
   width: 100%;
-  top: 15%;
   left: 10%;
   justify-content: space-evenly;
-  grid-template-columns: repeat(auto-fill, minmax(10%, 10%));
-  transform: translateY(20vh)  translateX(10px);
+  grid-template-columns: repeat(8, 10%);
+  transform: translateY(calc(5px + 6vw))  translateX(10px);
 }
 
 .game_holder {
@@ -131,10 +137,6 @@ body {
   top: 1vw;
   position: relative;
   text-align: center;
-}
-
-.name_welcome p {
-  font-size: 25px;
 }
 
 .profile_pic_a {
