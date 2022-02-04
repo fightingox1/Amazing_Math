@@ -107,10 +107,9 @@ body {
   display: grid;
   grid-gap: 1% 1%;
   width: 100%;
-  left: 10%;
   justify-content: space-evenly;
   grid-template-columns: repeat(8, 10%);
-  transform: translateY(calc(5px + 6vw))  translateX(10px);
+  transform: translateY(calc(5px + 6vw));
 }
 
 .game_holder {
