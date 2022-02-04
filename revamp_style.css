@@ -45,13 +45,7 @@ body {
 }
 
 .main_game_page_body {
-  width: 90.47619%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  overflow:scroll;
+  overflow: scroll;
   overflow-x: hidden;
 }
 
@@ -64,13 +58,13 @@ body {
   position: absolute;
 }
 
-.coming_soon_body {
+.body_page {
   width: 90.47619%;
   height: 100%;
   top: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position: absolute;  
 }
 
 .sidebar {
