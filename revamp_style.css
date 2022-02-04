@@ -98,18 +98,18 @@ body {
 
 .game_icons {
   display: grid;
-  grid-gap: 0.5em 2.5em;
+  grid-gap: 1% 1%;
   width: 100%;
   top: 15%;
   left: 10%;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fill, minmax(10%, 10%));
   transform: translateY(20vh)  translateX(10px);
 }
 
 .game_holder {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px;
@@ -127,7 +127,8 @@ body {
 }
 
 .game_holder p {
-  font-size: 20px;
+  font-size: 1vw;
+  top: 1vw;
   position: relative;
   text-align: center;
 }
