@@ -147,6 +147,9 @@
            </div>
          </div>
        </div>
+       <div class="chat_paage">
+         Hello this is a very cool chat page yes yes i don't do drugs.
+       </div>
        <div class="coming_soon_body" id="coming_soon_page" style="display:none">
        <div class="text_area">
        <h1>
@@ -353,6 +356,7 @@
          users_select.style.cursor = 'pointer';
          users_select.onclick = function() {
            coming_soon.style.display = 'inline';
+           chat_page.style.display = 'none;
            play.style.display = 'none';
            main.style.display = 'none';
             
@@ -362,7 +366,8 @@
          };
          chat_select.style.cursor = 'pointer';
          chat_select.onclick = function() {
-           coming_soon.style.display = 'inline';
+           coming_soon.style.display = 'none';
+           chat_page.style.display = 'inline;
            play.style.display = 'none';
            main.style.display = 'none';
             
@@ -373,6 +378,7 @@
          game_select.style.cursor = 'pointer';
          game_select.onclick = function() {
            coming_soon.style.display = 'none';
+           chat_page.style.display = 'none;
            play.style.display = 'none';
            main.style.display = 'inline';
             
