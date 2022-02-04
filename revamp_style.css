@@ -160,7 +160,6 @@ body {
 
 .page_selected {
   transform: translateX(25px) scale(1.1);
-  background-color: rgba(0, 0, 0, 0.1); 
 }
 
 .page_select:hover {
