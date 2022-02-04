@@ -55,10 +55,6 @@ body {
   overflow-x: hidden;
 }
 
-.game_icons {
-  display: grid;
-}
-
 .play_game_page_body {
   width: 100%;
   height: 100%;
@@ -106,27 +102,34 @@ body {
     font-size: 55px;
 }
 
+.game_icons {
+  display: grid;
+  grid-gap: 0.5em 2.5em;
+  position: fixed;
+  width: 100%;
+  top: 15%;
+  left: 10%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+}
+
 .game_holder {
-  top: 20.5%;
-  width: 15%;
-  left: 5.5%;
-  padding-right: 3.5%;
-  float: left;
-  position: relative;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid;
+  padding: 5px;
 }
 
 .game_holder img {
-  top: 10%;
-  width: 85%;
-  height: 70%;
+  top: 10px;
+  width: 100%;
   position: relative;
 }
 
 .game_holder p {
-  font-size: 23px;
-  bottom: -5%;
+  font-size: 20px;
   position: relative;
+  text-align: center;
 }
 
 .name_welcome p {
