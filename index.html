@@ -13,11 +13,8 @@
            <img class="profile_pic_img" id="profile_pic_img" src="https://i.pinimg.com/originals/47/5a/86/475a86177aeedacf8dc7f5e2b4eff61f.png">
          </a>
         <img src="https://static.thenounproject.com/png/446003-200.png" id="users_select" class="page_select">
-        <div class="selected_bar" id="users_bar"></div>
         <img src="https://www.freeiconspng.com/uploads/controller-game-icon-10.png" id="games_select" class="page_select">
-        <div class="selected_bar_games" id="games_bar"></div>
         <img src="https://static.thenounproject.com/png/2206184-200.png" id="chat_select" class="page_select">
-        <div class="selected_bar" id="chat_bar"></div>
        </div>
        <div class="main_game_page_body" id="main_game_page">
          <div id="name_welcome" class="name_welcome">
@@ -185,9 +182,6 @@
          var coming_soon = document.getElementById('coming_soon_page')
          var back_arrow = document.getElementById('back_arrow')
          var play_game = document.getElementById('play_button');
-         var game_bar = document.getElementById('games_bar');
-         var users_bar = document.getElementById('users_bar');
-         var chat_bar = document.getElementById('chat_bar');
          var game_select = document.getElementById('games_select');
          var users_select = document.getElementById('users_select');
          var chat_select = document.getElementById('chat_select');
@@ -358,27 +352,18 @@
          };
          users_select.style.cursor = 'pointer';
          users_select.onclick = function() {
-           users_bar.style.display = 'inline-block'
-           chat_bar.style.display = 'none';
-           game_bar.style.display = 'none';
            coming_soon.style.display = 'inline';
            play.style.display = 'none';
            main.style.display = 'none';
          };
          chat_select.style.cursor = 'pointer';
          chat_select.onclick = function() {
-           users_bar.style.display = 'none'
-           chat_bar.style.display = 'inline-block';
-           game_bar.style.display = 'none';
            coming_soon.style.display = 'inline';
            play.style.display = 'none';
            main.style.display = 'none';
          };
          game_select.style.cursor = 'pointer';
          game_select.onclick = function() {
-           users_bar.style.display = 'none'
-           chat_bar.style.display = 'none';
-           game_bar.style.display = 'inline-block';
            coming_soon.style.display = 'none';
            play.style.display = 'none';
            main.style.display = 'inline';
