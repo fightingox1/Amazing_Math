@@ -155,14 +155,15 @@ body {
   width: 71.95%;
   position: relative;
   transition: all 0.5s;
-}
-
-.page_select:hover {
-  transform: translateX(25px);
+  border-radius: 5px;
 }
 
 .page_selected {
-  transform: translateX(50px); 
+  transform: translateX(25px) scale(1.1); 
+}
+
+.page_select:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .profile_pic_img {
@@ -285,3 +286,4 @@ body {
   margin: auto;
   font-size: 15.5px;
 }
+
