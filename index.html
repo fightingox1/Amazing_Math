@@ -147,7 +147,7 @@
            </div>
          </div>
        </div>
-       <div class="chat_paage">
+       <div class="chat_page" id="chat_page" style="display:none">
          Hello this is a very cool chat page yes yes i don't do drugs.
        </div>
        <div class="coming_soon_body" id="coming_soon_page" style="display:none">
@@ -188,7 +188,8 @@
          var game_select = document.getElementById('games_select');
          var users_select = document.getElementById('users_select');
          var chat_select = document.getElementById('chat_select');
-
+         var chat_page = document.getElementById('chat_page');   
+         
          ff.style.cursor = 'pointer';
          ff.onclick = function() {
            play.style.display = 'inline';
