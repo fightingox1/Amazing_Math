@@ -105,10 +105,10 @@ body {
 
 .game_icons {
   display: grid;
-  grid-gap: 1% 1%;
+  grid-gap: 1% 0%;
   width: 100%;
   justify-content: space-evenly;
-  grid-template-columns: repeat(8, 10%);
+  grid-template-columns: repeat(8, 12%);
   transform: translateY(calc(5px + 6vw));
 }
 
