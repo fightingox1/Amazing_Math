@@ -154,6 +154,15 @@ body {
   top: 33.5%;
   width: 71.95%;
   position: relative;
+  transition: all 0.5s;
+}
+
+.page_select:hover {
+  transform: translateX(25px);
+}
+
+.page_selected {
+  transform: translateX(50px); 
 }
 
 .profile_pic_img {
