@@ -146,7 +146,7 @@ body {
 }
 
 .page_selected {
-  transform: translateX(15%) scale(1.1);
+  transform: translateX(15%) scale(1.09);
 }
 
 .page_select:hover {
@@ -200,11 +200,17 @@ body {
 }
 
 .back_arrow {
-    height: 45px;
-    width: 45px;
-    left: 10%;
-    top: 3.5%;
-    position: absolute;
+  height: 45px;
+  width: 45px;
+  bottom: 0;
+  z-index: 10;
+  position: absolute;
+  transition: all 0.5s;
+  border-radius: 5px; 
+}
+
+.back_arrow:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .back_arrow_img {
@@ -213,7 +219,7 @@ body {
 }
 
 .credits {
-    left: 3px;
+    right: 3px;
     bottom: -10px;
     position: fixed;
     font-size: 13px;
@@ -277,4 +283,12 @@ body {
 
 #game_name {
   font-size: 2.15vw;
+}
+
+#play_button {
+  transition: all 0.5s;
+}
+
+#play_button:hover {
+  filter: hue-rotate(25deg);
 }
