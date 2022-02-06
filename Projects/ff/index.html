@@ -168,6 +168,7 @@ game_loop_func();
 function game_loop_func(){
 var game_loop = setInterval(function(){
 
+
 ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 ctx_e.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
@@ -205,8 +206,8 @@ sprite_y = obstacle_array[i][1] + vel_y
 
 obstacle_array[i][0] = sprite_x
 obstacle_array[i][1] = sprite_y
-
-ctx_e.fillRect(sprite_x, sprite_y, obstacle_array[i][2],obstacle_array[i][3]);
+  
+ ctx_e.fillRect(sprite_x - 5, sprite_y - 5, obstacle_array[i][2] + 10,obstacle_array[i][3] + 10);
 }
 
 document.getElementById("score_counter").innerHTML = "Score: " + Math.trunc(player_score);
