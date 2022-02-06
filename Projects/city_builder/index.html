@@ -2,10 +2,15 @@
 <head>
   <title>2d City Game</title>
   <link rel="stylesheet" href="style/style.css">
-
+  <link rel="stylesheet" href="../../Global.css">
+  
   <script type="text/javascript" src="scripts/Input.js"></script>
 </head>
 <body>
+  <div class="above-game" id="above-game">
+	  <center><button onclick="location.href = '../../index.html';" id="myButton" class="float-left submit-button" >Home</button></center>
+  </div>
+  
   <div id="settings" onmouseover="elover()" onmouseout="elexit()">
     <select name="object" id="object">
       <option value="road">Road</option>
