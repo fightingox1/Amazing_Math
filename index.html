@@ -22,7 +22,7 @@
            <p>Welcome to Amazing Math</p>
          </div>
            <div class="game_icons">
-            <div id="FF" class="game_holder">
+            <div id="City_Builder" class="game_holder">
               <img src="https://fightingox1.github.io/image_library/CityBuilder.png">
               <p>
                  <a style="color: #4287f5; font-weight: bold;">In Progress: </a>City Builder Game
@@ -173,6 +173,7 @@
          var description
          var name
          var game_url
+         var city_builder = document.getElementById('City_Builder');
          var ff = document.getElementById('FF');
          var hextris = document.getElementById('hextris');
          var game_2048 = document.getElementById('2048');
@@ -197,6 +198,18 @@
          var chat_select = document.getElementById('chat_select');
          var chat_page = document.getElementById('chat_page');   
          
+         city_builder.style.cursor = 'pointer';
+         city_builder.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://fightingox1.github.io/image_library/CityBuilderBanner.png"
+           cover = "https://fightingox1.github.io/image_library/CityBuilder.png"
+           description = "An inprogress City Builder Game that is made in house by Something Studios, Please Remember that this game is in progress and is currently just a road renderer";
+           name = "City Builder";
+           game_url = "Projects/city_builder/index.html"
+           set_properties(banner, cover, description, name)
+         };
+          
          ff.style.cursor = 'pointer';
          ff.onclick = function() {
            play.style.display = 'inline';
