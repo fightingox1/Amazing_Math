@@ -5,6 +5,6 @@ Main Dev: Keljrack
 Main Dev/hosting: Fightingox1 (Me)
 Side Dev: Log-log-log
 
-## By Simple Studios
+## By Something Studios
 
 https://fightingox1.github.io/Amazing-Math/
