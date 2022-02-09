@@ -134,6 +134,9 @@ function genRects(rectnum,maxsize,minsize){
     return rects;
 }
 
+var rock = new Image();
+rock.src = "Rock.jpg";
+        
 rects = genRects(20,250,50);
 function game(){
     ctx.fillStyle = "rgba(0,0,0,25%)";
@@ -160,7 +163,7 @@ function game(){
             if(py>r[1]+r[3]+vy){py-=vy;vy=1}
             if(px>r[0]+r[2]+vx){px-=vx;vx=0}
         }
-        ctx.fillRect(r[0],r[1],r[2],r[3]);
+        ctx.drawImage(rock, r[0],r[1],r[2],r[3]);
       }
     }
 
