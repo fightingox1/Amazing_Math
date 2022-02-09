@@ -137,6 +137,9 @@ function genRects(rectnum,maxsize,minsize){
 var rock = new Image();
 rock.src = "Rock.jpg";
         
+var lava = new Image();
+lava.src = "Lava.jpg";
+        
 rects = genRects(20,250,50);
 function game(){
     ctx.fillStyle = "rgba(0,0,0,25%)";
@@ -217,7 +220,7 @@ function game(){
     }
     if(lavaHeight>-100){lavaRate=Math.max(0.5,Math.min(difficulty*0.6,3))}
     ctx.fillStyle = "orange";
-    ctx.fillRect(0,canvas.height,canvas.width,-lavaHeight);
+    ctx.drawImage(lava, 0,canvas.height,canvas.width,-lavaHeight);
     lavaHeight+=lavaRate;
 }
 for(let i=0;i<60;i++){game()}
