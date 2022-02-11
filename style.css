@@ -50,7 +50,7 @@ body {
 }
 
 .body_page {
-  width: 90.47619%;
+  width: 90.0%;
   height: 100%;
   top: 0;
   bottom: 0;
@@ -59,7 +59,7 @@ body {
 }
 
 .sidebar {
-  width: 9.52381%;
+  width:10%;
   height: 100%;
   top: 0;
   left: 0;
@@ -78,10 +78,26 @@ body {
 }
 
 .branding {
-    top: 0.5%;
-    right: 3.5%;
-    position: absolute;
-    line-height: 10px;
+  filter: drop-shadow(5px 5px 4px black);
+  top: 0px;
+  right: 0px;
+  position: fixed;
+}
+
+.branding h1 {
+  font-size: 3vw;
+  right: 0px;
+  top: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+.branding h2 {
+  font-size: 2vw;
+  right: 0px;
+  top: 3vw;
+  padding: 0;
+  margin: 0;
 }
 
 .name_welcome h1 {
@@ -109,6 +125,8 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px;
+  height: fit-content;
+  padding-bottom: 5px;
   transition: all 0.5s;
 }
 
@@ -120,6 +138,7 @@ body {
   top: 10px;
   width: 100%;
   position: relative;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0,0, 0.5));
 }
 
 .game_holder p {
@@ -127,6 +146,7 @@ body {
   top: 1vw;
   position: relative;
   text-align: center;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0,0, 0.5));
 }
 
 .profile_pic_a {
