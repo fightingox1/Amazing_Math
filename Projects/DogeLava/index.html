@@ -220,7 +220,7 @@ function game(){
     }
     if(lavaHeight>-100){lavaRate=Math.max(0.5,Math.min(difficulty*0.6,3))}
     ctx.fillStyle = "orange";
-    ctx.drawImage(lava, 0,canvas.height,canvas.width,-lavaHeight);
+    ctx.drawImage(lava, 0, -lavaHeight, canvas.width,canvas.height);
     lavaHeight+=lavaRate;
 }
 for(let i=0;i<60;i++){game()}
