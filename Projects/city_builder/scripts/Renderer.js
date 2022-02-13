@@ -59,14 +59,14 @@ for (var i = 0; i < Size_x; i++)
 for (var x = 0; x < Size_x; x++) {
   for (var y = 0; y < Size_y; y++) {
     City_Grid[x][y] = -1;
-    if (x != 0 && y != 0 && x != Size_x - 1 && y != Size_y - 1) {
-      var val = Math.trunc(Math.random() * 100);
-      if (val >= 4)
-        Terrain_Grid[x][y] = 1;
-      else
-        Terrain_Grid[x][y] = 0;
-      }
-    else
+//     if (x != 0 && y != 0 && x != Size_x - 1 && y != Size_y - 1) {
+//       var val = Math.trunc(Math.random() * 100);
+//       if (val >= 4)
+//         Terrain_Grid[x][y] = 1;
+//       else
+//         Terrain_Grid[x][y] = 0;
+//       }
+//     else
       Terrain_Grid[x][y] = 0;
   }
 }
