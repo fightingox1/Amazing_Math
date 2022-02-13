@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>2d City Game</title>
+  <link rel="stylesheet" href="style/style.css">
+
+  <script type="text/javascript" src="scripts/Input.js"></script>
+  <script type="text/javascript" src="scripts/Noise.js"></script>
+</head>
+<body>
+  <div id="settings" onmouseover="elover()" onmouseout="elexit()">
+    <select name="object" id="object">
+      <option value="road">Road</option>
+      <option value="house">House</option>
+    </select>
+
+    Place/Destroy:
+    <input type="checkbox" name="place" id="place"></input>
+  </div>
+
+  <div id="game_data">
+    <div class="data" onmouseover="elover()" onmouseout="elexit()">
+      <p>Population</p><div id="population">15</div>
+    </div>
+
+    <div class="data" onmouseover="elover()" onmouseout="elexit()">
+      <p>Money</p><div id="money">15</div>
+    </div>
+
+    <div class="data" onmouseover="elover()" onmouseout="elexit()">
+      <p>Happiness</p><div id="Happiness">100%</div>
+    </div>
+  </div>
+
+  <canvas id="game_canvas"></canvas>
+
+  <script type="text/javascript" src="scripts/Renderer.js"></script>
+  <script type="text/javascript" src="scripts/Game.js"></script>
+</body>
