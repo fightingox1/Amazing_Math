@@ -133,7 +133,9 @@ body {
 
 .game_holder:hover {
   background-color: rgba(0, 0, 0, 0.1);
-  transform: scale(1.1);
+  transform: scale(1);
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .game_holder img {
