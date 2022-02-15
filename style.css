@@ -79,8 +79,8 @@ body {
 
 .branding {
   filter: drop-shadow(5px 5px 4px black);
-  top: 0px;
-  right: 0px;
+  top: 5px;
+  right: 5px;
   position: fixed;
 }
 
