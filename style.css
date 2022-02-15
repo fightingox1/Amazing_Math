@@ -127,11 +127,13 @@ body {
   border-radius: 5px;
   height: fit-content;
   padding-bottom: 5px;
+  transform: scale(1);
   transition: all 0.5s;
 }
 
 .game_holder:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
 }
 
 .game_holder img {
