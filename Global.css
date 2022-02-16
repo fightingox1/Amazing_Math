@@ -6,7 +6,8 @@
   border-style: solid;
   border-color: black;
   border-width: 2px;
-
+  border-radius: 15px;
+  
   color: white;
   padding: 15px 32px;
   display: inline-block;
