@@ -70,12 +70,6 @@
                 Dino game
               </p>
             </div>
-            <div id="flappy" class="game_holder">
-              <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png">
-              <p>
-                Flappy bird
-              </p>
-            </div>
             <div id="snake" class="game_holder">
               <img src="https://logodix.com/logo/833674.png">
               <p>
@@ -178,7 +172,6 @@
          var game_2048 = document.getElementById('2048');
          var tetris = document.getElementById('tetris');
          var dino = document.getElementById('dino');
-         var flappy = document.getElementById('flappy');
          var snake = document.getElementById('snake');
          var pacman = document.getElementById('pacman');
          var racer = document.getElementById('racer');
@@ -265,17 +258,6 @@
            game_url = "Projects/DinoGame/index.html"
            set_properties(banner, cover, description, name)
          };
-         flappy.style.cursor = 'pointer';
-         flappy.onclick = function() {
-           play.style.display = 'inline';
-           main.style.display = 'none';
-           banner = "http://oyster.ignimgs.com/wordpress/stg.ign.com/2014/02/FlappyBirdReview_020614_1600.jpg"
-           cover = "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png"
-           description = "Your a bird and you have to go in between two poles so that you don't hit them!"
-           name = "Flappy Bird!"
-           game_url = "Projects/FlappyBird/index.html"
-           set_properties(banner, cover, description, name)
-         };
          snake.style.cursor = 'pointer';
          snake.onclick = function() {
            play.style.display = 'inline';
@@ -348,7 +330,7 @@
            main.style.display = 'none';
            banner = "https://fightingox1.github.io/image_library/space_company_banner.jpeg"
            cover = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkfGNho7QKQ_9Iv-6T3nu10b-k9NlJk0apJg&usqp=CAU"
-           description = "Idk I've never played this game"
+           description = "A game where you run your own space company that you will inevitabley stop playing because of boredom (unless you are a weird determind person)! (the Amazing Math devs are not responsible for your failing company)"
            name = "Space Company!"
            game_url = "Projects/SpaceCompany/index.html"
            set_properties(banner, cover, description, name)
@@ -359,7 +341,7 @@
            main.style.display = 'none';
            banner = "https://unwinnable.com/wp-content/uploads/2011/08/minecraft1.png"
            cover = "https://glcometstale.com/wp-content/uploads/2019/09/Untitled-1.jpg"
-           description = "It's like a shittier version of minecraft in the browser... and well do I really need to describe minecraft to you?"
+           description = "It's like a shittier version of minecraft in the browser... and well do I really need to describe minecraft to you? (the amazing math devs are not at fault for the player falling infinitely into the void)"
            name = "Minecraft!"
            game_url = "Minecraft/index.html"
            set_properties(banner, cover, description, name)
