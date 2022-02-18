@@ -15,6 +15,7 @@
         <img src="https://static.thenounproject.com/png/446003-200.png" id="users_select" class="page_select">
         <img src="https://www.freeiconspng.com/uploads/controller-game-icon-10.png" id="games_select" class="page_select page_selected">
         <img src="https://static.thenounproject.com/png/2206184-200.png" id="chat_select" class="page_select">
+        <img src="https://www.freeiconspng.com/uploads/settings-icon-7.png" id="settings_select" class="page_select">
        </div>
        <div class="main_game_page_body body_page" id="main_game_page">
          <div id="name_welcome" class="name_welcome">
@@ -196,6 +197,7 @@
          var users_select = document.getElementById('users_select');
          var chat_select = document.getElementById('chat_select');
          var chat_page = document.getElementById('chat_page');   
+         var settings_select = document.getElementById('setting_select');
          
          city_builder.style.cursor = 'pointer';
          city_builder.onclick = function() {
@@ -383,6 +385,7 @@
            users_select.classList.add("page_selected");
            chat_select.classList.remove("page_selected");
            game_select.classList.remove("page_selected");
+           settings_select.classList.remove("page_selected");
          };
          chat_select.style.cursor = 'pointer';
          chat_select.onclick = function() {
@@ -394,6 +397,7 @@
            users_select.classList.remove("page_selected");
            chat_select.classList.add("page_selected");
            game_select.classList.remove("page_selected");
+           settings_select.classList.remove("page_selected");
          };
          game_select.style.cursor = 'pointer';
          game_select.onclick = function() {
@@ -405,8 +409,21 @@
            users_select.classList.remove("page_selected");
            chat_select.classList.remove("page_selected");
            game_select.classList.add("page_selected");
+           settings_select.classList.remove("page_selected");
          };
-
+         settings_select.style.cursor = 'pointer';
+         settings_select.onclick = function() {
+           coming_soon.style.display = 'inline';
+           chat_page.style.display = 'none';
+           play.style.display = 'none';
+           main.style.display = 'none';
+            
+           users_select.classList.remove("page_selected");
+           chat_select.classList.remove("page_selected");
+           game_select.classList.remove("page_selected");
+           settings_select.classList.add("page_selected");
+         };
+          
          function set_properties(header_img, game_logo, description, game_name) {
            document.getElementById("banner_img").src = header_img;
            document.getElementById("game_cover").src = game_logo;
