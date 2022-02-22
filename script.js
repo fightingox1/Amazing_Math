@@ -23,6 +23,8 @@ var audio=new Audio("https://fightingox1.github.io/Amazing-Math/Wham!%20-%20Last
 var muted;
 var PathToLoad;
 
+// tyler is gay
+
 function getCookie(name) {
     var dc = document.cookie;
     var prefix = name + "=";
