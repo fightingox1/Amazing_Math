@@ -24,9 +24,9 @@ function Client( socketio )
 //
 // Connect to a server with the specified nickname.
 
-Client.prototype.connect = function( uri, nickname )
+Client.prototype.connect = function( 'https://caution.zapto.org', nickname )
 {
-	var socket = this.socket = this.io.connect( uri, { reconnect: false } );
+	var socket = this.socket = this.io.connect( 'https://caution.zapto.org', { reconnect: false } );
 	this.nickname = nickname;
 
 	// Hook events
