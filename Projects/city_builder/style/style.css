@@ -1,0 +1,65 @@
+body {
+  background-color: white;
+}
+
+#item_desc {
+  padding: 10px;
+  background-color: gray;
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  z-index: 10;
+  right: 10px;
+  top: 10px;
+}
+
+#settings {
+  padding: 10px;
+  background-color: gray;
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  z-index: 10;
+  left: 10px;
+  top: 10px;
+}
+
+#game_data {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+
+    background-color: black;
+}
+
+.data {
+  padding: 10px;
+
+  background-color: gray;
+
+  margin: 5px;
+
+  font-family: arial;
+
+  text-align: center;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#object {
+  position: relative;
+}
+
+#game_canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
