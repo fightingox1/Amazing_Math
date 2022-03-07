@@ -257,7 +257,7 @@ var Speed = 0.1;
 var Population_Amt = 0;
 var Supermarket_Amt = 0;
 var Road_Amt = 0;
-var Money_Amt = 20000;
+var Money_Amt = 10000;
 var Money_Amt_Added = 0;
 
 function AddMoney() {
