@@ -36,11 +36,18 @@ button{
     background-color: rgba(30,30,30,75%);
     padding: 30px;
 }
-
+#Score_Counter {
+  position: fixed;
+  color: gray;
+  font-size: 25px;
+}
     </style>
     <link rel="stylesheet" href="../../Global.css">
 </head>
 <body>
+    <div id="Score_Counter">
+    Score: 0
+    </div>
     <div onclick="location.href = '../../index.html';" id="myButton" class="MakePosAbs" >Home</div>
     <canvas width="500" height="500"></canvas>
     <div id="endscreen" hidden>
@@ -71,6 +78,7 @@ canvas.height = window.innerHeight;
 const xrange = canvas.width*(5/6);
 const yrange = canvas.height*(5/6);
 const ctx = canvas.getContext("2d");
+const score_count = document.getElementById("Score_Counter");
 const f = 0.09;
 const maxSpeed=6;
 const speedCap = 20;
@@ -213,6 +221,7 @@ function game(){
         if(difficulty<15){difficulty++}
     }
     score = difficulty*1000 + Math.round(canvas.height-py);
+    score_count.innerHTML = "Score: " + score;
     if(canvas.height-(py+ph/2)<lavaHeight){
         document.getElementById("endscreen").hidden = false;
         document.getElementById("score").textContent = "Score: "+score;
