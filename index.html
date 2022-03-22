@@ -15,6 +15,7 @@
         <img src="https://static.thenounproject.com/png/446003-200.png" id="users_select" class="page_select">
         <img src="https://www.freeiconspng.com/uploads/controller-game-icon-10.png" id="games_select" class="page_select page_selected">
         <img src="https://static.thenounproject.com/png/2206184-200.png" id="chat_select" class="page_select">
+        <img src="https://cdn-icons-png.flaticon.com/512/4/4259.png" id="freak_select" class="page_select">
        </div>
        <div class="main_game_page_body body_page" id="main_game_page">
          <div id="name_welcome" class="name_welcome">
@@ -159,8 +160,90 @@
          <h1>Amazing Math</h1>
          <h2>By something studios</h2>
        </div>
+       <div class="body_page" id="freak_page" style="display:none">
+			 <div id="freak_container" style="freak_container">
+			 <center>
+			 <h1>FREAK FILES</h1>
+			 </center>
+         <p style="width: 90%; height: 75%; margin:auto; overflow: scroll;">
+Tim is a masochist, he moaned when I stabbed him.
+<br>
+The Grim Reaper is his adoptive father.
+<br>
+Black Waluigi is his biological father.
+<br>
+Tim cheated on his girlfriend with Greg's mom
+<br>
+<br>		 
+Tyler has a piss kink, he said "ah man" when Ian said he hates people with one.
+<br>
+He can type without looking at his phone, claiming it to be normal.
+<br>
+Has a shit and degradation kink. Loves to be insulted.
+<br>
+Tyler takes candy from little children, I think he abducts him.
+<br>
+There's a warrant for his arrest.
+<br>
+<br>
+I am a mass murderer.
+<br>
+<br>
+Greg has consistently fucked Tim's mom, as he states it on many occasions.
+<br>
+Greg said the only way to keep good programming is SUCKING DICK.
+<br>
+Greg is very sexually attracted to Kim Jong Un, calling him Daddy Kim on all occasions.
+<br>
+Greg has sugar withdrawal symptoms.
+<br>
+<br>
+Jay has witnessed Jacob and Antoine cum.
+<br>
+He has stated it's quite the large amount aswell.
+<br>
+Even stating that Antoine produces gallons of the stuff.
+<br>
+<br>
+Corban is also a masochist, he told me to beat him every month, I'm growing concerned.
+<br>
+I started choking him and he said thanks.
+<br>
+<br>
+Jacob once moaned in a female voice towards me, saying "Harder daddy." I was very off put.
+<br>
+Much like Greg he has fucked Tim's mom.
+<br>
+<br>
+Ian wants to be pegged, having stated he wants a female to 'do' him.
+<br>
+Everyone appears to have fucked other people's moms in this school,
+<br>
+is there some sort of pedophila ring?
+<br>
+<br>
+Landon moaned when Jacob smacked his leg.
+<br>
+Is everyone here a god damn masochist?
+<br>
+Then asked him to kiss the mark?
+<br>
+Landon is a sex MONSTER
+<br>
+<br>
+Kasey lets people have all of his house passwords, I feel like it's a bait.
+<br>
+He's gonna trap someone. He also beats orphans with bats.
+<br>
+he is not funny and multible people want him dead.
+<br>
+<br>
+Taylor bit Antoine once apparently, saying he was a dog as well. Antoine kicked him though, good for him.
+</p>
+			</div>
+       </div>
        <div class="chat_page body_page" id="chat_page" style="display:none">
-         <input value="Message..." class="Amazing_math_input" id="chat_message"></input>
+         <input value="Message..." class="Amazing_math_input" id="chat_message">
        </div>
        <div class="coming_soon_body body_page" id="coming_soon_page" style="display:none">
        <div class="text_area">
@@ -203,6 +286,8 @@
          var users_select = document.getElementById('users_select');
          var chat_select = document.getElementById('chat_select');
          var chat_page = document.getElementById('chat_page');   
+				 var freak_page = document.getElementById('freak_page'); 
+				 var freak_select = document.getElementById('freak_select');
          
          fs.style.cursor = 'pointer';
          fs.onclick = function() {
@@ -396,34 +481,54 @@
          users_select.onclick = function() {
            coming_soon.style.display = 'inline';
            chat_page.style.display = 'none';
+					 freak_page.style.display = 'none';
            play.style.display = 'none';
            main.style.display = 'none';
             
            users_select.classList.add("page_selected");
            chat_select.classList.remove("page_selected");
            game_select.classList.remove("page_selected");
+					 freak_select.classList.remove("page_selected");
          };
          chat_select.style.cursor = 'pointer';
          chat_select.onclick = function() {
            coming_soon.style.display = 'none';
            chat_page.style.display = 'inline';
+					 freak_page.style.display = 'none';
            play.style.display = 'none';
            main.style.display = 'none';
             
            users_select.classList.remove("page_selected");
            chat_select.classList.add("page_selected");
            game_select.classList.remove("page_selected");
+					 freak_select.classList.remove("page_selected");
          };
          game_select.style.cursor = 'pointer';
          game_select.onclick = function() {
            coming_soon.style.display = 'none';
            chat_page.style.display = 'none';
+					 freak_page.style.display = 'none';
            play.style.display = 'none';
            main.style.display = 'inline';
             
            users_select.classList.remove("page_selected");
            chat_select.classList.remove("page_selected");
            game_select.classList.add("page_selected");
+					 freak_select.classList.remove("page_selected");
+         };
+				 
+         freak_select.style.cursor = 'pointer';
+         freak_select.onclick = function() {
+           coming_soon.style.display = 'none';
+           chat_page.style.display = 'none';
+					 freak_page.style.display = 'inline';
+           play.style.display = 'none';
+           main.style.display = 'none';
+            
+           users_select.classList.remove("page_selected");
+           chat_select.classList.remove("page_selected");
+           freak_select.classList.add("page_selected");
+					 game_select.classList.remove("page_selected");
          };
 
          function set_properties(header_img, game_logo, description, game_name) {
