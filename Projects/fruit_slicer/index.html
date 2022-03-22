@@ -1,0 +1,226 @@
+<! DOCTYPE html>
+<html>
+<head>
+<style>
+#canvas {
+	top: 0%;
+	left: 0%;
+	bottom: 0%;
+	right: 0%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#dead {
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	background-color: #3d3d3d;
+	font-family: Sans-serif;
+	width: 25%;
+	height: 30%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	display: inline;
+	visibility: hidden;
+}
+
+.button {
+	cursor: pointer;
+	border-radius: 15px;
+  background-color: #326da8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+	margin-top: 3.5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+</head>
+<body>
+<img src = "https://www.culinaryschools.org/clipart/fruit/apple-clipart.gif" id="apple" style="display:none;">
+<img src = "https://content.mycutegraphics.com/graphics/apple/sliced-apple-and-wedges.png" id="sliced_apple" style="display:none;">
+
+<img src = "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1991014/banana-clipart-xl.png" id="banana" style="display:none;">
+<img src = "https://freepngimg.com/save/130809-vector-slice-banana-download-hq/600x600" id="sliced_banana" style="display:none;">
+
+<img src = "https://www.pikpng.com/pngl/b/56-561325_watermelon-clipart-transparent-whole-watermelon-clipart-png-download.png" id="melon" style="display:none;">
+<img src = "https://www.nicepng.com/png/full/30-304874_whole-watermelon-clipart-free-clipart-image-image-one.png" id="sliced_melon" style="display:none;">
+
+<img src = "https://i.pinimg.com/originals/cd/a3/66/cda36696d58bc09659bf1d26f6695189.png" id="orange" style="display:none;">
+<img src = "https://i.pinimg.com/originals/22/d2/11/22d21144f855199528d7e191cea1328e.png" id="sliced_orange" style="display:none;">
+
+<img src = "https://www.downloadclipart.net/large/55823-pineapple-clipart.png" id="pineapple" style="display:none;">
+<img src = "https://pixy.org/src/67/674894.png" id="sliced_pineapple" style="display:none;">
+
+<img src = "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/4570/strawberry-clipart-xl.png" id="strawberry" style="display:none;">
+<img src = "https://images.vexels.com/media/users/3/226980/isolated/lists/c94b206556ebf85a9741a42c71c073be-sliced-strawberry-illustration.png" id="sliced_strawberry" style="display:none;">
+
+<img src = "https://www.seekpng.com/png/full/146-1468961_apple-clipart-clear-background-green-apple-clip-art.png" id="apple2" style="display:none;">
+<img src = "https://content.mycutegraphics.com/graphics/apple/sliced-green-apple.png" id="sliced_apple2" style="display:none;">
+
+<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" id="heart" style="display:none;">
+<img src = "https://www.pikpng.com/pngl/b/70-700794_heart-clipart.png" id="gray_heart" style="display:none;">
+
+<img src="https://img.freepik.com/free-vector/beige-monochrome-kitchen-flat-color-vector-illustration-modern-furniture-dining-room-apartnment-with-appliance-household-2d-cartoon-interior-with-modern-furniture-background_151150-6258.jpg" id="background" style="width: 100%; height: 100%; left: 0%; right: 0%; top: 0%; bottom: 0%; position: absolute;">
+
+<canvas id="canvas"></canvas>
+
+<div id="dead" style="dead">
+	<h3 id = "dead_head">You Died</h3>
+	<p id="score">Your score:</p>
+	<button class="button" id="play_again">Play Again</button>
+</div>
+
+<script>
+var lives = 3;
+var gen_count = 1;
+var gen_speed = 2500;
+var mouse_over = false;
+var mouse_pos = {'x':0, 'y':0}
+const score = document.getElementById("score");
+const dead_div = document.getElementById("dead");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const heart = [document.getElementById("heart"),document.getElementById("gray_heart")];
+const replay = document.getElementById("play_again");
+const images = [
+[document.getElementById("apple"),document.getElementById("sliced_apple")],
+[document.getElementById("banana"),document.getElementById("sliced_banana")], 
+[document.getElementById("melon"),document.getElementById("sliced_melon")],
+[document.getElementById("orange"),document.getElementById("sliced_orange")],
+[document.getElementById("pineapple"),document.getElementById("sliced_pineapple")],
+[document.getElementById("strawberry"),document.getElementById("sliced_strawberry")],
+[document.getElementById("apple2"),document.getElementById("sliced_apple2")]
+];
+width = 23.4375
+
+var removed = [];
+
+var objects = [ {"pos":[Math.floor((Math.random() * 300-width-1) + 1),150], "vel":[Math.floor((Math.random() * 10) - 5),Math.floor((Math.random() * 3.8) + 2)], "image":[images[Math.floor(Math.random() * (images.length))]], "sliced":false} ]
+function physics(){
+
+for(var i = 0; i < objects.length; i++){
+	if(objects[i].pos[1] >= 155 && !removed.includes(i)){
+		removed.push(i);
+		if(!objects[i].sliced){
+			lives -= 1;
+		}
+		if(lives < 1){
+		return;
+		}
+	}
+	
+	if(objects[i].pos[0] <= 0){
+	objects[i].pos[0] = 0 + 1;
+	objects[i].vel[0] = -objects[i].vel[0]
+	}
+	if(objects[i].pos[0] >= 300-width){
+	objects[i].pos[0] = 300-width-1
+	objects[i].vel[0] = -objects[i].vel[0]
+	}
+	
+	objects[i].vel[1] -=  (9.81*(0.02))*0.29539113716;
+	
+	objects[i].pos[0] -= objects[i].vel[0];
+	objects[i].pos[1] -= objects[i].vel[1];
+	
+	if((objects[i].pos[0] < mouse_pos.x && objects[i].pos[0]+23.4375 > mouse_pos.x) && (objects[i].pos[1] < mouse_pos.y && objects[i].pos[1]+23.4375 > mouse_pos.y) && mouse_over){
+	console.log("sliced");
+	objects[i].sliced = true;
+}}}
+
+function game_func(){
+const game_loop = setInterval(function(){
+
+if(lives < 1){
+score.innerHTML = "Your score: " + gen_count;
+dead_div.style.visibility = "visible";
+return;
+}
+
+ctx.clearRect(0,0,300,150);
+
+physics()
+
+
+
+for(var i = 0; i < objects.length; i++){
+if(objects[i].sliced){
+ctx.drawImage(objects[i].image[0][1], objects[i].pos[0], objects[i].pos[1], 23.4375, 23.4375)
+}
+else{
+ctx.drawImage(objects[i].image[0][0], objects[i].pos[0], objects[i].pos[1], 23.4375, 23.4375)
+}}
+
+if(mouse_over){
+ctx.fillRect(mouse_pos.x-5,mouse_pos.y-5,10,10)
+}
+
+if(lives >= 1){
+ctx.drawImage(heart[0], 2.5, 1, 20, 20);
+}
+if(lives >= 2){
+ctx.drawImage(heart[0], 30, 1, 20, 20);
+}
+if(lives >= 3){
+ctx.drawImage(heart[0], 57.5, 1, 20, 20);
+}
+}, 20);
+}
+
+function gen_loop()
+{
+		if(lives < 1){
+		return;
+		}
+   setTimeout(function() {
+	 		if(lives < 1){
+				return;
+			}
+	 		objects.push({"pos":[Math.floor((Math.random() * 300-width-1) + 1),150], "vel":[Math.floor((Math.random() * 10) - 5),Math.floor((Math.random() * 4) + 2)],"image":[images[Math.floor(Math.random() * (images.length))]], "sliced":false})
+			gen_count++;
+			if(gen_speed > 200){
+      gen_speed -= 1 * gen_count
+			}
+      gen_loop();
+   }, gen_speed);
+}
+
+function  getMousePos(canvas, evt) {
+  var rect = canvas.getBoundingClientRect(),
+      scaleX = canvas.width / rect.width,
+      scaleY = canvas.height / rect.height;
+  return {
+    x: Math.round((evt.clientX - rect.left) * scaleX),
+    y: Math.round((evt.clientY - rect.top) * scaleY)
+  }
+}
+
+canvas.addEventListener("mousemove", function(evt){
+	mouse_pos = getMousePos(canvas, evt);
+});
+
+canvas.addEventListener("mouseover", function(){
+	mouse_over = true;
+});
+canvas.addEventListener("mouseout", function(){
+	mouse_over = false;
+})
+
+gen_loop();
+game_func();
+
+replay.addEventListener("click", function(){
+	window.location.reload();
+});
+</script>
+</body>
+</html>
