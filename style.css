@@ -160,11 +160,21 @@ body {
 }
 
 .page_select {
-  top: 33.5%;
+  top: 25%;
   width: 71.95%;
   position: relative;
   transition: all 0.5s;
   border-radius: 5px;
+}
+
+#freak_container {
+	width: 80%;
+	height: 60%;
+	background: #434343;
+	border-radius: 15px;
+	 margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .page_selected {
