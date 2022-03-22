@@ -22,6 +22,12 @@
            <p>Welcome to Amazing Math</p>
          </div>
            <div class="game_icons">
+             <div id="FS" class="game_holder">
+              <img src="https://fightingox1.github.io/image_library/Screenshot%202022-03-22%208.51.59%20AM.png">
+              <p>
+                 <a style="color: #ebdb4d; font-weight: bold;">New: </a>Fruit Slicer!
+              </p>
+            </div>
             <div id="City_Builder" class="game_holder">
               <img src="https://fightingox1.github.io/image_library/CityBuilder.png">
               <p>
@@ -174,6 +180,7 @@
          var game_url
          var city_builder = document.getElementById('City_Builder');
          var ff = document.getElementById('FF');
+         var fs = document.getElementById('FS');
          var hextris = document.getElementById('hextris');
          var game_2048 = document.getElementById('2048');
          var tetris = document.getElementById('tetris');
@@ -197,6 +204,18 @@
          var chat_select = document.getElementById('chat_select');
          var chat_page = document.getElementById('chat_page');   
          
+         fs.style.cursor = 'pointer';
+         fs.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://fightingox1.github.io/image_library/Screenshot%202022-03-22%208.51.21%20AM.png"
+           cover = "https://fightingox1.github.io/image_library/Screenshot%202022-03-22%208.51.59%20AM.png"
+           description = "Amazing Math's new exclusive fruit-ninja style game!"
+           name = "Fruit Slicer!"
+           game_url = "Projects/fruit_slicer/index.html"
+           set_properties(banner, cover, description, name)
+         };
+          
          city_builder.style.cursor = 'pointer';
          city_builder.onclick = function() {
            play.style.display = 'inline';
