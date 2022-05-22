@@ -1,0 +1,153 @@
+ :root {
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+}
+
+#numbers {
+  position: fixed;
+  transform: translateX(18.9%) translateY(695px);
+}
+
+#suduko_board {
+  display: grid;
+  position: fixed;
+  
+  transform: translateX(-50%);
+  left: 50%;
+  
+  grid-template-columns: repeat(3, 5px 75px 75px 75px) 5px; 
+  grid-template-rows: repeat(3, 5px 75px 75px 75px) 5px; 
+}
+
+.TakenNumber {
+  background-color: gray;
+  width: 75px;
+  height: 75px;
+  font-size: 63px;
+  
+  border-radius: 10px;
+  
+  transform: translateY(10%) rotate(360deg);
+  
+  transition: all 1s;
+}
+
+.AvalibleNumber {
+  background-color: lightgray;
+  width: 75px;
+  height: 75px;
+  font-size: 63px;
+  
+  transform: translateY(10%);
+  
+  border-radius: 10px;
+}
+
+.AvalibleNumber:hover {
+  background-color: gray;
+}
+
+#inner {
+  background-color: black;
+}
+
+#center {
+  background-color: black;
+}
+
+.finshed {
+  background-color: rgb(217, 203, 163) !important;
+}
+
+.selected {
+  background-color: rgb(242, 231, 196) !important;
+}
+
+.slected_second {
+  filter: brightness(0.9);
+} 
+
+.finshed.selected {
+  border-radius: rgb(242, 231, 196) !important;
+}
+
+.finshed_rotate_1 {
+  transition: transform 1s;
+  transform: rotate(360deg);
+}
+
+.finshed_rotate_2 {
+  transition: transform 1.1s;
+  transform: rotate(360deg);
+}
+
+.finshed_rotate_3 {
+  transition: transform 1.2s;
+  transform: rotate(360deg);
+}
+
+.finshed_rotate_4 {
+  transition: transform 1.3s;
+  transform: rotate(360deg);
+}
+
+.finshed_rotate_5 {
+  transition: transform 1.4s;
+  transform: rotate(360deg);
+}
+
+.finshed_rotate_6 {
+  transition: transform 1.5s;
+  transform: rotate(360deg);
+}
+
+.finshed_rotate_7 {
+  transition: transform 1.6s;
+  transform: rotate(360deg);
+}
+
+.finshed_rotate_8 {
+  transition: transform 1.7s;
+  transform: rotate(360deg);
+}
+
+.finshed_rotate_9 {
+  transition: transform 1.8s;
+  transform: rotate(360deg);
+}
+
+.NumLeft {
+  position: absolute;
+  font-size: 15px;
+  transform: translate(53px, -35px);
+}
+
+#tile {
+  display: grid;
+  
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  
+  font-size: 70px;
+  text-align: center;
+  
+  background-color: rgb(201, 192, 165);
+}
+
+#tile:hover {
+  background-color: rgb(209, 197, 163);
+}
+
+#number {
+  position: fixed;
+  z-index: 20;
+  font-size: 40px;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+  color: gray;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0,0, 0.5));
+}
+
+.failed {
+   background-color: red !important; 
+}
