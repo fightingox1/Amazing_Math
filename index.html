@@ -291,6 +291,18 @@ Taylor bit Antoine once apparently, saying he was a dog as well. Antoine kicked 
 				 var freak_page = document.getElementById('freak_page'); 
 				 var freak_select = document.getElementById('freak_select');
          
+	 suduko.style.cursor = 'pointer';
+         suduko.onclick = function() {
+           play.style.display = 'inline';
+           main.style.display = 'none';
+           banner = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjdTiq68-jFMY2Wrl4k4w73j5BtGZpqlh0g&usqp=CAU"
+           cover = "https://www.puzzles.ca/sudoku_puzzles_images/sudoku_easy_829.gif"
+           description = "Idk i made this in a day becauase I was bored it functions and I think its pretty good"
+           name = "Sudoku!"
+           game_url = "Projects/Suduko/index.html"
+           set_properties(banner, cover, description, name)
+         };
+	       
          fs.style.cursor = 'pointer';
          fs.onclick = function() {
            play.style.display = 'inline';
@@ -468,17 +480,6 @@ Taylor bit Antoine once apparently, saying he was a dog as well. Antoine kicked 
            description = "It's like a shittier version of minecraft in the browser... and well do I really need to describe minecraft to you?"
            name = "Minecraft!"
            game_url = "Minecraft/index.html"
-           set_properties(banner, cover, description, name)
-         };
-         suduko.style.cursor = 'pointer';
-         suduko.onclick = function() {
-           play.style.display = 'inline';
-           main.style.display = 'none';
-           banner = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjdTiq68-jFMY2Wrl4k4w73j5BtGZpqlh0g&usqp=CAU"
-           cover = "https://www.puzzles.ca/sudoku_puzzles_images/sudoku_easy_829.gif"
-           description = "Idk i made this in a day becauase I was bored it functions and I think its pretty good"
-           name = "Sudoku!"
-           game_url = "Projects/Suduko/index.html"
            set_properties(banner, cover, description, name)
          };	     
          back_arrow.style.cursor = 'pointer';
