@@ -9,7 +9,7 @@ Head Of Advertising: Level121
 Current Projects ----
 Outbreak - Zombie survival game <br / >
 Civilization Game - Try and take over the world <br / >
-2d Racing Game - Get the fastest time <br / >
+2d Racing Game - Get the fastest time
 
 ## By Astral
 
