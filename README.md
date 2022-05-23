@@ -15,6 +15,6 @@ Civilization Game - Try and take over the world <br />
 
 [Website](https://bit.ly/amazing-math)
 
-```css
+```diff
 - We are currently working on removing stolen games
 ```
