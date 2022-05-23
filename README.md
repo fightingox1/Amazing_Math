@@ -6,8 +6,13 @@ Backend Devs: Fightingox1 <br />
 Game Devs: Log-Log-Log, Keljrack, Fightingox1, T306<br />
 Head Of Advertising: Level121
 
+Current Projects ----
+Outbreak - Zombie survival game
+Civilization Game - Try and take over the world
+2d Racing Game - Get the fastest time
+
 ## By Astral
 
-https://fightingox1.github.io/Amazing-Math/
+bit.ly/amazing-math
 
 ### Amazing math is working on removing stolen games and they will be removed in the coming months as soon as some in house games are finished.
