@@ -15,4 +15,5 @@ Civilization Game - Try and take over the world <br />
 
 [Website](https://bit.ly/amazing-math)
 
-![#2c3a4a]Amazing math is working on removing stolen games and they will be removed in the coming months as soon as some in house games are finished.
+```diff
+Amazing math is working on removing stolen games and they will be removed in the coming months as soon as some in house games are finished.
