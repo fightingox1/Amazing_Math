@@ -7,9 +7,9 @@ Game Devs: Log-Log-Log, Keljrack, Fightingox1, T306<br />
 Head Of Advertising: Level121
 
 Current Projects ----
-Outbreak - Zombie survival game
-Civilization Game - Try and take over the world
-2d Racing Game - Get the fastest time
+Outbreak - Zombie survival game <br / >
+Civilization Game - Try and take over the world <br / >
+2d Racing Game - Get the fastest time <br / >
 
 ## By Astral
 
