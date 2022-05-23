@@ -13,6 +13,6 @@ Civilization Game - Try and take over the world <br />
 
 ## By Astral
 
-[Link text Here](https://link-url-here.org)
+[Website](https://bit.ly/amazing-math)
 
 ### Amazing math is working on removing stolen games and they will be removed in the coming months as soon as some in house games are finished.
